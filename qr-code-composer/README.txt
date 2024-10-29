@@ -4,10 +4,10 @@ Contributors: sharabindu
 Tags: QR Code, qrcode, qr code generator, WordPress qr code, woocommerce
 Donate link: https://sharabindu.com/donation/
 Requires at least: 4.6.0 or higher
-Tested up to: 6.6.1
+Tested up to: 6.6.2
 Requires PHP: 5.6
-Stable tag: 2.0.8
-Version: 2.0.8
+Stable tag: 2.0.9
+Version: 2.0.9
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
@@ -198,6 +198,9 @@ Yes, you can easily customize from the settings page, which post type you want t
 
 
 == Changelog ==
+
+= 2.0.9 =
+- Update: Added a prefix to the modal popup
 = 2.0.8 =
 - New: For generating QR codes for Elementor Page Builder, QR addon is included 
 

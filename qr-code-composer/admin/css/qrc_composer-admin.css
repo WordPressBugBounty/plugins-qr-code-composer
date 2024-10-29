@@ -66,7 +66,7 @@ img.shrycodegenrs {
  */
 
 /* 1. Ensure this sits above everything when visible */
-.modal {
+.qrc_modal {
     position: absolute;
     z-index: 10000; /* 1 */
     top: 0;
@@ -76,7 +76,7 @@ img.shrycodegenrs {
     height: 100%;
 }
 
-.modal.is-visible {
+.qrc_modal.is-visible {
     visibility: visible;
 }
 
@@ -93,7 +93,7 @@ img.shrycodegenrs {
   transition: visibility 0s linear 0.3s, opacity 0.3s;
 }
 
-.modal.is-visible .qrc-overlay {
+.qrc_modal.is-visible .qrc-overlay {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
@@ -117,7 +117,7 @@ img.shrycodegenrs {
   opacity: 0;
 }
 
-.modal.is-visible .qrc-modal-transition {
+.qrc_modal.is-visible .qrc-modal-transition {
   transform: translateY(0);
   opacity: 1;
 }

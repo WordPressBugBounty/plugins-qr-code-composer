@@ -33,7 +33,7 @@
     function qrcpromodalwrapperQRS() {
         jQuery(".qrcpromodalwrapper").each(function() {
             var modlabutton = $(this).find('.qrc-modal-toggle');
-            var modla = $(this).find('.modal');
+            var modla = $(this).find('.qrc_modal');
             $(modlabutton).on('click', function(e) {
                 e.preventDefault();
                 $(modla).toggleClass('is-visible');

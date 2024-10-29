@@ -502,7 +502,7 @@ function qrc_print_pdf()
 <?php  
   echo '<button type="button" class="qrc-modal-toggle" id="popModal_ex2" style="background:'.$qrcpopup_bg.';color:'. $qrcpopup_color.';border: 1px solid '.$qrcpopup_brclr.';border-radius:'.$qrcpopup_brdius.'px;padding: 6px 14px;font-size:'.$qrcpopup_fntsize.'px">'.esc_html($qrcpopuptext).'</button>';
 ?>
-  <div class="modal">
+  <div class="qrc_modal">
     <div class="qrc-overlay qrc-modal-toggle"></div>
     <div class="qrc-modal-wrapper qrc-modal-transition">
                 <span class="qrc-modal-toggle">&times;</span>

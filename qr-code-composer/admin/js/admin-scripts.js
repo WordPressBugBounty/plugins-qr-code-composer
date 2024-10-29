@@ -86,7 +86,7 @@
     jQuery(document).ready(function () {
         function qrcpromodalwrapperQRSsdh() {
             jQuery(".qrc-modal-toggle").on("click", function () {
-                jQuery(".modal").toggleClass("is-visible");
+                jQuery(".qrc_modal").toggleClass("is-visible");
             });
         }qrcpromodalwrapperQRSsdh();
 		 jQuery(".qrc-color-picker").wpColorPicker({
