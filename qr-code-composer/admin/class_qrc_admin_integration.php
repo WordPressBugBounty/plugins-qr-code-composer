@@ -27,18 +27,18 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
         
         add_settings_section("qrc_admin_integrate__section", " ", array($this ,'settting_log_sec_func'), 'qrc_admin_integrate_sec');
 
-        add_settings_field("qrc_metavcard_display", esc_html__("Disable QR on Customer Dashboard", "qrc_composer") ,array($this , "qrc_metavcard_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_metavcard_display',));
+        add_settings_field("qrc_metavcard_display", esc_html__("Disable QR on Customer Dashboard", "qr-code-composer") ,array($this , "qrc_metavcard_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_metavcard_display',));
 
-        add_settings_field("qrc_userdsiplay", esc_html__("User Profile QR Code", "qrc_composer") ,array($this , "qrc_userdsiplay"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_userdsiplay',));
-
-
+        add_settings_field("qrc_userdsiplay", esc_html__("User Profile QR Code", "qr-code-composer") ,array($this , "qrc_userdsiplay"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_userdsiplay',));
 
 
-        add_settings_field("qrc_bbpress_display", esc_html__("BB Press Plugin (Premium)", "qrc_composer") ,array($this , "qrc_bbpress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bbpress_display',));
 
-        add_settings_field("qrc_bdypress_display", esc_html__("Buddy Press Plugin (Premium)", "qrc_composer") ,array($this , "qrc_bdypress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bdypress_display',));
 
-        add_settings_field("qrc_dokan_display", esc_html__("Dokan Plugin (Premium)", "qrc_composer") ,array($this , "qrc_dokan_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_dokan_display',));
+        add_settings_field("qrc_bbpress_display", esc_html__("BB Press Plugin (Premium)", "qr-code-composer") ,array($this , "qrc_bbpress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bbpress_display',));
+
+        add_settings_field("qrc_bdypress_display", esc_html__("Buddy Press Plugin (Premium)", "qr-code-composer") ,array($this , "qrc_bdypress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bdypress_display',));
+
+        add_settings_field("qrc_dokan_display", esc_html__("Dokan Plugin (Premium)", "qr-code-composer") ,array($this , "qrc_dokan_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_dokan_display',));
 
     
 
@@ -47,9 +47,9 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
   public function settting_log_sec_func()
     { ?>
 <div class="qrc-box-header" >
-   <h3 class="sui-box-title"><?php echo esc_html__('Generate QR codes for other plugins', 'qrc_composer') ?>
+   <h3 class="sui-box-title"><?php echo esc_html__('Generate QR codes for other plugins', 'qr-code-composer') ?>
 </h3>
-<p class="vrcomponents"><?php echo esc_html__('QR codes can be generated for other plugins, we have integrated QR codes for BuddyPress, BBPress, and Dokan plugin. What other plugins can be integrated with.', 'qrc_composer') ?> <a href="https://sharabindu.com/what-features-want-to-see/"><?php echo esc_html__('Send your feedback', 'qrc_composer') ?></a></p>
+<p class="vrcomponents"><?php echo esc_html__('QR codes can be generated for other plugins, we have integrated QR codes for BuddyPress, BBPress, and Dokan plugin. What other plugins can be integrated with.', 'qr-code-composer') ?> <a href="https://sharabindu.com/what-features-want-to-see/"><?php echo esc_html__('Send your feedback', 'qr-code-composer') ?></a></p>
 
         </div>
         <?php
@@ -77,7 +77,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
         $checked = isset($options['qrc_vcard_myacdash']) ? 'checked' : '';
 
         printf('<p>
-<div><label class="qrccheckboxwrap" for ="qrc_vcard_myacdash">'.esc_html__('Remove from My account dashboard' ,'qrc_composer').'<input type="checkbox" id="qrc_vcard_myacdash" value="qrc_vcard_myacdash" name="qrc_admin_integrate[qrc_vcard_myacdash]" %s>
+<div><label class="qrccheckboxwrap" for ="qrc_vcard_myacdash">'.esc_html__('Remove from My account dashboard' ,'qr-code-composer').'<input type="checkbox" id="qrc_vcard_myacdash" value="qrc_vcard_myacdash" name="qrc_admin_integrate[qrc_vcard_myacdash]" %s>
   <span class="qrccheckmark"></span>
 </label> <a class="qrcwdasbordqrdisble" href="https://qrcode-composer.dipashi.com/docs/qr-code-for-customer-woocommerce/#0-toc-title" target="_blank">(how to use)</a></div></p>',esc_attr($checked));
   

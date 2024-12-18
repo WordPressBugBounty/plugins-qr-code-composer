@@ -51,19 +51,19 @@ class QRCDefaultmeta
     ?>
         <ul class="qrcomposeroutput_wrap">
         <li class="qrcmetalintitle">
-            <h3><?php esc_html_e('Hide QR Code', 'qrc_composer') ?></h3>
-            <p><?php esc_html_e('Remove QR code from front end. When you select yes the QR code will be removed from the frontend of this page but will remain here', 'qrc_composer') ?></p>
+            <h3><?php esc_html_e('Hide QR Code', 'qr-code-composer') ?></h3>
+            <p><?php esc_html_e('Remove QR code from front end. When you select yes the QR code will be removed from the frontend of this page but will remain here', 'qr-code-composer') ?></p>
             </li><li class="qrcmetalinkchekc">
                 <select name="qrc_select_field" class=" qrc_metaoutput">
                     
-                <option value="1" <?php echo esc_attr($qrc_meta_check_info) == 1 ? 'selected' : '' ?>><?php esc_html_e('No', 'qrc_composer'); ?></option>
-                <option value="2" <?php echo esc_attr($qrc_meta_check_info) == 2 ? 'selected' : '' ?>><?php esc_html_e('Yes', 'qrc_composer'); ?></option>
+                <option value="1" <?php echo esc_attr($qrc_meta_check_info) == 1 ? 'selected' : '' ?>><?php esc_html_e('No', 'qr-code-composer'); ?></option>
+                <option value="2" <?php echo esc_attr($qrc_meta_check_info) == 2 ? 'selected' : '' ?>><?php esc_html_e('Yes', 'qr-code-composer'); ?></option>
 
                 </select>
             </li>
         <?php
 
-echo  '<li class="qrcmetaqrcode"><div class="qrcswholewtapper"><div class="qrcprowrapper"><div class="qrc_canvass" id="qrc_cuurentlinks" data-text="'.$current_id_link.'" style="width:'.esc_attr($qrc_size).'px;display:inline-block"></div><div><a class="qrcdownloads" download="' . esc_attr($current_title) . '.png"><button type="button" style="min-width:' . esc_attr($qrc_size) . 'px;" class="button button-secondary is-button is-default is-large">' . esc_html($download_qr) . '</button></a></div></div></div></li></ul>';
+echo  '<li class="qrcmetaqrcode"><div class="qrcswholewtapper"><div class="qrcprowrapper"><div class="qrc_canvass" id="qrc_cuurentlinks" data-text="'.esc_attr($current_id_link).'" style="width:'.esc_attr($qrc_size).'px;display:inline-block"></div><div><a class="qrcdownloads" download="' . esc_attr($current_title) . '.png"><button type="button" style="min-width:' . esc_attr($qrc_size) . 'px;" class="button button-secondary is-button is-default is-large">' . esc_html($download_qr) . '</button></a></div></div></div></li></ul>';
 
 
 
@@ -76,10 +76,13 @@ echo  '<li class="qrcmetaqrcode"><div class="qrcswholewtapper"><div class="qrcpr
     public function qrc_save_post_meta($post_id)
     {
 
+    $nonce = wp_create_nonce( 'qrc-nonce' );
+    if ( ! wp_verify_nonce( $nonce, 'qrc-nonce' ) ) return;
+
         if (array_key_exists('qrc_select_field', $_POST))
         {
 
-            update_post_meta($post_id, 'qrc_metabox', sanitize_text_field($_POST['qrc_select_field']));
+            update_post_meta($post_id, 'qrc_metabox', sanitize_text_field(wp_unslash($_POST['qrc_select_field'])));
         }
 
     }

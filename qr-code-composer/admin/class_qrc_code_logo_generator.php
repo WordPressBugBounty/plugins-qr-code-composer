@@ -27,36 +27,36 @@ public function qrc_custom_link_generator_page()
 
         add_settings_section("logo_qrc_download_section", " ", array($this ,'settting_log_sec_func'), 'qrc_logo_admin_sec');
 
-        add_settings_field("qr_code_custom_text", esc_html__("Custom Link/Text /email/number", "qrc_composer") , array($this ,"qr_code_custom_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_custom_text", esc_html__("Custom Link/Text /email/number", "qr-code-composer") , array($this ,"qr_code_custom_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_custom_text', 
         'label_for' => 'qr_code_custom_text',
 
     ));
 
-        add_settings_field("qr_code_phonenumber", esc_html__("QR code for phone number", "qrc_composer") , array($this ,"qr_code_phonenumber"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_phonenumber", esc_html__("QR code for phone number", "qr-code-composer") , array($this ,"qr_code_phonenumber"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_phonenumber', 
         'label_for' => 'qr_code_phonenumber',
 
     ));
 
-        add_settings_field("qr_code_mail_text", esc_html__("QR for WhatsApp ", "qrc_composer") , array($this ,"qr_code_mail_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_mail_text", esc_html__("QR for WhatsApp ", "qr-code-composer") , array($this ,"qr_code_mail_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_mail_text', 
         'label_for' => 'qr_code_mail_text',
 
     ));
 
-        add_settings_field("qr_code_wifi_text", esc_html__("QR for Wifi (Premium)", "qrc_composer") , array($this ,"qr_code_wifi_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_wifi_text", esc_html__("QR for Wifi (Premium)", "qr-code-composer") , array($this ,"qr_code_wifi_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_wifi_text'
 
     ));
 
 
-        add_settings_field("qr_code_maps_text", esc_html__("QR for Maps (Premium)", "qrc_composer") , array($this ,"qr_code_maps_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section" , array(
+        add_settings_field("qr_code_maps_text", esc_html__("QR for Maps (Premium)", "qr-code-composer") , array($this ,"qr_code_maps_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section" , array(
             'class'  =>  'qr_code_maps_text'
 
     ));
 
-        add_settings_field("qr_code_event_text", esc_html__("QR for Event (Premium)", "qrc_composer") , array($this ,"qr_code_event_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_event_text", esc_html__("QR for Event (Premium)", "qr-code-composer") , array($this ,"qr_code_event_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_event_text'
 
     ));
@@ -106,9 +106,9 @@ public function settting_log_sec_func()
 { ?>
 
 <div class="qrc-box-header" >
-            <h3 class="sui-box-title"><?php echo esc_html__('QR codes for various components', 'qrc_composer') ?>
+            <h3 class="sui-box-title"><?php echo esc_html__('QR codes for various components', 'qr-code-composer') ?>
 </h3>
-<p class="vrcomponents"><?php echo esc_html__('Basically,it generates QR codes for the following elements. which are displayed on the frontend through shortcodes. The most interesting thing is that in the premium version you can also generate these QR codes using the', 'qrc_composer') ?> <a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode"><?php echo esc_html__('Shortcode Generator (Pro).', 'qrc_composer') ?></a></p>
+<p class="vrcomponents"><?php echo esc_html__('Basically,it generates QR codes for the following elements. which are displayed on the frontend through shortcodes. The most interesting thing is that in the premium version you can also generate these QR codes using the', 'qr-code-composer') ?> <a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode"><?php echo esc_html__('Shortcode Generator (Pro).', 'qr-code-composer') ?></a></p>
         </div>
         <?php
 }
@@ -157,7 +157,7 @@ public function qr_code_mail_text()
 
     $options = get_option('qrc_custom_link_generator');
     $options_value = isset($options['qr_code_mail_text']) ? $options['qr_code_mail_text'] : '';
-    $placeholder = esc_html('Input WhatsApp numer with Country Code ', 'qrc_composer');
+    $placeholder = esc_html('Input WhatsApp numer with Country Code ', 'qr-code-composer');
 
     printf('<p><input type="text" id="qr_code_mail_text" name="qrc_custom_link_generator[qr_code_mail_text]"   value="%s" placeholder="'.esc_attr($placeholder).'" style="min-width:300px"></p><p class="qrcshortvar">
             <input id="qr_whaappxre" type="text" class="shortcodereadoly" value="[qr_whatsapp_composer]" readonly >
@@ -176,7 +176,7 @@ public function qr_code_custom_text()
 
     $options = get_option('qrc_custom_link_generator');
     $options_value = isset($options['qr_code_custom_text']) ? $options['qr_code_custom_text'] : '';
-    $placeholder = esc_html('Write Text, Number or Link ', 'qrc_composer');
+    $placeholder = esc_html('Write Text, Number or Link ', 'qr-code-composer');
 
     printf('<p><input style="width:300px" type="text" id="qr_code_custom_text" name="qrc_custom_link_generator[qr_code_custom_text]"   value="%s" placeholder="'.esc_attr($placeholder).'"></p><p class="qrcshortvar">
             <input id="qr_linkexre" type="text" class="shortcodereadoly" value="[qr_link_composer]" readonly >
@@ -189,7 +189,7 @@ public function qr_code_phonenumber()
 
     $options = get_option('qrc_custom_link_generator');
     $options_value = isset($options['qr_code_phonenumber']) ? $options['qr_code_phonenumber'] : '';
-    $placeholder = esc_html('Input phone or mobile number', 'qrc_composer');
+    $placeholder = esc_html('Input phone or mobile number', 'qr-code-composer');
 
     printf('<p><input type="text" id="qr_code_phonenumber" name="qrc_custom_link_generator[qr_code_phonenumber]"   value="%s" placeholder="'.esc_attr($placeholder).'" style="width:300px"></p><p class="qrcshortvar">
             <input id="qr_phnexre" type="text" class="shortcodereadoly" value="[qrc_phonenumber]" readonly >

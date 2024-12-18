@@ -34,7 +34,7 @@ class QRC_Shortcode_lite {
         $user_url = $user_info->user_url;
         $description = $user_info->description;
         $mastervcard = "BEGIN:VCARD\nVERSION:3.0\nN:" . $name . "\nEMAIL:" . $user_email . "\nNOTE:" . $description . "\nEND:VCARD";
-        return printf('<div class="qrcswholewtapper"><div class="qrcprowrapper"><div class="qrc_canvass"  id="qrcwrausd_'.get_the_ID().'" style="width:'.esc_attr($size).'px;display:inline-block" data-text="'. esc_attr($mastervcard). '"></div><div><a class="qrcdownloads" download="' . $name . '.png"><button type="button" class="button button-secondary is-button is-default is-large" style="width:' . $size . 'px;">' . esc_html__("Download QR", "qr-code-composer") . '</button></a></div></div></div>');
+        return printf('<div class="qrcswholewtapper"><div class="qrcprowrapper"><div class="qrc_canvass"  id="qrcwrausd_'.esc_attr(get_the_ID()).'" style="width:'.esc_attr($size).'px;display:inline-block" data-text="'. esc_attr($mastervcard). '"></div><div><a class="qrcdownloads" download="' . esc_attr($name) . '.png"><button type="button" class="button button-secondary is-button is-default is-large" style="width:' . esc_attr($size) . 'px;">' . esc_html__("Download QR", "qr-code-composer") . '</button></a></div></div></div>');
     }
     function qrc_woo_accountdash() {
     if (class_exists("WooCommerce")) {
@@ -54,14 +54,14 @@ class QRC_Shortcode_lite {
             $description = $user_info->description;
         if ($qr_download_hide == "no") {
                 $qr_download_ = '<div><a download="' .$name . '.png" class="qrcdownloads">
-           <button type="button" style="min-width:' . $qrc_size. "px;background:" . $qr_dwnbtnbg_color . ";color:" . $qr_dwnbtn_color . ';font-weight: 600;border: 1px solid '.$qr_download_brclr.';border-radius:'.$qrc_dwnbtn_brdius.'px;font-size:'.$qr_download_fntsz.'px;padding: 6px 0;" class="uqr_code_btn">' . esc_html__($download_qr, "qr-code-composer") . '</button>
+           <button type="button" style="min-width:' . $qrc_size. "px;background:" . $qr_dwnbtnbg_color . ";color:" . $qr_dwnbtn_color . ';font-weight: 600;border: 1px solid '.$qr_download_brclr.';border-radius:'.$qrc_dwnbtn_brdius.'px;font-size:'.$qr_download_fntsz.'px;padding: 6px 0;" class="uqr_code_btn">' . esc_html($download_qr) . '</button>
            </a></div>';
             } else {
                 $qr_download_ = "";
             }
         $mastervcard3 = "BEGIN:VCARD\nVERSION:3.0\nN:" . $name . "\nEMAIL:" . $user_email . "\nNOTE:" . $description . "\nEND:VCARD";
 
-        echo '<div class="qrcswholewtapper"><div class="qrcprowrapper"  id="qrcmastervcard'.$i.'leds"><div class="qrc_canvass" id="qrcmastervcard3'.$i.'" style="display:inline-block" data-text="'.esc_attr($mastervcard3).'"></div>'.$qr_download_.'</div></div>';
+        echo '<div class="qrcswholewtapper"><div class="qrcprowrapper"  id="qrcmastervcard'.esc_attr($i).'leds"><div class="qrc_canvass" id="qrcmastervcard3'.esc_attr($i).'" style="display:inline-block" data-text="'.esc_attr($mastervcard3).'"></div>'.wp_kses_post($qr_download_).'</div></div>';
 
         }
         }

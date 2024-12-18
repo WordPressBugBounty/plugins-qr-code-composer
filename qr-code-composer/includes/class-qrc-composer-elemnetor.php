@@ -90,7 +90,7 @@ class QrcELementorLightWidget
     function register_qrc_categories($elements_manager)
     {
         $elements_manager->add_category("qrccategory", [
-            "title" => esc_html__("QR Composer", "qrc_composer"),
+            "title" => esc_html__("QR Composer", "qr-code-composer"),
             "icon" => "fa fa-plug",
         ]);
     }

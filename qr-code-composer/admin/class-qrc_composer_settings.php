@@ -50,7 +50,7 @@ class QR_code_Admin_settings{
     add_settings_field("qr_popup_enablefor", esc_html__("Popup Enable For", "qr-code-composer") , array($this ,"qr_popup_enablefor"), 'qrc_design_sec', "qrc_design_section" , array('class' =>'qrcnewqr_popup_btndesign'));
 
 
-    add_settings_field("qr_alignment", esc_html__("Alignment", "qrc_composer") , array($this ,"qr_alignment"), 'qrc_admin_sec', "qrc_download_section",array(
+    add_settings_field("qr_alignment", esc_html__("Alignment", "qr-code-composer") , array($this ,"qr_alignment"), 'qrc_admin_sec', "qrc_download_section",array(
             'class'  =>  'alignme', 
         'label_for' => 'qr_alignment',
 
@@ -58,13 +58,13 @@ class QR_code_Admin_settings{
 
     if (class_exists('WooCommerce'))
     {
-        add_settings_field("wc_qr_alignment", esc_html__("QR location on product page", "qrc_composer") , array($this ,"wc_qr_alignment"), 'qrc_admin_sec', "qrc_download_section",array(
+        add_settings_field("wc_qr_alignment", esc_html__("QR location on product page", "qr-code-composer") , array($this ,"wc_qr_alignment"), 'qrc_admin_sec', "qrc_download_section",array(
             'class'  =>  'wcalignme qrcnewfeatures ', 
         'label_for' => 'qrcppagelocation',
 
     ));
 
-        add_settings_field("qrc_wc_ptab_name", esc_html__("Change Text of Product Tab", "qrc_composer") ,array($this , "qrc_wc_ptab_name"), 'qrc_admin_sec', "qrc_download_section",array(
+        add_settings_field("qrc_wc_ptab_name", esc_html__("Change Text of Product Tab", "qr-code-composer") ,array($this , "qrc_wc_ptab_name"), 'qrc_admin_sec', "qrc_download_section",array(
             'class'  =>  'ptab_name', 
         'label_for' => 'qrc_wc_ptab_name',
 
@@ -72,13 +72,13 @@ class QR_code_Admin_settings{
 
     }
 
-    add_settings_field("qr_checkbox", esc_html__("Hide QR code according to post type", "qrc_composer") ,array($this , "qr_checkbox"), 'qrc_admin_sec', "qrc_download_section" ,array(
+    add_settings_field("qr_checkbox", esc_html__("Hide QR code according to post type", "qr-code-composer") ,array($this , "qr_checkbox"), 'qrc_admin_sec', "qrc_download_section" ,array(
             'class'  =>  'qr_checkbox',
 
     ));
 
 
-    add_settings_field("qr_checkbox_page", esc_html__("Hide QR code according to Page", "qrc_composer") , array(
+    add_settings_field("qr_checkbox_page", esc_html__("Hide QR code according to Page", "qr-code-composer") , array(
         $this,
         "qr_checkbox_page"
     ) , 'qrc_admin_sec', "qrc_download_section" ,array(
@@ -87,7 +87,7 @@ class QR_code_Admin_settings{
     ));
 
 
-    add_settings_field("qr_stcode_management", esc_html__("Shortcode for Current Page URL", "qrc_composer") ,array($this , "qr_stcode_management"), 'qrc_admin_sec', "qrc_download_section",array(
+    add_settings_field("qr_stcode_management", esc_html__("Shortcode for Current Page URL", "qr-code-composer") ,array($this , "qr_stcode_management"), 'qrc_admin_sec', "qrc_download_section",array(
             'class'  =>  'qr_stcode_management',
 
     ));
@@ -104,8 +104,8 @@ class QR_code_Admin_settings{
     {   
        ?>
 <div class="qrc-box-header" >
-            <h3 class="sui-box-title"><?php echo esc_html__('Auto Generate QR', 'qrc_composer') ?></h3>
-<p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qrc_composer') ?><a class="qrcdownsize" id="qrcauto" video-url="https://www.youtube.com/watch?v=LyQGEShmhn8"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
+            <h3 class="sui-box-title"><?php echo esc_html__('Auto Generate QR', 'qr-code-composer') ?></h3>
+<p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qr-code-composer') ?><a class="qrcdownsize" id="qrcauto" video-url="https://www.youtube.com/watch?v=LyQGEShmhn8"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
 
         </div>
 
@@ -196,7 +196,7 @@ function qr_input_size()
     $options = get_option('qrc_composer_settings');
     $qrc_size = isset($options['qr_code_picture_size_width']) ? $options['qr_code_picture_size_width'] : 200;
 
-        printf('<input type="range" class="qrcranges"  name="qrc_composer_settings[qr_code_picture_size_width]"  id="qwe_sizw" min="50" step="1" max="600" value="%s" oninput="num7.value = this.value"><input type="number" id="num7" value="%s" min="50" step="1" max="600" oninput="qwe_sizw.value = this.value">', $qrc_size, $qrc_size);
+        printf('<input type="range" class="qrcranges"  name="qrc_composer_settings[qr_code_picture_size_width]"  id="qwe_sizw" min="50" step="1" max="600" value="%s" oninput="num7.value = this.value"><input type="number" id="num7" value="%s" min="50" step="1" max="600" oninput="qwe_sizw.value = this.value">', esc_attr($qrc_size), esc_attr($qrc_size));
 
  }
 
@@ -286,7 +286,7 @@ function qr_input_size()
 
         printf('<div class="onoffswitch"><input type="checkbox" value="qrchidefrontend" class="onoffswitch-checkbox" id="qrchidefrontend"  name="qrc_composer_settings[qrchidefrontend]" %s tabindex="0"><label class="onoffswitch-label" for="qrchidefrontend">
         <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span></label></div>',$qrchidefrontend);
+        <span class="onoffswitch-switch"></span></label></div>',esc_attr($qrchidefrontend));
 
         ?>
 
@@ -374,7 +374,7 @@ function qr_input_size()
     <?php
         printf('<div class="onoffswitch"><input type="checkbox" value="qrcpopupenbl" class="onoffswitch-checkbox" id="qrcpopupenbl"  name="qrc_composer_settings[qrcpopupenbl]" %s tabindex="0"><label class="onoffswitch-label" for="qrcpopupenbl">
         <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span></label></div>',$qrcpopupenbl);
+        <span class="onoffswitch-switch"></span></label></div>',esc_attr($qrcpopupenbl));
 
         ?>
       
@@ -446,12 +446,12 @@ function wc_qr_alignment()
     ?>
     <select class="select"  name="qrc_composer_settings[qrcppagelocation]" id="qrcppagelocation">
         
-    <option value="inatab" <?php echo esc_attr($qrc_wc_alignment) == 'inatab' ? 'selected' : '' ?>><?php esc_html_e('In a tab', 'qrc_composer'); ?></option>
-    <option value="endofpmeta" <?php echo esc_attr($qrc_wc_alignment) == 'endofpmeta' ? 'selected' : '' ?>><?php esc_html_e('End of Product Meta', 'qrc_composer'); ?></option>    
+    <option value="inatab" <?php echo esc_attr($qrc_wc_alignment) == 'inatab' ? 'selected' : '' ?>><?php esc_html_e('In a tab', 'qr-code-composer'); ?></option>
+    <option value="endofpmeta" <?php echo esc_attr($qrc_wc_alignment) == 'endofpmeta' ? 'selected' : '' ?>><?php esc_html_e('End of Product Meta', 'qr-code-composer'); ?></option>    
 
-    <option value="bellowofcart" <?php echo esc_attr($qrc_wc_alignment) == 'bellowofcart' ? 'selected' : '' ?>><?php esc_html_e('Below the cart button', 'qrc_composer'); ?></option>
+    <option value="bellowofcart" <?php echo esc_attr($qrc_wc_alignment) == 'bellowofcart' ? 'selected' : '' ?>><?php esc_html_e('Below the cart button', 'qr-code-composer'); ?></option>
 
-     <option value="abvofcart" <?php echo esc_attr($qrc_wc_alignment) == 'abvofcart' ? 'selected' : '' ?>><?php esc_html_e('Above of cart Button', 'qrc_composer'); ?></option>   
+     <option value="abvofcart" <?php echo esc_attr($qrc_wc_alignment) == 'abvofcart' ? 'selected' : '' ?>><?php esc_html_e('Above of cart Button', 'qr-code-composer'); ?></option>   
 
     </select>
 
@@ -509,7 +509,7 @@ function wc_qr_alignment()
             <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_stcode_management" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button>
             </p>');
 
-    printf('<div style="width:%s; padding:10px 0px"><em>'.esc_html__('For developer: ','qrc_composer').'<span style="color:#673ab7"><em ><</em>?php echo do_shortcode["qrc_code_composer"];<em>?</em>></<em></span></div>', '90%');
+    printf('<div style="width:%s; padding:10px 0px"><em>'.esc_html__('For developer: ','qr-code-composer').'<span style="color:#673ab7"><em ><</em>?php echo do_shortcode["qrc_code_composer"];<em>?</em>></<em></span></div>', '90%');
 
     }
 

@@ -157,8 +157,8 @@
              [
                'label' => esc_html__( 'Enable Download Button?', 'qr-code-composer' ),
                'type' => \Elementor\Controls_Manager::SWITCHER,
-               'label_on' => esc_html__( 'Show', 'your-plugin' ),
-               'label_off' => esc_html__( 'Hide', 'your-plugin' ),
+               'label_on' => esc_html__( 'Show', 'qr-code-composer' ),
+               'label_off' => esc_html__( 'Hide', 'qr-code-composer' ),
                'return_value' => 'yes',
                'default' => 'yes',
              ]
@@ -363,22 +363,21 @@
           ?>
             <div class="qrc_elementr_wrapeer" >
 
-  <?php 
+<div class="qrcswholewtapper"><div <?php echo wp_kses_data($this->get_render_attribute_string('qr-code-composer_attributes'))?>> </div><?php
+if($settings['enable_downbtn']== 'yes'){ 
 
-  if($settings['enable_downbtn']== 'yes'){ 
-
-  $qr_download_ =  '<div style="cursor:pointer"><a '.wp_kses_post($this->get_render_attribute_string('qrcComo_btn')).' style="display: inline-block;
+echo '<div style="cursor:pointer"><a '.wp_kses_data($this->get_render_attribute_string('qrcComo_btn')).' style="display: inline-block;
   text-align: center;width:'.esc_attr($qrc_size).'px;text-decoration:none">'.esc_html($settings['btn_text']).'</a></div>';
-  }else{
-
-  $qr_download_ = '';
-  } 
-  ?><div class="qrcswholewtapper"><div <?php echo $this->get_render_attribute_string('qr-code-composer_attributes')?>> </div><?php echo $qr_download_; ?></div>
+  }
+ ?></div>
       
   </div>
 
 
    <?php
+
+
+
   }
 
 

@@ -3,7 +3,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      2.0.9
+ * @since      2.0.10
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/admin
@@ -27,7 +27,7 @@ class Qrc_composer_Admin
     /**
      * The ID of this plugin.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -36,7 +36,7 @@ class Qrc_composer_Admin
     /**
      * The version of this plugin.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -45,7 +45,7 @@ class Qrc_composer_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -69,7 +69,7 @@ class Qrc_composer_Admin
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class_qrc_code_logo_generator.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class_qrc_admin_integration.php';
         
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/metadata/class-yoo-filed-data.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/metadata/class-qrc-filed-data.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/metadata/class_qrc_defaultmeta.php';
 
         $plugin_name = new QR_code_Print_light();
@@ -84,7 +84,7 @@ class Qrc_composer_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      */
     public function enqueue_styles()
     {
@@ -100,31 +100,38 @@ class Qrc_composer_Admin
          * between the defined hooks and the functions defined in this
          * class.
          */
-        wp_register_style('qrc-admin-css', QRC_COMPOSER_URL . 'admin/css/qrc_composer-admin.css', array() ,$this->version, 'all');
-        
-      if (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_PLUGIN_ID) !== false){ 
+    $nonce = wp_create_nonce( 'qrc-nonce' );
+    if ( ! wp_verify_nonce( $nonce, 'qrc-nonce' ) ) return;
 
+        wp_register_style('qrc-admin-css', QRC_COMPOSER_URL . 'admin/css/qrc_composer-admin.css', array() ,$this->version, 'all');
         wp_enqueue_style('wp-color-picker');
 
         wp_enqueue_style('qrc-admin-css');
         wp_enqueue_style('datetimepicker', QRC_COMPOSER_URL . 'admin/css/jquery.datetimepicker.css', array() , $this->version, 'all');
-    }
+
 
     }
 
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      */
     public function enqueue_scripts()
     {
+
+    $nonce = wp_create_nonce( 'qrc-nonce' );
+    if ( ! wp_verify_nonce( $nonce, 'qrc-nonce' ) ) return;
+        
+
 
         wp_register_script('qrcode-composer', QRC_COMPOSER_URL . 'admin/js/qrcodecomposer.js', array(
             'jquery'
         ) , QRC_COMPOSER_VERSION, true);
 
-      if (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_PLUGIN_ID) !== false){    
+    if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page']))), QRC_COMPOSER_PLUGIN_ID) !== false) {
+
+
         wp_enqueue_script('qrcode-composer');
         wp_enqueue_script('wp-color-picker');
 
@@ -135,9 +142,7 @@ class Qrc_composer_Admin
         wp_enqueue_script('jquery-datepicker', QRC_COMPOSER_URL . 'admin/js/jquery-datepicker.js', array(
             'jquery'
         ) , $this->version, true); 
-        wp_enqueue_script('clipboard', QRC_COMPOSER_URL . 'admin/js/clipboard.min.js', array(
-            'jquery'
-        ) , $this->version, true);
+        wp_enqueue_script('clipboard');
         wp_enqueue_script('clipbord-script', QRC_COMPOSER_URL . 'admin/js/clipbord-script.js', array(
             'clipboard'
         ) , $this->version, true);
@@ -148,9 +153,7 @@ class Qrc_composer_Admin
             'jquery','wp-color-picker','jquery-datepicker'
         ) , $this->version, true); 
         }
-
-
-      if ((isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_DOWNLOAD_ID) !== false) || (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_PRINT_ID) !== false) || (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_ORDER_MAIL) !== false) || (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_SHORTCODE) !== false)|| (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_VCARDLIST) !== false) ){  
+    if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_DOWNLOAD_ID) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_PRINT_ID ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_ORDER_MAIL ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_SHORTCODE ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_VCARDLIST ) !== false ) {
 
         wp_enqueue_script('admin-js', QRC_COMPOSER_URL . 'admin/js/admin.js', array(
             'jquery'
@@ -187,7 +190,7 @@ class Qrc_composer_Admin
     /**
      * Setting link.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      */
 
     public function plugin_settings_link($links)
@@ -204,9 +207,9 @@ class Qrc_composer_Admin
 
 
     public function adminFooterTextQR(){
-
-          if (isset($_GET['page']) && strpos($_GET['page'], QRC_COMPOSER_PLUGIN_ID) !== false) {
-
+    $nonce = wp_create_nonce( 'qrc-nonce' );
+    if ( ! wp_verify_nonce( $nonce, 'qrc-nonce' ) ) return;
+    if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page']))), QRC_COMPOSER_PLUGIN_ID) !== false) {
       ?>
 
          <div id="footer_contaciner" role="contentinfo">

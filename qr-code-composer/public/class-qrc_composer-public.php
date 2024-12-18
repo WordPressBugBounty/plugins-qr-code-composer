@@ -3,7 +3,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      2.0.9
+ * @since      2.0.10
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/public
@@ -25,7 +25,7 @@ class Qrc_composer_Public
     /**
      * The ID of this plugin.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -34,7 +34,7 @@ class Qrc_composer_Public
     /**
      * The version of this plugin.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -43,7 +43,7 @@ class Qrc_composer_Public
     /**
      * Initialize the class and set its properties.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      * @param      string    $plugin_name       The name of the plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -58,7 +58,7 @@ class Qrc_composer_Public
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      */
     public function enqueue_styles()
     {
@@ -70,7 +70,7 @@ class Qrc_composer_Public
     /**
      * Register the JavaScript for the public-facing side of the site.
      *
-     * @since    2.0.9
+     * @since    2.0.10
      */
     public function enqueue_scripts()
     {
@@ -180,7 +180,7 @@ class Qrc_composer_Public
     {
        $content = do_shortcode('[qrc_code_composer]');
 
-        return printf('%s', $content);
+        return printf('%s', wp_kses_post($content));
 
     }
 
