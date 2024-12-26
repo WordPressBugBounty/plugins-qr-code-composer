@@ -6,8 +6,8 @@ Donate link: https://sharabindu.com/donation/
 Requires at least: 4.6.0 or higher
 Tested up to: 6.7.1
 Requires PHP: 5.6
-Stable tag: 2.0.10
-Version: 2.0.10
+Stable tag: 2.0.11
+Version: 2.0.11
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
@@ -22,7 +22,7 @@ This is a WordPress QR Code Generator plugin. It automatically generates QR code
 Easy to install and use. generate dynamic QR codes with automatic display and custom settings. Content can be the current page URL, any text, and any links.
 
 
-[Try the Demo](https://qrcode-composer.dipashi.com/ "Pro Demo QR code Composer") | [Backend Demo](https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qr_composer "Admin Demo QR code Composer Pro ") | [Premium version](https://sharabindu.com/plugins/qr-code-composer/) | [Documents](https://qrcode-composer.dipashi.com/docs/introduction/ "Documents")
+[Try the Demo](https://qrcode-composer.dipashi.com/ "Pro Demo QR code Composer") | [Backend Demo](https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qr_composer "Admin Demo QR code Composer Pro ") | [Premium version](https://sharabindu.com/plugins/wordpress-qr-code-generator/) | [Documents](https://qrcode-composer.dipashi.com/docs/introduction/ "Documents")
 
 
 ###Preview WordPress QR Code Generator
@@ -151,7 +151,7 @@ Give any suggestions or feedback, thank you for using or trying our plugin. Plea
 
 ### And many more things are waiting for you to discover
 
-[GET PRO VERSION](https://sharabindu.com/plugins/qr-code-composer/)
+[GET PRO VERSION](https://sharabindu.com/plugins/wordpress-qr-code-generator/)
 
 
 ###WooCommerce Order QR Code
@@ -227,6 +227,9 @@ Yes, you can easily customize from the settings page, which post type you want t
 
 
 == Changelog ==
+
+= 2.0.11 =
+- Update: Compatibility Update
 
 = 2.0.10 =
 - Update: Compatibility Update

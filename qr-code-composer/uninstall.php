@@ -6,7 +6,7 @@
 
  *
  * @link       https://sharabindu.com
- * @since      2.0.10
+ * @since      2.0.11
  *
  * @package    Qrc_composer
  */
