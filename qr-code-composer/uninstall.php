@@ -6,7 +6,7 @@
 
  *
  * @link       https://sharabindu.com
- * @since      2.0.11
+ * @since      2.0.12
  *
  * @package    Qrc_composer
  */
@@ -15,8 +15,3 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
-
-
-delete_option('qrc_composer_settings');
-
-delete_site_option('qrc_composer_settings');

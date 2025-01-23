@@ -469,7 +469,7 @@ $("div#qrccomsposerprviewss").css('opacity','1');
 		
 		
 		$('.alignme th').append("<p>Choose the alignment of the QR code, by default it will be on the left</p>");
-        $('.wcalignme th').append("<p>Choose the alignment of the QR code on the product page, by default it will be on the left</p>");
+        $('.wcalignme th').append("<p>Choose the QR Code location on the Single product page, by default In a Tab</p>");
         $('.ptab_name th').append("<p>The QR code is located in the tab called QR Code on the product page. Rename tab name</p>");
         $('.qr_checkbox th').append("<p>Disable the QR code for specific post type that you wish to prevent the QR code on.</p>");
         $('.qr_checkbox_page th').append("<p>Disable the QR code for specific pages that you wish to prevent the QR code on. Also can remove QR code from page, post, product, custom post using meta field</p>");
@@ -484,16 +484,16 @@ $("div#qrccomsposerprviewss").css('opacity','1');
 
 
         $('.qr_code_vcard th').append("<p>A simple vCard QR code based on the information on the side. If you want to generate more, use the  <a href='https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode'> shortcode generator for vCard</a></p>");
-        $('.qrc_vacrdtempe th').append("<p>vCard Templates is a feature for displaying vCard information on the frontend. <a href='https://qrcode-composer.dipashi.com/card/elizabeth-i-brown/'>View Demo</a></p>");
+        $('.qrc_vacrdtempe th').append("<p>vCard Templates is a feature for displaying vCard information on the frontend. <a href='https://wordpressqr.sharabindu.com/card/elizabeth-i-brown/'>View Demo</a></p>");
 		        $('.qrc_vacrdauodisplay th').append("<p>Meta vCard QR code will be automatically displayed on the frontend after the content.</p>");
 		
 		
-        $('.qr_checkbox_vcrad th').append("<p>Clicking the switcher button next to the post type name will enable the vCard meta field for that post type<a href='https://qrcode-composer.dipashi.com/docs/automatically-display-vcard/' target='_blank'> Read Docs</a></p>");
+        $('.qr_checkbox_vcrad th').append("<p>Clicking the switcher button next to the post type name will enable the vCard meta field for that post type<a href='https://wordpressqr.sharabindu.com/docs/automatically-display-vcard/' target='_blank'> Read Docs</a></p>");
 
         $('.qrc_userdsiplay th').append("<p>The plugin generates auto QR codes for user profiles, vCard QR code are generated from user profile information, If you want to close <a href='profile.php/#qrcuserQRcode'>Look Profile Page</a></p>");
-        $('.qrc_bbpress_display th').append("<p>Forum Memeber QR Code Generator for BB Press. QR code of memeber's profile URL and memeber's vCard QR code. <a href='https://qrcode-composer.dipashi.com/forums/users/dipashi/'> View Demo</a></p>");
-        $('.qrc_bdypress_display th').append("<p>  Profile QR Code Generator for Buddy Press. QR code of user's profile URL and user's vCard QR code. <a href='https://qrcode-composer.dipashi.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
-        $('.qrc_dokan_display th').append("<p>Vendor QR code generator for Dokan. QR code of vendor's profile URL and vendor's vCard QR code. <a href='https://qrcode-composer.dipashi.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
+        $('.qrc_bbpress_display th').append("<p>Forum Memeber QR Code Generator for BB Press. QR code of memeber's profile URL and memeber's vCard QR code. <a href='https://wordpressqr.sharabindu.com/forums/users/dipashi/'> View Demo</a></p>");
+        $('.qrc_bdypress_display th').append("<p>  Profile QR Code Generator for Buddy Press. QR code of user's profile URL and user's vCard QR code. <a href='https://wordpressqr.sharabindu.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
+        $('.qrc_dokan_display th').append("<p>Vendor QR code generator for Dokan. QR code of vendor's profile URL and vendor's vCard QR code. <a href='https://wordpressqr.sharabindu.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
 
     })
 })(jQuery);

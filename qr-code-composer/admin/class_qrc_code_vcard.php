@@ -54,7 +54,7 @@ public function qrc_vcard_generator_page()
 public function qrc_vacrdtempe()
 {
 
-    echo '<input id="qrcvacrdtmple" type="text" class="shortcodereadoly" value="[qrc_vcard_template]" readonly ><a href="https://qrcode-composer.dipashi.com/docs/vcard-templete/"> Docs</a>';
+    echo '<input id="qrcvacrdtmple" type="text" class="shortcodereadoly" value="[qrc_vcard_template]" readonly ><a href="https://wordpressqr.sharabindu.com/docs/vcard-templete/"> Docs</a>';
 }
 /**
  * This function is a callback function of  add seeting field
@@ -94,7 +94,7 @@ public function qr_code_vcard()
            <textarea name="qrc_vcard_generator[qrcvcardsingle_note]" id="qrcvcardsingle_note" placeholder="Enter Note" >%s</textarea></p><p class="qrcshortvar">
             <input id="qrcvacrdsingle" type="text" class="shortcodereadoly" value="[qrc_vcard_single]" readonly >
             <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qrcvacrdsingle" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button>
-            <a href="https://qrcode-composer.dipashi.com/docs/vcard-qr-code/">Docs</a></p>', esc_attr($qrcvcardsingle_name), esc_attr($qrcvcardsingle_company), esc_attr($qrcvcardsingle_subtitle),esc_attr($qrcvcardsingle_mbunber),esc_attr($qrcvcardsingle_pbunber),esc_attr($qrcvcardsingle_email), esc_attr($qrcvcardsingle_website),esc_textarea($qrcvcardsingle_address),esc_textarea($qrcvcardsingle_note));
+            <a href="https://wordpressqr.sharabindu.com/docs/vcard-qr-code/">Docs</a></p>', esc_attr($qrcvcardsingle_name), esc_attr($qrcvcardsingle_company), esc_attr($qrcvcardsingle_subtitle),esc_attr($qrcvcardsingle_mbunber),esc_attr($qrcvcardsingle_pbunber),esc_attr($qrcvcardsingle_email), esc_attr($qrcvcardsingle_website),esc_textarea($qrcvcardsingle_address),esc_textarea($qrcvcardsingle_note));
 
 
 

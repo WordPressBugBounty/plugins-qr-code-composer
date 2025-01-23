@@ -7,7 +7,7 @@
  * public-facing side of the site and the admin area.
  *
  * @link       https://sharabindu.com
- * @since      2.0.11
+ * @since      2.0.12
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/includes
@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      2.0.11
+ * @since      2.0.12
  * @package    Qrc_composer
  * @subpackage Qrc_composer/includes
  * @author     Sharabindu Bakshi <sharabindu86@gmail.com>
@@ -35,7 +35,7 @@ class Qrc_composer {
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 * @access   protected
 	 * @var      Qrc_composer_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
@@ -44,7 +44,7 @@ class Qrc_composer {
 	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 * @access   protected
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
@@ -53,7 +53,7 @@ class Qrc_composer {
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 * @access   protected
 	 * @var      string    $version    The current version of the plugin.
 	 */
@@ -66,19 +66,17 @@ class Qrc_composer {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 */
 	public function __construct() {
 		if ( defined( 'QRC_COMPOSER_VERSION' ) ) {
 			$this->version = QRC_COMPOSER_VERSION;
 		} else {
-			$this->version = '2.0.11';
+			$this->version = '2.0.12';
 		}
 		$this->plugin_name = 'qr-code-composer';
 	
-		
 		$this->load_dependencies();
-		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 		
@@ -99,14 +97,13 @@ class Qrc_composer {
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 * @access   private
 	 */
 	private function load_dependencies() {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-qrc_composer-loader.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-qrc-composer-elemnetor.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-qrc_composer-i18n.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-qrc_composer-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/shortcode/class_qrc_customlinks.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-qrc_composer-public.php';
@@ -115,28 +112,12 @@ class Qrc_composer {
 
 	}
 
-	/**
-	 * Define the locale for this plugin for internationalization.
-	 *
-	 * Uses the Qrc_composer_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since    2.0.11
-	 * @access   private
-	 */
-	private function set_locale() {
-
-		$plugin_i18n = new Qrc_composer_i18n();
-
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
-	}
 
 	/**
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
@@ -157,7 +138,7 @@ class Qrc_composer {
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 * @access   private
 	 */
 	private function define_public_hooks() {
@@ -191,7 +172,7 @@ class Qrc_composer {
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
-	 * @since    2.0.11
+	 * @since    2.0.12
 	 */
 	public function run() {
 		$this->loader->run();
@@ -201,7 +182,7 @@ class Qrc_composer {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     2.0.11
+	 * @since     2.0.12
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
@@ -211,7 +192,7 @@ class Qrc_composer {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     2.0.11
+	 * @since     2.0.12
 	 * @return    Qrc_composer_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
@@ -221,7 +202,7 @@ class Qrc_composer {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     2.0.11
+	 * @since     2.0.12
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {

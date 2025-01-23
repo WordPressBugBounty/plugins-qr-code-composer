@@ -1,17 +1,14 @@
 <?php
 /**
- * The file that defines admin area
- *
- * public-facing side of the site and the admin area.
- *
- * @link       https://sharabindu.com
- * @since      1.0.0
- *
- * @package    qrcode
- * @subpackage qrcode/admin
- */
+*
+* @link       https://sharabindu.com
+* @since       2.0.12
+*
+* @package    Qrc_composer
+* @subpackage Qrc_composer/admin/
+*/
 
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 function qrcode_vcard_single_gnr_lite($rand,$size,$name,$company,$subtitle,$mobile,$phone,$email,$website,$address,$note,$qr_download_){
 

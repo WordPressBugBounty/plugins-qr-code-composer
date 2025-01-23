@@ -67,7 +67,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
 
        echo '<p class="qrcshortvar"><label class="mqrc_label" for="qrcuservacrds" style="vertical-align: middle;">Author QR Shortcode (Premium):</label>
             <input id="qrcuservacrds" type="text" class="shortcodereadoly" value="[qrc_user]" readonly style="width:70px;">
-            <a href="https://qrcode-composer.dipashi.com/docs/author-page-qr-code">See Docs</a></p>';
+            <a href="https://wordpressqr.sharabindu.com/docs/author-page-qr-code">See Docs</a></p>';
     }
      function qrc_metavcard_display()
     {
@@ -79,7 +79,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
         printf('<p>
 <div><label class="qrccheckboxwrap" for ="qrc_vcard_myacdash">'.esc_html__('Remove from My account dashboard' ,'qr-code-composer').'<input type="checkbox" id="qrc_vcard_myacdash" value="qrc_vcard_myacdash" name="qrc_admin_integrate[qrc_vcard_myacdash]" %s>
   <span class="qrccheckmark"></span>
-</label> <a class="qrcwdasbordqrdisble" href="https://qrcode-composer.dipashi.com/docs/qr-code-for-customer-woocommerce/#0-toc-title" target="_blank">(how to use)</a></div></p>',esc_attr($checked));
+</label> <a class="qrcwdasbordqrdisble" href="https://wordpressqr.sharabindu.com/docs/qr-code-for-customer-woocommerce/#0-toc-title" target="_blank">(how to use)</a></div></p>',esc_attr($checked));
   
 
     }
@@ -99,7 +99,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
     <span class="shortcodes">
     <span>[bbpress-qrc-composer]</span>
 
-<p>Developer tips: You can use this shortcode on BBPress Profile page hooks. <a href="https://qrcode-composer.dipashi.com/docs/qr-code-for-bbpress-plugin/"  target=_blank>Need Help?</a></p>
+<p>Developer tips: You can use this shortcode on BBPress Profile page hooks. <a href="https://wordpressqr.sharabindu.com/docs/qr-code-for-bbpress-plugin/"  target=_blank>Need Help?</a></p>
 </span>
 <div class="bbpressremovefiled">
     <em><?php echo esc_html__('Remove Field from vCard ', 'qr-code-composer') ?></em>
@@ -136,7 +136,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
     <span class="shortcodesr">
     <span>[buddypress-qrc-composer]</span>
 
-    <p>Developer tips: You can use this shortcode in the hooks on the Buddy Press Profile page. <a href="https://qrcode-composer.dipashi.com/docs/qr-code-for-buddypress-plugin/">Need Help?</a></p>
+    <p>Developer tips: You can use this shortcode in the hooks on the Buddy Press Profile page. <a href="https://wordpressqr.sharabindu.com/docs/qr-code-for-buddypress-plugin/">Need Help?</a></p>
     </span>
 <div class="budypressremovefiled">
     <em><?php echo esc_html__('Remove Field from vCard ', 'qr-code-composer') ?></em>
@@ -173,7 +173,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
     <span class="shortcodesdokan">
     <span>[dokhan-qrc-composer]</span>
 
-    <p>Developer tips: You can use this shortcode in the hooks on the Dokan Vernor Page. <a href="https://qrcode-composer.dipashi.com/docs/qr-code-for-dokan-vendor/" target=_blank>Need Help?</a></p>
+    <p>Developer tips: You can use this shortcode in the hooks on the Dokan Vernor Page. <a href="https://wordpressqr.sharabindu.com/docs/qr-code-for-dokan-vendor/" target=_blank>Need Help?</a></p>
     </span>
 <div class="dokanremovefiled">
     <em><?php echo esc_html__('Remove Field from vCard ', 'qr-code-composer') ?></em>

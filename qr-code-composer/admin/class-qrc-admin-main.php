@@ -72,7 +72,7 @@ function qrc_pro_func(){
                           <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
-                          <li><a href="https://qrcode-composer.dipashi.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/contact-us/" target="_blank"><?php echo esc_html('Support', 'qr-code-composer') ?></a></li>
                           <li><a href="https://sharabindu.com/plugins/" target="_blank"><?php echo esc_html('More Plugin', 'qr-code-composer') ?></a></li>
@@ -127,7 +127,7 @@ function qrc_pro_func(){
                           <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_ordermail" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
-                          <li><a href="https://qrcode-composer.dipashi.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/contact-us/" target="_blank"><?php echo esc_html('Support', 'qr-code-composer') ?></a></li>
                           <li><a href="https://sharabindu.com/plugins/" target="_blank"><?php echo esc_html('More Plugin', 'qr-code-composer') ?></a></li>
@@ -195,7 +195,7 @@ function qrc_pro_func(){
                           <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardsettings" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
-                          <li><a href="https://qrcode-composer.dipashi.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/contact-us/" target="_blank"><?php echo esc_html('Support', 'qr-code-composer') ?></a></li>
                           <li><a href="https://sharabindu.com/plugins/" target="_blank"><?php echo esc_html('More Plugin', 'qr-code-composer') ?></a></li>
@@ -245,10 +245,10 @@ function qrc_pro_func(){
         <div class="qrcodewrap">
                   <div class="qr_wp_admin">
                       <ul class="qrc_nav_bar">
-                          <li><a href="https://qrcode-composer.dipashi.com/qr-code-download/" target="_blank"><?php echo esc_html('Live demo', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/qr-code-download/" target="_blank"><?php echo esc_html('Live demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
-                          <li><a href="https://qrcode-composer.dipashi.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/contact-us/" target="_blank"><?php echo esc_html('Support', 'qr-code-composer') ?></a></li>
                           <li><a href="https://sharabindu.com/plugins/" target="_blank"><?php echo esc_html('More Plugin', 'qr-code-composer') ?></a></li>
@@ -337,9 +337,9 @@ function qrc_print_pdf()
                 <div class="qrcodewrap">
                   <div class="qr_wp_admin">
                       <ul class="qrc_nav_bar">
-                          <li><a href="https://qrcode-composer.dipashi.com/qr-code-print-demo/" target="_blank"><?php echo esc_html('Bulk Print demo', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/qr-code-print-demo/" target="_blank"><?php echo esc_html('Bulk Print demo', 'qr-code-composer') ?></a></li>
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy premium', 'qr-code-composer') ?></a></li>
-                          <li><a href="https://qrcode-composer.dipashi.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/contact-us/" target="_blank"><?php echo esc_html('Support', 'qr-code-composer') ?></a></li>
                           <li><a href="https://sharabindu.com/plugins/" target="_blank"><?php echo esc_html('More Plugin', 'qr-code-composer') ?></a></li>
@@ -443,9 +443,9 @@ function qrc_print_pdf()
                  <ul class="qrc_nav_bar">
                      <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/"><?php echo esc_html('Pro Page', 'qr-code-composer') ?></a></li>                  
                      <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qr_composer"><?php echo esc_html('Pro dashboard', 'qr-code-composer') ?></a></li>
-                     <li><a href="https://qrcode-composer.dipashi.com/"><?php echo esc_html('Pro Demo', 'qr-code-composer') ?></a>
+                     <li><a href="https://wordpressqr.sharabindu.com/"><?php echo esc_html('Pro Demo', 'qr-code-composer') ?></a>
                      </li>
-                     <li><a href="https://qrcode-composer.dipashi.com/docs/introduction/"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
+                     <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
                      <li><a href="https://wordpress.org/support/plugin/qr-code-composer/"><?php echo esc_html('Support', 'qr-code-composer') ?></a></li>
 
 
@@ -685,6 +685,9 @@ function qrc_print_pdf()
 $plugins = [
   [
     'slug' => 'qr-code-composer',
+  ],
+  [
+    'slug' => 'barcode-generator-for-woocommerce',
   ],
   [
     'slug' => 'mini-cart-for-woocommerce',

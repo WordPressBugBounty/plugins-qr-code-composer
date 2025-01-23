@@ -1,14 +1,24 @@
 <?php
-    	$options1 = get_option('qrc_composer_settings');
+/**
+*
+* @link       https://sharabindu.com
+* @since       2.0.12
+*
+* @package    Qrc_composer
+* @subpackage Qrc_composer/includes/
+*/
 
-        $current_id = get_the_ID();
-        $current_title = get_the_title($current_id);
-        $current_id_link = get_the_permalink($current_id);
-        $qrc_meta_display = get_post_meta($current_id, 'qrc_metabox', true) ? get_post_meta($current_id, 'qrc_metabox', true) : 1;
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+    $options1 = get_option('qrc_composer_settings');
 
-        $qrc_qr_image = '';
-        $post_types = get_post_types();
-        $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';
+    $current_id = get_the_ID();
+    $current_title = get_the_title($current_id);
+    $current_id_link = get_the_permalink($current_id);
+    $qrc_meta_display = get_post_meta($current_id, 'qrc_metabox', true) ? get_post_meta($current_id, 'qrc_metabox', true) : 1;
+
+    $qrc_qr_image = '';
+    $post_types = get_post_types();
+    $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';
 
     $qrc_size = isset($options1['qr_code_picture_size_width']) ? $options1['qr_code_picture_size_width'] : 200;
     $qrc_dwnbtn_brdius = isset($options1['qrc_dwnbtn_brdius']) ? $options1['qrc_dwnbtn_brdius'] : '20';
@@ -17,13 +27,13 @@
     $qr_dwnbtnbg_color = (isset($options1['qr_dwnbtnbg_color'])) ? $options1['qr_dwnbtnbg_color'] : '#44d813';
     $qr_dwnbtn_color = (isset($options1['qr_dwnbtn_color'])) ? $options1['qr_dwnbtn_color'] : '#000';
     $download_qr = isset($options1['qr_download_text']) ? $options1['qr_download_text'] : 'Download QR 🡻';
-        $qrc_alignment = isset($options1['qrc_select_alignment']) ? $options1['qrc_select_alignment'] : 'left';
+    $qrc_alignment = isset($options1['qrc_select_alignment']) ? $options1['qrc_select_alignment'] : 'left';
     $qr_download_hide = isset($options1['qr_download_hide']) ? $options1['qr_download_hide'] : 'no';
     $qr_download_brclr = isset($options1['qr_download_brclr']) ? $options1['qr_download_brclr'] : '#44d813';
-        $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';    
-        $popupcustomqr = isset($options1['popupcustomqr']) ? 'checked' : '';
-        $popupcustomqr = isset($options1['popupcustomqr']) ? 'checked' : '';
-        $popupvcardqr = isset($options1['popupvcardqr']) ? 'checked' : '';
+    $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';    
+    $popupcustomqr = isset($options1['popupcustomqr']) ? 'checked' : '';
+    $popupcustomqr = isset($options1['popupcustomqr']) ? 'checked' : '';
+    $popupvcardqr = isset($options1['popupvcardqr']) ? 'checked' : '';
 
     $qrcpopupenbl = isset($options1['qrcpopupenbl']) ? 'checked' : '';
 
@@ -45,21 +55,21 @@
     $text = isset($options['qr_code_custom_text']) ? $options['qr_code_custom_text'] : '';
     $whatsapp = isset($options['qr_code_mail_text']) ? $options['qr_code_mail_text'] : '+1895767567';
     $number = isset($options['qr_code_phonenumber']) ? $options['qr_code_phonenumber'] : '+98732382';
-        $options2 = get_option('qrc_vcard_generator');
+    $options2 = get_option('qrc_vcard_generator');
 
-        $name = isset($options2['qrcvcardsingle_name']) ? $options2['qrcvcardsingle_name'] : '';    
-        $company = isset($options2['qrcvcardsingle_company']) ? $options2['qrcvcardsingle_company'] : '';
-        $subtitle = isset($options2['qrcvcardsingle_subtitle']) ? $options2['qrcvcardsingle_subtitle'] : '';
-        $mobile = isset($options2['qrcvcardsingle_mbunber']) ? $options2['qrcvcardsingle_mbunber'] : '';
-        $phone = isset($options2['qrcvcardsingle_pbunber']) ? $options2['qrcvcardsingle_pbunber'] : '';
-        $email = isset($options2['qrcvcardsingle_email']) ? $options2['qrcvcardsingle_email'] : '';
-        $address = isset($options2['qrcvcardsingle_address']) ? $options2['qrcvcardsingle_address'] : '';
-        $note = isset($options2['qrcvcardsingle_note']) ? $options2['qrcvcardsingle_note'] : '';
-        $website = isset($options2['qrcvcardsingle_website']) ? $options2['qrcvcardsingle_website'] : '';
+    $name = isset($options2['qrcvcardsingle_name']) ? $options2['qrcvcardsingle_name'] : '';    
+    $company = isset($options2['qrcvcardsingle_company']) ? $options2['qrcvcardsingle_company'] : '';
+    $subtitle = isset($options2['qrcvcardsingle_subtitle']) ? $options2['qrcvcardsingle_subtitle'] : '';
+    $mobile = isset($options2['qrcvcardsingle_mbunber']) ? $options2['qrcvcardsingle_mbunber'] : '';
+    $phone = isset($options2['qrcvcardsingle_pbunber']) ? $options2['qrcvcardsingle_pbunber'] : '';
+    $email = isset($options2['qrcvcardsingle_email']) ? $options2['qrcvcardsingle_email'] : '';
+    $address = isset($options2['qrcvcardsingle_address']) ? $options2['qrcvcardsingle_address'] : '';
+    $note = isset($options2['qrcvcardsingle_note']) ? $options2['qrcvcardsingle_note'] : '';
+    $website = isset($options2['qrcvcardsingle_website']) ? $options2['qrcvcardsingle_website'] : '';
 
 
-        if($qrchidefrontend == 'checked' && $qrcpopupenbl != 'checked'){
-        $displayblock = 'none';
-        }else{
-        $displayblock = 'inline-block'; 
-        }
+    if($qrchidefrontend == 'checked' && $qrcpopupenbl != 'checked'){
+    $displayblock = 'none';
+    }else{
+    $displayblock = 'inline-block'; 
+    }

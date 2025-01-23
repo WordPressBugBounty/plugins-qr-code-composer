@@ -1,11 +1,11 @@
 <?php
 /*
- * Plugin Name: Automatic QR Code Generator - QR Code Composer
- * Description: Automatically Generate QR Code for WordPress pages, posts, products, custom post.
+ * Plugin Name: QR Code Composer
+ * Description: Creates dynamic QR codes for WordPress pages, posts, products and custom posts.
  * Tags: QR Code, qrcode,vCard, Shortcode, WooCommerce, QR Code Widget, QR Code Shortcode, post, page, product
  * Author: Sharabindu
  * Author URI:  https://sharabindu.com/plugins/wordpress-qr-code-generator/
- * Version: 2.0.11
+ * Version: 2.0.12
  * Text Domain: qr-code-composer
  * Domain Path: /languages
  * License: GPLv2 or later
@@ -34,10 +34,10 @@ function deactivate_QRCpro_version(){
 
 /**
  * Currently plugin version.
- * Start at version 2.0.11 and use SemVer - https://semver.org
+ * Start at version 2.0.12 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'QRC_COMPOSER_VERSION', '2.0.11' );
+define( 'QRC_COMPOSER_VERSION', '2.0.12' );
 
 /**
  * The core plugin path that is used to define internationalization
@@ -92,7 +92,7 @@ require QRC_COMPOSER_PATH . 'includes/data/data.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    2.0.11
+ * @since    2.0.12
  */
 function run_qrc_composer() {
 
