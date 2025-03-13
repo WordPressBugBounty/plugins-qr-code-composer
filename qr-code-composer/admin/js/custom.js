@@ -483,7 +483,7 @@ $("div#qrccomsposerprviewss").css('opacity','1');
         $('.qrc_metavcard_display th').append("<p>Automatically displaying QR Code for WooCommerce customers.</p>");
 
 
-        $('.qr_code_vcard th').append("<p>A simple vCard QR code based on the information on the side. If you want to generate more, use the  <a href='https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode'> shortcode generator for vCard</a></p>");
+        $('.qr_code_vcard th').append("<p>A simple vCard QR code based on the information on the side. If you want to generate more, use the  <a href='https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode'> shortcode generator for vCard</a></p>");
         $('.qrc_vacrdtempe th').append("<p>vCard Templates is a feature for displaying vCard information on the frontend. <a href='https://wordpressqr.sharabindu.com/card/elizabeth-i-brown/'>View Demo</a></p>");
 		        $('.qrc_vacrdauodisplay th').append("<p>Meta vCard QR code will be automatically displayed on the frontend after the content.</p>");
 		

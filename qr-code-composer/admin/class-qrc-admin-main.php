@@ -69,7 +69,7 @@ function qrc_pro_func(){
                 <div class="qrcodewrap">
                   <div class="qr_wp_admin">
                       <ul class="qrc_nav_bar">
-                          <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
                           <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
@@ -103,7 +103,7 @@ function qrc_pro_func(){
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout"><?php esc_html_e('Upgrade and Unlock ', 'qr-code-composer'); ?><span class="dashicons dashicons-unlock"></span></a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode" target="_blank"><?php esc_html_e('Backend Demo for Pro', 'qr-code-composer'); ?></a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode" target="_blank"><?php esc_html_e('Backend Demo for Pro', 'qr-code-composer'); ?></a>
 </div>
 <div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -124,7 +124,7 @@ function qrc_pro_func(){
                 <div class="qrcodewrap">
                   <div class="qr_wp_admin">
                       <ul class="qrc_nav_bar">
-                          <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_ordermail" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_ordermail" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
                           <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
@@ -166,7 +166,7 @@ function qrc_pro_func(){
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_ordermail" target="_blank">Backend Demo for Pro</a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_ordermail" target="_blank">Backend Demo for Pro</a>
 </div>
 <div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -192,7 +192,7 @@ function qrc_pro_func(){
                 <div class="qrcodewrap">
                   <div class="qr_wp_admin">
                       <ul class="qrc_nav_bar">
-                          <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardsettings" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
+                          <li><a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardsettings" target="_blank"><?php echo esc_html('Pro Dashbord demo', 'qr-code-composer') ?></a></li>
 
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Buy Premium', 'qr-code-composer') ?></a></li>
                           <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
@@ -225,7 +225,7 @@ function qrc_pro_func(){
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardlist" target="_blank">Backend Demo for Pro</a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardlist" target="_blank">Backend Demo for Pro</a>
 </div>
 <div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -291,7 +291,7 @@ function qrc_pro_func(){
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_list_view" target="_blank">Backend Demo for Pro</a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_list_view" target="_blank">Backend Demo for Pro</a>
 </div>
 <div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -309,7 +309,7 @@ function qrc_pro_func(){
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_list_view&tab=qrc_list_page" target="_blank">Backend Demo for Pro</a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_list_view&tab=qrc_list_page" target="_blank">Backend Demo for Pro</a>
 </div>
 <div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -382,7 +382,7 @@ function qrc_print_pdf()
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Unlock Bulk Print</a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_print_pdf" target="_blank"> Live demo of Bulk Print QR code</a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_print_pdf" target="_blank"> Live demo of Bulk Print QR code</a>
 </div>
 <div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -400,7 +400,7 @@ function qrc_print_pdf()
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Unlock Bulk Print</a>
-<a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_print_pdf&tab=qrc_print_page" target="_blank"> Live demo of Bulk Print QR code</a>
+<a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_print_pdf&tab=qrc_print_page" target="_blank"> Live demo of Bulk Print QR code</a>
 </div>
 <div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
         </div>
@@ -442,7 +442,7 @@ function qrc_print_pdf()
              <div class="qr_wp_admin">
                  <ul class="qrc_nav_bar">
                      <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/"><?php echo esc_html('Pro Page', 'qr-code-composer') ?></a></li>                  
-                     <li><a href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qr_composer"><?php echo esc_html('Pro dashboard', 'qr-code-composer') ?></a></li>
+                     <li><a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qr_composer"><?php echo esc_html('Pro dashboard', 'qr-code-composer') ?></a></li>
                      <li><a href="https://wordpressqr.sharabindu.com/"><?php echo esc_html('Pro Demo', 'qr-code-composer') ?></a>
                      </li>
                      <li><a href="https://wordpressqr.sharabindu.com/docs/introduction/"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
@@ -522,7 +522,7 @@ function qrc_print_pdf()
          <div class="rightsidelast">
                        <div>
                      <div class="qrc_pro_ftcs_cont firstpages">
-                     <h4 class="pro_ftcs__h" style="font-size: 90%;"><?php echo esc_html__('Premium QR design', 'qr-code-composer') ?></h4><a href="https://qrc-admin.dipashi.com/wp-admin/?wtlwp_token=62fc8bc484c0bbc6ddd807f4b374079973d5afb3d92fd3a287f6cb1c5f2af853354fbbb9bad24ca14f7da1ea4acfa257d223d70afa3239febb3fcdac2256ab52" title="Click to view Pro Dashboard">
+                     <h4 class="pro_ftcs__h" style="font-size: 90%;"><?php echo esc_html__('Premium QR design', 'qr-code-composer') ?></h4><a href="https://wordpressqrcode.sharabindu.com/wp-admin/?wtlwp_token=62fc8bc484c0bbc6ddd807f4b374079973d5afb3d92fd3a287f6cb1c5f2af853354fbbb9bad24ca14f7da1ea4acfa257d223d70afa3239febb3fcdac2256ab52" title="Click to view Pro Dashboard">
                      <img src="<?php echo esc_url( QRC_COMPOSER_URL . '/admin/img/images-min.png') ?>" alt="Pro Features"></a>
 
                      
@@ -559,11 +559,11 @@ function qrc_print_pdf()
                      <img style="box-shadow: 2px 2px 11px 2px #9f9f9f;" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/order-qr-code.png') ?>" alt="Pro Features">
 
 
-                     <a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=codemanas-woocommerce-preview-emails"><?php echo esc_html__('Order Email Demo', 'qr-code-composer') ?></a>
+                     <a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=codemanas-woocommerce-preview-emails"><?php echo esc_html__('Order Email Demo', 'qr-code-composer') ?></a>
         <a class="oreremils" id="orderemail" video-url="https://www.youtube.com/watch?v=hSCa9Tz0FZc" style="cursor: pointer;"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a>
          <h4 class="rotnfjj"><?php echo esc_html__('Order QR code in PDF Invoice', 'qr-code-composer') ?></h4>
  <img style="box-shadow: 2px 2px 11px 2px #9f9f9f;" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/pdf-min.png') ?>" alt="Pro Features">
-                     <a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/edit.php?post_type=shop_order"><?php echo esc_html__('PDF Demo', 'qr-code-composer') ?></a>
+                     <a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/edit.php?post_type=shop_order"><?php echo esc_html__('PDF Demo', 'qr-code-composer') ?></a>
                  </div>
              </div>
          </div> 
@@ -593,9 +593,9 @@ function qrc_print_pdf()
       </div><div class="qrc_wrap-md-4">
                     <div class="qrc_pro_ftcs_cont">
                      <h4 class="pro_ftcs__h"><?php echo esc_html__('Shortcode Generator (Premium)', 'qr-code-composer') ?></h4>
-                     <p><?php echo esc_html__('In the premium version, you can create multiple shortcodes for each element. Also can do different QR designs, logo changes etc', 'qr-code-composer') ?></p><a  href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode" title="Click to view Pro Dashboard">
+                     <p><?php echo esc_html__('In the premium version, you can create multiple shortcodes for each element. Also can do different QR designs, logo changes etc', 'qr-code-composer') ?></p><a  href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode" title="Click to view Pro Dashboard">
                      <img class="shrycodegenrs" src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/shortcodegene-min.png') ?>" alt="Pro Features"></a>
-                     <a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_shortcode"><?php echo esc_html__('Pro Backend Demo', 'qr-code-composer') ?></a>
+                     <a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode"><?php echo esc_html__('Pro Backend Demo', 'qr-code-composer') ?></a>
 
                  </div>
 
@@ -623,11 +623,11 @@ function qrc_print_pdf()
                      <h4 class="pro_ftcs__h">Bulk vCard (Premium)</h4>
  <img src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/vcarddemo-min.png') ?>" alt="Pro Features" class="varcdemos">
                      
-                    <a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/post.php?post=3133&action=edit">Pro Backend Demo</a>
+                    <a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/post.php?post=3133&action=edit">Pro Backend Demo</a>
 <h4 class="pro_ftcs__h">Downlaod All vCard Images: (Premium)</h4>
  <p>You can download all Meta vCard QR code images from one page. Ability to filter by post type and pagination. </p>                    
  <img src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/downlaod-vcard-min.png') ?>" alt="Pro Features" class="varcdemos">
-<a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardlist">Backend demo</a>
+<a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardlist">Backend demo</a>
 
 
 
@@ -665,11 +665,11 @@ function qrc_print_pdf()
                      <h4 class="pro_ftcs__h">Widget API Suported (Premium)</h4>
  <p>Users can create and display QR codes using WordPress widgets</p>                    
  <img src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/widget-min.png') ?>" alt="Pro Features" class="varcdemos">
-<a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/widgets.php">Widget Backend demo</a>
+<a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/widgets.php">Widget Backend demo</a>
                      <h4 class="pro_ftcs__h">Elementor Addon: (Premium)</h4>
  <p>We have introduced the “QR Code Composer” addon to generate QR codes with Elementor. With this addon, you can generate QR codes for the current page URL, custom link, custom text, Google map location, Wi-Fi access, WhatsApp access, Vcard, event QR, email, and number.</p>                    
  <img src="<?php echo esc_url(QRC_COMPOSER_URL . '/admin/img/elementor-min.png') ?>" alt="Pro Features" class="varcdemos">
-<a class="qrc_gtnow" href="https://qrc-admin.dipashi.com/wp-admin/post.php?post=2984&action=elementor">Elementor Backend demo</a>
+<a class="qrc_gtnow" href="https://wordpressqrcode.sharabindu.com/wp-admin/post.php?post=2984&action=elementor">Elementor Backend demo</a>
 <a class="oreremils" id="elemtvide" video-url="https://www.youtube.com/watch?v=USdX-PuPjuU&t=3s" style="cursor: pointer;"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a>
 
                  </div>

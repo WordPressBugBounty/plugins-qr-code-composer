@@ -1,31 +1,31 @@
-﻿=== QR Code Composer - Dynamic QR code Generator ===
-Plugin Name: QR Code Composer - Dynamic QR code Generator
+﻿=== QR Code Composer (Auto QR Code Generator ) ===
+Plugin Name: QR Code Composer (Auto QR Code Generator)
 Contributors: sharabindu
-Tags: QR Code, qrcode, qr code generator, WordPress qr code, woocommerce qr
+Tags: QR Code, qrcode, qr code generator, qr code plugin, order qr code
 Donate link: https://sharabindu.com/donation/
 Requires at least: 6.0
 Tested up to: 6.7.1
 Requires PHP: 7.1
-Stable tag: 2.0.12
-Version: 2.0.12
+Stable tag: 2.0.13
+Version: 2.0.13
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Creates dynamic QR codes for WordPress pages, posts, products, and custom posts.
+This is an automatic QR code generator plugin for WordPress pages, posts, products, and custom posts.
 
 == Description ==
 
-This is a QR code generator plugin for the WordPress website. Creates dynamic QR codes for WordPress pages, posts, products, and custom posts.
+This is an automatic QR code generator plugin for WordPress pages, posts, products, and custom posts.
 
-Easy to install and use. generate dynamic QR codes with automatic display and custom settings. Content can be the current page URL, any text, and any links.
+It can generate vcard QR Codes for all your WordPress users. It can also generate custom link QR Codes, custom text QR Codes, WhatsApp QR Codes, custom vcard QR Codes. Easy to install and use. 
 
 
 ###QR CODE FEATURES
 
 
-**Generate dynamic QR code:** Generates dynamic QR codes for all pages, posts, products and custom posts on a WordPress website.QR code Automatically generated and displayed after the content. The QR code updates as the URL changes.
+**Generate Dynamic QR code:** Generates dynamic QR codes for all pages, posts, products and custom posts on a WordPress website.QR code Automatically generated and displayed after the content. The QR code updates as the URL changes.
 
 
 **Create Custom QR code:** QR code can be generated from any custom link, text or number. Which can be displayed on the frontend of the website through shortcodes
@@ -84,7 +84,7 @@ To generate QR codes with Elementor Page Builder, QR Code Addon is included in t
 ###Preview WordPress QR Code Generator
 [youtube https://youtu.be/MshS57Upc-s]
 
-&#9658; **CUSTOM SHAPE QR CODE:** The body shape of the QR code can be changed in the premium version. Also, gradient colors can be applied to it. Using square, dot, round, extra-round, sub-round features, the QR code body can design a variety of shapes.[Admin Demo for premium version](https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qr_composer)
+&#9658; **CUSTOM SHAPE QR CODE:** The body shape of the QR code can be changed in the premium version. Also, gradient colors can be applied to it. Using square, dot, round, extra-round, sub-round features, the QR code body can design a variety of shapes.[Admin Demo for premium version](https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qr_composer)
 
 
 &#9658; **EYES OF QR CODE:** The premium version can change the different sizes of the eye frame of the QR code. Gradient colors can be can be applied to it. You can design different eye frame shapes in QR Code using Square, Circle, Classy, and Classy Round features.
@@ -93,7 +93,7 @@ To generate QR codes with Elementor Page Builder, QR Code Addon is included in t
 
 &#9658; **LOGO ON QR CODE:** The premium version allows you to place the website's brand logo or business logo in the center of the QR code. Uniquely designed QR codes can be created using the business brand logo, which is helpful in promoting the brand name.
 
-&#9658; **WOOCOMMERCE ORDER QR CODE:** Generates QR code for every new order and old order on the WooCommerce website. The content of the QR code can be controlled from the plugin's settings page. This QR code can be seen on WooCommerce's order dashboard on the website. This QR code can be displayed on the order email and order invoice. [Admin Demo for Order QR](https://qrc-admin.dipashi.com/wp-admin/admin.php?page=qrc_ordermail)
+&#9658; **WOOCOMMERCE ORDER QR CODE:** Generates QR code for every new order and old order on the WooCommerce website. The content of the QR code can be controlled from the plugin's settings page. This QR code can be seen on WooCommerce's order dashboard on the website. This QR code can be displayed on the order email and order invoice. [Admin Demo for Order QR](https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_ordermail)
 
 &#9658; **QR CODE TO THE ORDER EMAIL:** A QR code in the order email helps to view the order quickly. After the order is completed, the QR code will appear in the WooCommerce order email. This QR code can be generated from various elements like order number, and order details
 
@@ -189,20 +189,23 @@ Click “Install” and “Activate”.
 == Frequently Asked Questions ==
 
 
-= What is WordPress QR code? =
-"WordPress QR Code" refers to a quick response code created within a WordPress website. This WordPress QR Code plugin helps you create dynamic QR codes for all pages, posts, products, and custom posts on your WordPress website.
+= What is WordPress QR code plugin? =
+"WordPress QR Code" Pluign refers to a quick response code created within a WordPress website. This WordPress QR Code plugin helps you create dynamic QR codes for all pages, posts, products, and custom posts on your WordPress website.
+
+= How you can benefit from this QR code plugin? =
+
+This QR Code Plugin helps you to generate QR Codes for WordPress and WooCommerce sites. The auto generate feature is capable of generating QR Codes for all pages, posts, products and custom posts. It can generate vcard QR Codes for all your WordPress users. It can also generate custom link QR Codes, custom text QR Codes, WhatsApp QR Codes, custom vcard QR Codes.
+
+
+= How long are the QR codes valid? =
+This QR code is considered valid for the lifetime of the website. So, it never expires unless the QR code content changes. Once generated, the QR code remains usable indefinitely.
 
 = How are QR codes created? Depend on Google API? =
-This QR Code Plugin is generated based on a URL or any custom content. QR codes are generated using pure JavaScript. These QR code images are stable and have lifetime validity. it is not dependent on Google API or any other 3rd party API.
+This QR codes are generated using pure JavaScript. These QR code images are stable and have lifetime validity. it is not dependent on Google API or any other 3rd party API.
 
 
 = What is dynamic QR Code? =
-"Dynamic QR Code" means that it can be edited and updated after creation.
-Our QR codes change or update as the content changes. Dynamic QR codes are created for all elements, including URLs or other custom content. So, it is called Dynamic QR Code Generator Plugin.
-
-
-= Will the QR code composer plugin work on all themes? =
-Yes, this QR code plugin will work on all types of WordPress themes and generate QR codes. It is a free QR code generator plugin for WordPress users.
+"Dynamic QR Code" means that it can be edited and updated after creation. The QR codes change or update as the content changes. Dynamic QR codes are created for all elements, including URLs or other custom content.
 
 
 = Where is the WooCommerce QR code located on the Single product page? =
@@ -227,6 +230,13 @@ This QR code closes the frontend but it will always be there in the meta box sec
 
 No, the QR code is generated instantly on the web page and the QR code image is not stored anywhere.
 
+
+
+= Will the QR code composer plugin work on all themes? =
+Yes, this QR code plugin will work on all types of WordPress themes and generate QR codes. It is a free QR code generator plugin for WordPress users.
+
+
+
 == Screenshots ==
 
 1. QR code on frontend with POpup Features
@@ -243,6 +253,9 @@ No, the QR code is generated instantly on the web page and the QR code image is 
 
 
 == Changelog ==
+
+= 2.0.13 =
+- Update: Compatibility Update
 
 = 2.0.12 =
 - Fix: QR code on product page as tab

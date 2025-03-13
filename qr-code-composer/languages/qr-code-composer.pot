@@ -706,7 +706,7 @@ msgstr ""
 #: includes/elements/qrc_composer_elements.php:310
 msgid ""
 "<p>Check out the Premium Version QR Code on the Elementor Editor page <a "
-"href=\"https://qrc-admin.dipashi.com/wp-admin/post.php?"
+"href=\"https://wordpressqrcode.sharabindu.com/wp-admin/post.php?"
 "post=2984&action=elementor\" traget=\"_blank\">View Demo</a> | <a "
 "href=\"https://sharabindu.com/plugins/wordpress-qr-code-generator/\" "
 "traget=\"_blank\">Plugin Page</a></p>"
