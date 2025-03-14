@@ -6,8 +6,8 @@ Donate link: https://sharabindu.com/donation/
 Requires at least: 6.0
 Tested up to: 6.7.1
 Requires PHP: 7.1
-Stable tag: 2.0.13
-Version: 2.0.13
+Stable tag: 2.0.14
+Version: 2.0.14
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
@@ -253,6 +253,9 @@ Yes, this QR code plugin will work on all types of WordPress themes and generate
 
 
 == Changelog ==
+
+= 2.0.14 =
+- Fix: QR Code Download File on Proudct page
 
 = 2.0.13 =
 - Update: Compatibility Update

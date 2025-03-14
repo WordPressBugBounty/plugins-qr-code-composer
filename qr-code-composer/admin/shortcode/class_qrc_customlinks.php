@@ -93,7 +93,7 @@ class QRCoserpsgortcode{
         $i++;
 
         if ($qr_download_hide == "no") {
-                $qr_download_ = '<div><a download="' .$current_title . '.png" class="qrcdownloads">
+                $qr_download_ = '<div><a download="' .$current_title . '.png" class="qrcdownloads" id="worign">
            <button type="button" style="min-width:' . $qrc_size. "px;background:" . $qr_dwnbtnbg_color . ";color:" . $qr_dwnbtn_color . ';font-weight: 600;border: 1px solid '.$qr_download_brclr.';border-radius:'.$qrc_dwnbtn_brdius.'px;font-size:'.$qr_download_fntsz.'px;padding: 6px 0;" class="uqr_code_btn">' . esc_html($download_qr). '</button>
            </a></div>';
             } else {
