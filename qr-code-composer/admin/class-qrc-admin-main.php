@@ -105,7 +105,7 @@ function qrc_pro_func(){
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout"><?php esc_html_e('Upgrade and Unlock ', 'qr-code-composer'); ?><span class="dashicons dashicons-unlock"></span></a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode" target="_blank"><?php esc_html_e('Backend Demo for Pro', 'qr-code-composer'); ?></a>
 </div>
-<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
                     
@@ -152,7 +152,7 @@ function qrc_pro_func(){
   </div>
 
 
-<div class="tab-content">
+<div class="qrctab-content">
   
   <div class="tab1-tab active">
     <div class="bulptiblur">
@@ -161,14 +161,14 @@ function qrc_pro_func(){
 <div class="bulptinyprowarp">
 <div class="bulptinypro">
             <h3>WooCommerce Order QR Code</h3>
-<p>After an order is completed, the QR code will be printed on the order email. Order Email QR Code can be created from different elements. Order ID, Transaction ID, Billing Address, Order Amount, Order Date, Shipping Cost, and more. These items can be user-controlled. This means you can control what elements are included in the order QR code</p>
+<p>The QR code is included in the order email. order QR code a unique Benefit in management of sales process. Order QR Code can be created from  Order ID, Transaction ID, Billing Address, Order Amount, Order Date, Shipping Cost, and more.</p>
 
 <div class="mqrfeatures">
 
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_ordermail" target="_blank">Backend Demo for Pro</a>
 </div>
-<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
 </div>
@@ -227,7 +227,7 @@ function qrc_pro_func(){
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_vcardlist&tab=vcardlist" target="_blank">Backend Demo for Pro</a>
 </div>
-<div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"> <span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
                     
@@ -273,7 +273,7 @@ function qrc_pro_func(){
   </div>
 
 
-<div class="tab-content">
+<div class="qrctab-content">
   
   <div class="tab1-tab active">
     <div class='qrcprosd'>
@@ -293,7 +293,7 @@ function qrc_pro_func(){
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_list_view" target="_blank">Backend Demo for Pro</a>
 </div>
-<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
         </div>
@@ -311,7 +311,7 @@ function qrc_pro_func(){
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Upgrade and Unlock <span class="dashicons dashicons-unlock"></span></a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_list_view&tab=qrc_list_page" target="_blank">Backend Demo for Pro</a>
 </div>
-<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"> <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
 
@@ -364,7 +364,7 @@ function qrc_print_pdf()
   </div>
 
 
-<div class="tab-content">
+<div class="qrctab-content">
   
   <div class="tab1-tab active">
 
@@ -384,7 +384,7 @@ function qrc_print_pdf()
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Unlock Bulk Print</a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_print_pdf" target="_blank"> Live demo of Bulk Print QR code</a>
 </div>
-<div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
       </div>
@@ -402,7 +402,7 @@ function qrc_print_pdf()
 <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank" class="mqrlocout">Unlock Bulk Print</a>
 <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_print_pdf&tab=qrc_print_page" target="_blank"> Live demo of Bulk Print QR code</a>
 </div>
-<div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 40% off</strong> </span><!----></div>
+<div class="mediumbonus-alert"><img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/bonus.png') ;?>" alt="bonus"><span><strong>Bonus:</strong> You can upgrade to the Pro plan today and <strong>save 29% off</strong> </span><!----></div>
         </div>
         </div>
 </div>
@@ -471,7 +471,7 @@ function qrc_print_pdf()
 
   </ul> <!-- END tabs-nav -->
 </div>
-  <div class="tab-content">
+  <div class="qrctab-content">
 
     <div  class="tab1-tab active">
         <form method="post" action="options.php" class="qrcdesings" >

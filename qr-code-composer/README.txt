@@ -4,10 +4,10 @@ Contributors: sharabindu
 Tags: QR Code, qrcode, qr code generator, qr code plugin, order qr code
 Donate link: https://sharabindu.com/donation/
 Requires at least: 6.0
-Tested up to: 6.7.1
+Tested up to: 6.7.2
 Requires PHP: 7.1
-Stable tag: 2.0.14
-Version: 2.0.14
+Stable tag: 2.0.15
+Version: 2.0.15
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
@@ -253,6 +253,9 @@ Yes, this QR code plugin will work on all types of WordPress themes and generate
 
 
 == Changelog ==
+
+= 2.0.15 =
+- Fix: QR Code Show/Hide on Product Page Issues Fixed
 
 = 2.0.14 =
 - Fix: QR Code Download File on Proudct page

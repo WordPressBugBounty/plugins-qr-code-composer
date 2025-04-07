@@ -524,8 +524,8 @@ jQuery(document).ready(function($) {
     var active_section,
       tab_names;
 
-    // Get all classes ending with -tab from div elements directly inside .tab-content.
-    tab_names = $('div.tab-content > div').map(function() {
+    // Get all classes ending with -tab from div elements directly inside .qrctab-content.
+    tab_names = $('div.qrctab-content > div').map(function() {
       var tab_name = get_tab_name_from_class($(this));
       if (tab_name) {
         return tab_name.split(tab_suffix)[0];
@@ -542,8 +542,8 @@ jQuery(document).ready(function($) {
         active_section = document.location.href.split('#')[1];
       }
       // Handle tab contents.
-      $('div.tab-content div.active').removeClass('active');
-      $('div.tab-content div.' + active_section + tab_suffix).addClass('active');
+      $('div.qrctab-content div.active').removeClass('active');
+      $('div.qrctab-content div.' + active_section + tab_suffix).addClass('active');
 
       // Handle tab menu.
       $('div.tab-nav ul li.active').removeClass('active');

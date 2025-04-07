@@ -298,7 +298,11 @@ img.qrcpreiumversion {
     top: 25px;
     transform: translate(-50%, 0%);
 }
-.tab-content {
+.mqrfeatures a.mqrlocout:hover {
+    background: #468301;
+}
+.qrctab-content {
+    overflow: hidden;
     position: relative;
 }
 .bulptinypro h3 {
@@ -317,6 +321,7 @@ img.qrcpreiumversion {
     padding: 10px 20px;
     font-size: 17px !important;
     border-radius: 3px;
+	transition:all 0.3s ease;
 }
 .mqrfeatures a {
     font-size: 15px;
@@ -786,10 +791,10 @@ textarea#qrc_vcard_docs {
 }
 /* Tabs */
 /* Tabs */
- #qrccomposerprowraper .tab-content > div {
+ #qrccomposerprowraper .qrctab-content > div {
      display:none;
 }
- #qrccomposerprowraper .tab-content > div.active {
+ #qrccomposerprowraper .qrctab-content > div.active {
      display:block;
 }
  #qrccomposerprowraper .qrcodewrap .tabs {
@@ -972,7 +977,7 @@ h4.rotnfjj {
 .qrc_wrap-md-5.lksfuieusb img {
     width: 88%;
 }
-#qrccomposerprowraper .tab-content .tab2-tab .form-table th{
+#qrccomposerprowraper .qrctab-content .tab2-tab .form-table th{
 	    width: 300px;
 }
 output.rangeoutouy {
