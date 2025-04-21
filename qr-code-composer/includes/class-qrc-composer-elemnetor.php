@@ -65,7 +65,7 @@ class QrcELementorLightWidget
         wp_register_script(
             "qrc_elementor",
             QRC_COMPOSER_URL . "admin/js/qrc_elementor.js",
-            ["jquery", "qrcode-composer"],
+            ["jquery", "qr-code-styling"],
             QRC_COMPOSER_VERSION,
             true
         );

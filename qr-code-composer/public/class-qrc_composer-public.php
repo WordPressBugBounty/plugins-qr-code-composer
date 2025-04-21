@@ -3,7 +3,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      2.0.15
+ * @since      2.0.16
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/public
@@ -25,7 +25,7 @@ class Qrc_composer_Public
     /**
      * The ID of this plugin.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -34,7 +34,7 @@ class Qrc_composer_Public
     /**
      * The version of this plugin.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -43,7 +43,7 @@ class Qrc_composer_Public
     /**
      * Initialize the class and set its properties.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      * @param      string    $plugin_name       The name of the plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -58,7 +58,7 @@ class Qrc_composer_Public
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      */
     public function enqueue_styles()
     {
@@ -70,17 +70,17 @@ class Qrc_composer_Public
     /**
      * Register the JavaScript for the public-facing side of the site.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      */
     public function enqueue_scripts()
     {
 
-         wp_register_script('qrcode-composer', QRC_COMPOSER_URL . 'admin/js/qrcodecomposer.js', array(
+         wp_register_script('qr-code-styling', QRC_COMPOSER_URL . 'admin/js/qr-code-styling.js', array(
             'jquery'
         ) , $this->version, true);
 
         wp_register_script('qrccreateqr', QRC_COMPOSER_URL . 'public/js/qrcode.js', array(
-        'jquery','qrcode-composer'
+        'jquery','qr-code-styling'
         ) ,$this->version, true);
 
         $options1 = get_option('qrc_composer_settings');
@@ -141,8 +141,7 @@ class Qrc_composer_Public
     {
 
         $options = get_option('qrc_composer_settings');
-
-        $qrc_wc_ptab_name = isset($options['qrc_wc_ptab_name']) ? $options['qrc_wc_ptab_name'] : esc_html__('QR Code','qr-code-composer');
+        $qrc_wc_ptab_name = isset($options['qrc_wc_ptab_name']) ? $options['qrc_wc_ptab_name'] : 'QR Code';
 
         $tabs['qty_pricing_tab'] = array(
             'title' => $qrc_wc_ptab_name ,
@@ -153,19 +152,25 @@ class Qrc_composer_Public
             )
         );
 
-        $qrc_meta_display = get_post_meta(get_the_ID() , 'qrc_metabox', true);
-      
+        $qrc_meta_display = get_post_meta(get_the_id() , 'qrc_metabox', true);
+
         if (!empty($options))
         {
-            $singlular_exclude = is_singular($options);
-        }else{
-            $singlular_exclude = '';
+            $singlular_wc_exclude = is_singular($options);
+        }
+        else
+        {
+            $singlular_wc_exclude = '';
         }
 
-        if (($qrc_meta_display == '2') or ($singlular_exclude)){
-            return;
-        }else{
+        if (($qrc_meta_display == '2') or ($singlular_wc_exclude))
+        {
+            return false;
+        }
+        else
+        {
             return $tabs;
+
         }
 
 

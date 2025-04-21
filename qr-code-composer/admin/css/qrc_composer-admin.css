@@ -1,3 +1,11 @@
+textarea#mqrc_labelds {
+    height: 60px;
+    width: 50%;
+}
+li#toplevel_page_qr_composer ul li:last-child a {
+    font-weight: 600;
+    color: #7edd0f;
+}
 .mediumbonus-alert img {
     vertical-align: bottom;
 }

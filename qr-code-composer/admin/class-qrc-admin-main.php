@@ -27,32 +27,44 @@ public function admin_menu_define()
     ) , $icon_url,70);
 
 
-    add_submenu_page('qr_composer', esc_html__('Shortcode Generator', 'qr-code-composer'), esc_html__('Shortcode Generator', 'qr-code-composer'), 'manage_options', 'qrc_shortcode', array(
+
+    add_submenu_page('qr_composer', esc_html__('Auto Generate QR Code', 'qr-code-composer'), esc_html__('Auto Generate QR Code', 'qr-code-composer'), 'manage_options', 'admin.php?page=qr_composer#tab2');
+
+
+
+    add_submenu_page('qr_composer', esc_html__('Custom QR Code', 'qr-code-composer'), esc_html__('Custom QR Code', 'qr-code-composer'), 'manage_options', 'admin.php?page=qr_composer#tab3');
+
+    add_submenu_page('qr_composer', esc_html__('vCard QR Code', 'qr-code-composer'), esc_html__('vCard QR Code', 'qr-code-composer'), 'manage_options', 'admin.php?page=qr_composer#tab4');
+
+    add_submenu_page('qr_composer', esc_html__('Integration', 'qr-code-composer'), esc_html__('Integration', 'qr-code-composer'), 'manage_options', 'admin.php?page=qr_composer#tab5');
+
+    
+    add_submenu_page('qr_composer', esc_html__('Shortcode Generator(PRO)', 'qr-code-composer'), esc_html__('Shortcode Generator(PRO)', 'qr-code-composer'), 'manage_options', 'qrc_shortcode', array(
         $this,
         'qrc_shortcode'
     ));
-    add_submenu_page('qr_composer', esc_html__('Order Email QR', 'qr-code-composer'), esc_html__('Order Email QR', 'qr-code-composer'), 'manage_options', 'qrc_ordermail', array(
+    add_submenu_page('qr_composer', esc_html__('Order QR Code (PRO)', 'qr-code-composer'), esc_html__('Order QR Code (PRO)', 'qr-code-composer'), 'manage_options', 'qrc_ordermail', array(
         $this,
         'qrc_ordermail'
     ));
-    add_submenu_page('qr_composer', esc_html__('Bulk vCard list', 'qr-code-composer'), esc_html__('Bulk vCard list', 'qr-code-composer'), 'manage_options', 'qrc_vcardlist', array(
+    add_submenu_page('qr_composer', esc_html__('Download Vcard (PRO)', 'qr-code-composer'), esc_html__('Download Vcard (PRO)', 'qr-code-composer'), 'manage_options', 'qrc_vcardlist', array(
         $this,
         'qrc_vcardlist'
     ));
 
 
-    add_submenu_page('qr_composer', esc_html__(' Post type QR List', 'qr-code-composer'), '<span class="qrc_down_qr_menu">'.esc_html__('Post type QR List', 'qr-code-composer').'</span>', 'manage_options', 'qrc_list_view', array(
+    add_submenu_page('qr_composer', esc_html__('Download QR Code(PRO)', 'qr-code-composer'), esc_html__('Download QR Code(PRO)', 'qr-code-composer'), 'manage_options', 'qrc_list_view', array(
         $this,
         'qrc_list_view'
     ));
 
 
-    add_submenu_page('qr_composer', esc_html__('Bulk Print QR Code', 'qr-code-composer'), '<span class="qrc_print_qr_menu"> '.esc_html__(' Bulk Print QR Code', 'qr-code-composer').'</span>', 'manage_options', 'qrc_print_pdf', array(
+    add_submenu_page('qr_composer', esc_html__('Bulk Print(PRO)', 'qr-code-composer'), esc_html__(' Bulk Print (PRO)', 'qr-code-composer'), 'manage_options', 'qrc_print_pdf', array(
         $this,
         'qrc_print_pdf'
     ));
 
-
+    add_submenu_page('qr_composer', esc_html__('Get PRO', 'qr-code-composer'), esc_html__('Get PRO', 'qr-code-composer'), 'manage_options', 'https://sharabindu.com/plugins/wordpress-qr-code-generator/');
 }
 /**
  * This function is Qr Code Composer Pro Features Field

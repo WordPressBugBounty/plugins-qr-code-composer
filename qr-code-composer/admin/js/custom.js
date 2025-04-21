@@ -237,7 +237,18 @@ $("div#qrccomsposerprviewss").css('opacity','1');
 
 	});
 	$(document).ready(function(){
-
+      $("input[name='qrc_composer_settings[page]").on("click", function () {
+         if ($(this).is(":checked")) {
+            $(".qr_checkbox_page").hide();
+         } else {
+            $(".qr_checkbox_page").show();
+         }
+      });
+      if ($("input[name='qrc_autogenerate[page]']").is(":checked")) {
+            $(".qr_checkbox_page").hide();
+      } else {
+            $(".qr_checkbox_page").show();
+      }
 	$("#qrcpopupenbl").on("click", function() {
 	if ($(this).is(":checked")){
 		$(".qrc_popup_preview").show();

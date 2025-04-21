@@ -3,7 +3,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      2.0.15
+ * @since      2.0.16
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/admin
@@ -27,7 +27,7 @@ class Qrc_composer_Admin
     /**
      * The ID of this plugin.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -36,7 +36,7 @@ class Qrc_composer_Admin
     /**
      * The version of this plugin.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -45,7 +45,7 @@ class Qrc_composer_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -84,7 +84,7 @@ class Qrc_composer_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      */
     public function enqueue_styles()
     {
@@ -115,7 +115,7 @@ class Qrc_composer_Admin
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      */
     public function enqueue_scripts()
     {
@@ -124,20 +124,19 @@ class Qrc_composer_Admin
     if ( ! wp_verify_nonce( $nonce, 'qrc-nonce' ) ) return;
         
 
-
-        wp_register_script('qrcode-composer', QRC_COMPOSER_URL . 'admin/js/qrcodecomposer.js', array(
+        wp_register_script('qr-code-styling', QRC_COMPOSER_URL . 'admin/js/qr-code-styling.js', array(
             'jquery'
         ) , QRC_COMPOSER_VERSION, true);
 
     if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page']))), QRC_COMPOSER_PLUGIN_ID) !== false) {
 
 
-        wp_enqueue_script('qrcode-composer');
+        wp_enqueue_script('qr-code-styling');
         wp_enqueue_script('wp-color-picker');
 
         wp_enqueue_script('admin-scripts', QRC_COMPOSER_URL . 'admin/js/admin-scripts.js', array(
-            'jquery' ,'qrcode-composer'
-        ) , $this->version, true);  
+            'jquery' ,'qr-code-styling'
+        ) ,$this->version, true);  
      
         wp_enqueue_script('jquery-datepicker', QRC_COMPOSER_URL . 'admin/js/jquery-datepicker.js', array(
             'jquery'
@@ -162,7 +161,7 @@ class Qrc_composer_Admin
 
 
         wp_register_script('qrccreateqr', QRC_COMPOSER_URL . 'public/js/qrcode.js', array(
-        'jquery','qrcode-composer'
+        'jquery','qr-code-styling'
         ) ,$this->version, true);
 
 
@@ -190,7 +189,7 @@ class Qrc_composer_Admin
     /**
      * Setting link.
      *
-     * @since    2.0.15
+     * @since    2.0.16
      */
 
     public function plugin_settings_link($links)

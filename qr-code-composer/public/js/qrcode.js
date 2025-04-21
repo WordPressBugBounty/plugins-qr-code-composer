@@ -1,21 +1,33 @@
 (function($) {
     'use strict';
+$(document).ready(function () {	
     function QRCShortcode() {
         jQuery(".qrc_canvass").each(function() {
             var options = {
-				text:$(this).data('text'),	 
-				width: datas.size,
-				height: datas.size,
-				background: datas.background,
-				foreground: datas.color,
+                width: datas.size,
+                height: datas.size,
+                type: "canvas",
+                data: $(this).data('text'),
+                dotsOptions: {
+                    color: datas.color,
+                },
+                backgroundOptions: {
+                    color: datas.background,
+                }
             };
-                var ereer = $(this).attr('id');
-                var $Mqrds = '#' + ereer;
-				$($Mqrds).qrcode(options);
+
+            var ereer = $(this).attr('id');
+            var $Mqrds = '#' + ereer;
+            var container = document.querySelector($Mqrds);
+            const qrcode = new QRCodeStyling(options);
+            if (qrcode) {
+                qrcode.append(container);
+            }
 
         });
     }
     QRCShortcode();
+
 
     function QRCShortcodeButon() {
         jQuery(".qrcdownloads").each(function(index) {
@@ -23,7 +35,7 @@
                 var ereer = $(this).closest('.qrcprowrapper').children('.qrc_canvass').attr('id');
                 var $Mqrds = '#' + ereer + ' canvas';
                 var image = document.querySelector($Mqrds).toDataURL("image/png").replace("image/png", "image/octet-stream");
-                this.setAttribute("href", image)
+                this.setAttribute("href", image);
             });
         });
 
@@ -40,6 +52,15 @@
             });
 
         });
+
     }
     qrcpromodalwrapperQRS();
+	});
+	
 }(jQuery));
+
+
+
+
+
+
