@@ -5,7 +5,7 @@
  * Tags: QR Code, qrcode,vCard, Shortcode, WooCommerce, QR Code Widget, QR Code Shortcode, post, page, product
  * Author: Sharabindu
  * Author URI:  https://sharabindu.com/plugins/wordpress-qr-code-generator/
- * Version: 2.0.16
+ * Version: 2.0.17
  * Text Domain: qr-code-composer
  * Domain Path: /languages
  * License: GPLv2 or later
@@ -34,10 +34,10 @@ function deactivate_QRCpro_version(){
 
 /**
  * Currently plugin version.
- * Start at version 2.0.16 and use SemVer - https://semver.org
+ * Start at version 2.0.17 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'QRC_COMPOSER_VERSION', '2.0.16' );
+define( 'QRC_COMPOSER_VERSION', '2.0.17' );
 
 /**
  * The core plugin path that is used to define internationalization
@@ -92,7 +92,7 @@ require QRC_COMPOSER_PATH . 'includes/data/data.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    2.0.16
+ * @since    2.0.17
  */
 function run_qrc_composer() {
 

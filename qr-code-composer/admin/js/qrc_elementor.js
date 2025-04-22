@@ -9,15 +9,26 @@
             var $btn_DynamicId = '#' + $btn_canvas.attr('id');
             $($sliderDynamicId).each(function() {
 				 var options = {
-				text:$carousel.data('qrcontent'),	 
 				width: $carousel.data('qrwidth'),
 				height: $carousel.data('qrwidth'),
-				background: $carousel.data('qrbgcolor'),
-				foreground: $carousel.data('qrcolor'),	
-				 }
-                var ereer = $(this).attr('id');
-                var $Mqrds = '#' + ereer;
-				$($Mqrds).qrcode(options);
+				type: "canvas",
+				data:$carousel.data('qrcontent'),
+				dotsOptions: {
+				color: $carousel.data('qrcolor'),
+				},
+				backgroundOptions: {
+				color: $carousel.data('qrbgcolor'),
+				}
+
+			}
+            var ereer = $(this).attr('id');
+            var $Mqrds = '#' + ereer;
+            var container = document.querySelector($Mqrds);
+            const qrcode = new QRCodeStyling(options);
+            if (qrcode) {
+                qrcode.append(container);
+            }				
+
             });	
             jQuery(".qrc_btn_canvas").each(function(index) {
                 $(this).on("click", function() {

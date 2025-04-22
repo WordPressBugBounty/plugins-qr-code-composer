@@ -6,8 +6,8 @@ Donate link: https://sharabindu.com/donation/
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.1
-Stable tag: 2.0.16
-Version: 2.0.16
+Stable tag: 2.0.17
+Version: 2.0.17
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
@@ -230,9 +230,6 @@ Click “Install” and “Activate”.
 = What is QR Code Composer? =  
 QR Code Composer is a WordPress plugin that automatically generates customizable QR codes for pages, posts, products, custom links, and more. It supports WooCommerce and popular builders like Elementor.
 
-= What is WordPress QR code plugin? =
-"WordPress QR Code" Pluign refers to a quick response code created within a WordPress website. This WordPress QR Code plugin helps you create dynamic QR codes for all pages, posts, products, and custom posts on your WordPress website.
-
 = How do I generate a QR code in WordPress? =   
 Once the plugin is installed and activated, QR codes are automatically generated for content. You can also create custom QR codes using shortcodes or from the plugin settings.
 
@@ -302,6 +299,9 @@ No, the QR code is generated instantly on the web page and the QR code image is 
 
 
 == Changelog ==
+
+= 2.0.17 =
+- Update: Elementor QR Code JS functionality update
 
 = 2.0.16 =
 - Fix: VCard QR code scannable problem
