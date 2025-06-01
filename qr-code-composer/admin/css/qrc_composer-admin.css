@@ -1,3 +1,32 @@
+.qrc_proversion a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    display: block;
+    margin: 10px 10px 22px 10px;
+    padding: 10px;
+    background: #a5fda9;
+	    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.qrc_proversion a:hover {
+    background-color: #3F51B5;
+    color: #fff;
+}
+.qrc_proversion {
+    margin-top: 10%;
+    padding: 10px;
+    margin: 27% 4% 16px 11%;
+    background: #4c4c4c;
+}
+sup.qrcnewfrtis {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 10px;
+    background: #4CAF50;
+    padding: 2px 7px;
+}
 textarea#mqrc_labelds {
     height: 60px;
     width: 50%;
@@ -189,17 +218,6 @@ p.qrcvisisbolity {
 .rightside{
 	display:none;
 }
-tr.qrcnewfeatures th:before {
-    text-align: center;
-    padding: 3px 8px;
-    font-size: 10px;
-    background: #f5b29e;
-    content: "New";
-    position: absolute;
-    right: 38%;
-    top: 0;
-    border-radius: 20px;
-}
 /*On off Swticger*/
 
 .onoffswitch {
@@ -267,8 +285,7 @@ tr.qrcnewfeatures th:before {
     top: 402px;	
 }
 
-.qrc_prev_manage{
-    position: -webkit-sticky;
+.rightsidesticky{
     position: sticky;
     top: 42px;	
 }
@@ -310,7 +327,6 @@ img.qrcpreiumversion {
     background: #468301;
 }
 .qrctab-content {
-    overflow: hidden;
     position: relative;
 }
 .bulptinypro h3 {
@@ -941,6 +957,7 @@ div#tabs-content a {
     width: 97%;
 }
 .qrc_pro_ftcs_cont.firstpages {
+    padding: 10px;
     background: #fff;
 }
 #wooqrimg-buffer {
@@ -1396,6 +1413,12 @@ button.qrcclipbtns {
 }
 tr.qrc_vacrdauodisplay p,tr.qrc_vacrdtempe p,tr.qrcorder_eemailalign p, tr.qrcorder_eemail p, tr.qrcpdfelemnts p, tr.qrcorder_elemnts p, tr.qrcorder_colors p, tr.qrcorder_width p, tr.qrc_bdypress_display p, tr.qrc_dokan_display p, tr.qrc_bbpress_display p, tr.qrc_userdsiplay p, tr.qr_code_vcard p, tr.qrc_metavcard_display p, tr.qr_checkbox_vcrad p, tr.qr_code_wifi_text p, tr.qr_code_event_text p, tr.qr_code_maps_text p, tr.qr_code_mail_text p, tr.qr_code_phonenumber p, tr.qr_code_custom_text p, tr.qr_stcode_management p, tr.qr_checkbox_page p, tr.qr_checkbox p, tr.ptab_name p, tr.wcalignme p, tr.alignme p {
     font-weight: normal;
+    color: #818181;
+}
+
+.qrctab-content table tr th p {
+    max-width: 77%;
+    font-weight: 400;
     color: #818181;
 }
 ul.qrc_nav_bar li:last-child{

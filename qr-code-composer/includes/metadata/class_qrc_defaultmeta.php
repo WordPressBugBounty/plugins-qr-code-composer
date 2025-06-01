@@ -28,12 +28,18 @@ class QRCDefaultmeta
         $types = get_post_types();
         $post_types = array_diff($types, $excluded_posttypes);
 
+        $options12 = get_option('qrc_autogenerate');
+
+        $checked = isset($options12['removemetabox']) ? 'checked' : '';
+        if(!$checked ){
+
         add_meta_box('qrccompoer_metabox', esc_html__('QR Code Composer', 'qr-code-composer') , array(
             $this,
             'qrc_metabox_func'
         ) , array(
             $post_types
         ));
+    }
 
     }
 

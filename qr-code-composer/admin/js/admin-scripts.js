@@ -59,16 +59,20 @@
 			function update_qrcode() {
 				
 	            var options = {
+				shape: val_by_id('qrc_codeshape'),
                 width: val_by_id('qwe_sizw'),
                 height: val_by_id('qwe_sizw'),
-                type: "canvas",
+				margin: val_by_id('quiet'),
                 data: "QR Code Composer",
                 dotsOptions: {
                     color: val_by_id('fill'),
                 },
                 backgroundOptions: {
                     color: val_by_id('qr_bg'),
-                }
+                },
+				qrOptions: {
+                    errorCorrectionLevel:  val_by_id('qrdotlevel'),
+                },
             }
 			
       var container = el_by_id('qrccomsposerprviewss');
@@ -79,7 +83,14 @@
       if (qrcode) {
          qrcode.append(container)
       }		
-			
+      var container1 = el_by_id('qrccomsposerprview');
+      const qrcode1 = new QRCodeStyling(options);
+      for_each(container1.childNodes, function (child) {
+         container1.removeChild(child)
+      });
+      if (qrcode1) {
+         qrcode1.append(container1)
+      }
 
 }
 

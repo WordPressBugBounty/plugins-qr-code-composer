@@ -462,9 +462,32 @@ $("div#qrccomsposerprviewss").css('opacity','1');
 
     });
 
-
-
-
+   $(document).ready(function () {
+      $("#removeautodisplay").on("click", function () {
+         if ($(this).is(":checked")) {
+            $("tr.wcalignme,tr.qrcchangeprodtab,.qr_checkbox,.qr_checkbox_page").hide();
+         } else {
+            $("tr.wcalignme,tr.qrcchangeprodtab,.qr_checkbox,.qr_checkbox_page").show();
+         }
+      });
+         if ($("#removeautodisplay").is(":checked")) {
+            $("tr.wcalignme,tr.qrcchangeprodtab,.qr_checkbox,.qr_checkbox_page").hide();
+         } else {
+            $("tr.wcalignme,tr.qrcchangeprodtab,.qr_checkbox,.qr_checkbox_page").show();
+         }
+   });
+      $("input[name='qrc_autogenerate[page]']").on("click", function () {
+         if ($(this).is(":checked")) {
+            $(".qr_checkbox_page").hide();
+         } else {
+            $(".qr_checkbox_page").show();
+         }
+      });
+      if ($("input[name='qrc_autogenerate[page]']").is(":checked")) {
+            $(".qr_checkbox_page").hide();
+      } else {
+            $(".qr_checkbox_page").show();
+      }
     $(document).ready(function() {
         $('#qr_print_tzx_ty').on('change', function() {
             $('#qr_print_product_ty').hide();
@@ -476,7 +499,9 @@ $("div#qrccomsposerprviewss").css('opacity','1');
                 $('#qr_print_cat_ty').show()
             }
         });
-		
+      $('.removeautodisplay th').append("<p>Disable QR Code automatically displayed on the frontend after the content.</p>");
+
+      $('.removemetabox th').append("<p>Disable QR Code From Backend Metabox </p>");		
 		
 		
 		$('.alignme th').append("<p>Choose the alignment of the QR code, by default it will be on the left</p>");

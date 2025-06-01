@@ -3,7 +3,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      2.0.17
+ * @since      3.0.0
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/admin
@@ -27,7 +27,7 @@ class Qrc_composer_Admin
     /**
      * The ID of this plugin.
      *
-     * @since    2.0.17
+     * @since    3.0.0
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -36,7 +36,7 @@ class Qrc_composer_Admin
     /**
      * The version of this plugin.
      *
-     * @since    2.0.17
+     * @since    3.0.0
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -45,7 +45,7 @@ class Qrc_composer_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since    2.0.17
+     * @since    3.0.0
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -57,7 +57,10 @@ class Qrc_composer_Admin
 
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class_qr_code_print.php';
 
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class_qrc_code_autogenertae.php';
+
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class_qr_code_list_view.php';
+        
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-qrc_composer_settings.php';
 
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class_qrc_code_vcard.php';
@@ -84,7 +87,7 @@ class Qrc_composer_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since    2.0.17
+     * @since    3.0.0
      */
     public function enqueue_styles()
     {
@@ -115,7 +118,7 @@ class Qrc_composer_Admin
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since    2.0.17
+     * @since    3.0.0
      */
     public function enqueue_scripts()
     {
@@ -189,7 +192,7 @@ class Qrc_composer_Admin
     /**
      * Setting link.
      *
-     * @since    2.0.17
+     * @since    3.0.0
      */
 
     public function plugin_settings_link($links)

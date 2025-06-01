@@ -6,8 +6,8 @@
  *
  * @link       https://sharabindu.com
  *
- * @package    qrc_composer_pro
- * @subpackage qrc_composer_pro/admin
+ * @package    qr-code-composer
+ * @subpackage qr-code-composer/admin
  */
 class QRCoserpsgortcode{
 
@@ -67,7 +67,7 @@ class QRCoserpsgortcode{
             }
 
 
-        $qrcelements =  '<div class="qrcswholewtapper" style="text-align:'.$qrc_alignment.';"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_phonenumer_'.$i.'" style="display:'.$displayblock.'" data-text="' . $number . '"></div>'.$qr_download_.'</div></div>';
+        $qrcelements =  '<div class="qrcswholewtapper"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_phonenumer_'.$i.'" style="display:'.$displayblock.'" data-text="' . $number . '"></div>'.$qr_download_.'</div></div>';
         if($qrcpopupenbl == 'checked' && $popupcustomqr){
         $content = '<div class="qrcpromodalwrapper" style="margin: 20px 0;"><button type="button" class="qrc-modal-toggle" id="popModal_ex2" style="background:'.$qrcpopup_bg.';color:'. $qrcpopup_color.';border: 1px solid '.$qrcpopup_brclr.';border-radius:'.$qrcpopup_brdius.'px;padding: 6px 14px;font-size:'.$qrcpopup_fntsize.'px">'.esc_html($qrcpopuptext).'</button><div class="qrc_modal"><div class="qrc-overlay qrc-modal-toggle"></div><div class="qrc-modal-wrapper qrc-modal-transition"><span class="qrc-modal-toggle">&times;</span>'.$qrcelements.'</div></div></div>';
 
@@ -135,7 +135,7 @@ class QRCoserpsgortcode{
             }
 
 
-        $qrcelements =  '<div class="qrcswholewtapper" style="text-align:'.$qrc_alignment.';"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_customtext_'.$i.'" style="display:'.$displayblock.'" data-text="' . $text . '"></div>'.$qr_download_.'</div></div>';
+        $qrcelements =  '<div class="qrcswholewtapper"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_customtext_'.$i.'" style="display:'.$displayblock.'" data-text="' . $text . '"></div>'.$qr_download_.'</div></div>';
         if($qrcpopupenbl == 'checked' && $popupcustomqr){
         $content = '<div class="qrcpromodalwrapper" style="margin: 20px 0;"><button type="button" class="qrc-modal-toggle" id="popModal_ex2" style="background:'.$qrcpopup_bg.';color:'. $qrcpopup_color.';border: 1px solid '.$qrcpopup_brclr.';border-radius:'.$qrcpopup_brdius.'px;padding: 6px 14px;font-size:'.$qrcpopup_fntsize.'px">'.esc_html($qrcpopuptext).'</button><div class="qrc_modal"><div class="qrc-overlay qrc-modal-toggle"></div><div class="qrc-modal-wrapper qrc-modal-transition"><span class="qrc-modal-toggle">&times;</span>'.$qrcelements.'</div></div></div>';
 
@@ -171,7 +171,7 @@ class QRCoserpsgortcode{
             }
 
 
-        $qrcelements =  '<div class="qrcswholewtapper" style="text-align:'.$qrc_alignment.';"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_whatapps_'.$i.'" style="display:'.$displayblock.'" data-text="' . $whatsapps . '"></div>'.$qr_download_.'</div></div>';
+        $qrcelements =  '<div class="qrcswholewtapper"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_whatapps_'.$i.'" style="display:'.$displayblock.'" data-text="' . $whatsapps . '"></div>'.$qr_download_.'</div></div>';
         if($qrcpopupenbl == 'checked' && $popupcustomqr){
         $content = '<div class="qrcpromodalwrapper" style="margin: 20px 0;"><button type="button" class="qrc-modal-toggle" id="popModal_ex2" style="background:'.$qrcpopup_bg.';color:'. $qrcpopup_color.';border: 1px solid '.$qrcpopup_brclr.';border-radius:'.$qrcpopup_brdius.'px;padding: 6px 14px;font-size:'.$qrcpopup_fntsize.'px">'.esc_html($qrcpopuptext).'</button><div class="qrc_modal"><div class="qrc-overlay qrc-modal-toggle"></div><div class="qrc-modal-wrapper qrc-modal-transition"><span class="qrc-modal-toggle">&times;</span>'.$qrcelements.'</div></div></div>';
 
@@ -206,7 +206,7 @@ class QRCoserpsgortcode{
             }
 
 
-        $qrcelements =  '<div class="qrcswholewtapper" style="text-align:'.$qrc_alignment.';"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_vcards_'.$i.'" style="display:'.$displayblock.'" data-text="' . $mastervcard . '"></div>'.$qr_download_.'</div></div>';
+        $qrcelements =  '<div class="qrcswholewtapper"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_vcards_'.$i.'" style="display:'.$displayblock.'" data-text="' . $mastervcard . '"></div>'.$qr_download_.'</div></div>';
         if($qrcpopupenbl == 'checked' && $popupvcardqr){
         $content = '<div class="qrcpromodalwrapper" style="margin: 20px 0;"><button type="button" class="qrc-modal-toggle" id="popModal_ex2" style="background:'.$qrcpopup_bg.';color:'. $qrcpopup_color.';border: 1px solid '.$qrcpopup_brclr.';border-radius:'.$qrcpopup_brdius.'px;padding: 6px 14px;font-size:'.$qrcpopup_fntsize.'px">'.esc_html($qrcpopuptext).'</button><div class="qrc_modal"><div class="qrc-overlay qrc-modal-toggle"></div><div class="qrc-modal-wrapper qrc-modal-transition"><span class="qrc-modal-toggle">&times;</span>'.$qrcelements.'</div></div></div>';
 

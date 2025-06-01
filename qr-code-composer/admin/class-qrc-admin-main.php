@@ -168,7 +168,7 @@ function qrc_pro_func(){
   
   <div class="tab1-tab active">
     <div class="bulptiblur">
-    <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/orderqt-min.png') ; ?>" alt="order QR demoo" class="qrcpreiumversion">
+    <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/orderpage-min.png') ; ?>" alt="order QR demo" class="qrcpreiumversion">
     </div>
 <div class="bulptinyprowarp">
 <div class="bulptinypro">
@@ -185,7 +185,7 @@ function qrc_pro_func(){
         </div>
 </div>
   <div class="tab2-tab">
-    <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/PDF-invoice-ore.png') ; ?>" alt="order QR demoo"  class="qrcpreiumversion">
+    <img src="<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/rderpage-min.png') ; ?>" alt="order QR demoo"  class="qrcpreiumversion">
   </div>
 
          </div>
@@ -402,7 +402,7 @@ function qrc_print_pdf()
       </div>
   <div class="tab2-tab">
 
-        <div class="qrc_print_pro_demo"  style="background:url(<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/print.png') ; ?>);min-height: 675px;width:100%"></div> 
+        <div class="qrc_print_pro_demo"  style="background:url(<?php echo esc_url( QRC_COMPOSER_URL .'/admin/img/printpage-min.png') ; ?>);min-height: 675px;width:100%"></div> 
 
 <div class="bulptinyprowarp">
 <div class="bulptinypro">
@@ -433,10 +433,10 @@ function qrc_print_pdf()
      public function qrc_option_func()
      {
          $options1 = get_option('qrc_composer_settings');
-    $qr_download_text = isset($options1['qr_download_text']) ? $options1['qr_download_text'] : 'Download QR 🠋';
+    $qr_download_text = isset($options1['qr_download_text']) ? $options1['qr_download_text'] : 'Download QR';
     $valuebg = (isset($options1['qr_dwnbtnbg_color'])) ? $options1['qr_dwnbtnbg_color'] : '#44d813';
     $value = (isset($options1['qr_dwnbtn_color'])) ? $options1['qr_dwnbtn_color'] : '#000';
-    $qrcpopuptext = isset($options1['qrcpopuptext']) ? $options1['qrcpopuptext'] : 'View To Click  ⮞ ';
+    $qrcpopuptext = isset($options1['qrcpopuptext']) ? $options1['qrcpopuptext'] : 'View To Click';
     $qrcpopup_bg = (isset($options1['qrcpopup_bg'])) ? $options1['qrcpopup_bg'] : '#44d813';
     $qrcpopup_color = (isset($options1['qrcpopup_color'])) ? $options1['qrcpopup_color'] : '#000';
     $qrcpopup_brclr = (isset($options1['qrcpopup_brclr'])) ? $options1['qrcpopup_brclr'] : '#32a518';
@@ -453,7 +453,7 @@ function qrc_print_pdf()
          <div class="qrcodewrap">
              <div class="qr_wp_admin">
                  <ul class="qrc_nav_bar">
-                     <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/"><?php echo esc_html('Pro Page', 'qr-code-composer') ?></a></li>                  
+                     <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/"><?php echo esc_html('Premium Upgrade', 'qr-code-composer') ?></a></li>                  
                      <li><a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qr_composer"><?php echo esc_html('Pro dashboard', 'qr-code-composer') ?></a></li>
                      <li><a href="https://wordpressqr.sharabindu.com/"><?php echo esc_html('Pro Demo', 'qr-code-composer') ?></a>
                      </li>
@@ -486,19 +486,23 @@ function qrc_print_pdf()
   <div class="qrctab-content">
 
     <div  class="tab1-tab active">
-        <form method="post" action="options.php" class="qrcdesings" >
+
             <div class="desingwrapper">
             <div class="leftside">
-            <?php              
+            <form method="post" action="options.php">
+            <?php
+            settings_errors();           
             settings_fields("qrc_composer_settings");
              do_settings_sections('qrc_design_sec'); ?>
              <div class="qrcsubmits">
              <button type ="submit" id="osiudi" class="button button-primary"><?php echo esc_html('Save Changes','qr-code-composer') ?> <span class="qrcs_desingcrt"></span></button>
          <span class="qrcsdhicr_dsigns"></span>
          </div>
+       </form>
          </div>
          <div class="rightside">
-           <div class="prbloth"><?php echo esc_html('Preview','qr-code-composer') ?></div>
+          <div class="rightsidesticky">
+           <div class="prbloth"><?php echo esc_html('Live Preview','qr-code-composer') ?></div>
          <div class="qrc_prev_manage">
          
             <div id="qrccomsposerprviewss" class="qrc_canvas"></div> 
@@ -530,12 +534,20 @@ function qrc_print_pdf()
 
 
          </div>
-         </div>
+
+    <div class="qrc_proversion" >
+    <a href="https://wordpressqr.sharabindu.com/" target="_blank">Frontend Demo (PRO)</a>
+    <a href="https://wordpressqrcode.sharabindu.com/wp-admin" target="_blank"> Backend Demo (PRO)</a>
+    <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank">Premium Upgrade</a>
+    <a href="https://wordpressqr.sharabindu.com/docs/introduction/" target="_blank">Documentation</a>
+    </div>
+
+        </div> </div>
          <div class="rightsidelast">
                        <div>
                      <div class="qrc_pro_ftcs_cont firstpages">
-                     <h4 class="pro_ftcs__h" style="font-size: 90%;"><?php echo esc_html__('Premium QR design', 'qr-code-composer') ?></h4><a href="https://wordpressqrcode.sharabindu.com/wp-admin/?wtlwp_token=62fc8bc484c0bbc6ddd807f4b374079973d5afb3d92fd3a287f6cb1c5f2af853354fbbb9bad24ca14f7da1ea4acfa257d223d70afa3239febb3fcdac2256ab52" title="Click to view Pro Dashboard">
-                     <img src="<?php echo esc_url( QRC_COMPOSER_URL . '/admin/img/images-min.png') ?>" alt="Pro Features"></a>
+                     <h4 class="pro_ftcs__h" style="font-size: 90%;"><?php echo esc_html__('Advanced QR Code Designs (PRO)', 'qr-code-composer') ?></h4><a href="https://wordpressqrcode.sharabindu.com/wp-admin/?wtlwp_token=62fc8bc484c0bbc6ddd807f4b374079973d5afb3d92fd3a287f6cb1c5f2af853354fbbb9bad24ca14f7da1ea4acfa257d223d70afa3239febb3fcdac2256ab52" title="Click to view Pro Dashboard">
+                     <img src="<?php echo esc_url( QRC_COMPOSER_URL . '/admin/img/custom-label-min.png') ?>" alt="Pro Features"></a>
 
                      
 
@@ -544,14 +556,14 @@ function qrc_print_pdf()
                   <div class="qrc_prodemos">
                <ul class="qrc_nav_bradnfg">
 
-                         <li><?php echo esc_html__('Body Shape QR Code', 'qr-code-composer') ?></li>
-                        <li><?php echo esc_html__('EyeFrame Shape QR', 'qr-code-composer') ?></li>
-                         <li><?php echo esc_html__('Eyeball Shape QR', 'qr-code-composer') ?></li>
-                         <li><?php echo esc_html__('Gradient Color QR', 'qr-code-composer') ?></li>
-                         <li><?php echo esc_html__('Logo Upload', 'qr-code-composer') ?></li>
+                        <li><?php echo esc_html__('QR Dot Shape', 'qr-code-composer') ?></li>
+                        <li><?php echo esc_html__('Eye Frame Style', 'qr-code-composer') ?></li>
+                         <li><?php echo esc_html__('Eyeball Style', 'qr-code-composer') ?></li>
+                         <li><?php echo esc_html__('Gradient Colors', 'qr-code-composer') ?></li>
+                         <li><?php echo esc_html__('Logo Integration', 'qr-code-composer') ?></li>
+                         <li><?php echo esc_html__('Add Beautiful Border', 'qr-code-composer') ?></li>
+                         <li><?php echo esc_html__('Custom Label on QR Code', 'qr-code-composer') ?></li>
                      </ul>
-                     <a class="qrc_gtnow duwieurnfs" href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" ><?php echo esc_html__('Get Premium', 'qr-code-composer') ?></a>
-
                      </div>
 
          </div>
@@ -559,10 +571,25 @@ function qrc_print_pdf()
     </div>
     <div  class="tab2-tab">
         <div id="dynamic-qr">
-<div class="qrc_wrap-md-7">
-  <?php do_settings_sections('qrc_admin_sec'); ?>
+    <div class="qrc_wrap-md-7">
+      <form method="post" action="options.php"  class="qrcdesings" > 
+        <?php 
+
+
+            settings_fields("qrc_autogenerate");
+             do_settings_sections('qrc_admin_sec'); ?>
+
+             <div class="qrcsubmits">
+             <button type ="submit" id="osiudi" class="button button-primary"><?php echo esc_html('Save Changes','qr-code-composer') ?> <span class="qrcs_desingcrt"></span></button>
+         <span class="qrcsdhicr_dsigns"></span>
+        </div>
+
+
+
+             
+           </form>
          </div>
-<div class="qrc_wrap-md-5 lksfuieusb">
+        <div class="qrc_wrap-md-5 lksfuieusb">
              <div>
                      <div class="qrc_pro_ftcs_cont">
                      <h4 class="pro_ftcs__h"><?php echo esc_html__('Order Email QR Code (Premium)', 'qr-code-composer') ?></h4>
@@ -579,13 +606,7 @@ function qrc_print_pdf()
                  </div>
              </div>
          </div> 
-</div>
-
-             <div class="qrcsubmits">
-             <button type ="submit" id="osiudi" class="button button-primary"><?php echo esc_html('Save Changes','qr-code-composer') ?> <span class="qrcs_desingcrt"></span></button>
-         <span class="qrcsdhicr_dsigns"></span>
         </div>
-</form>
     </div>
 
     <div  class="tab3-tab">

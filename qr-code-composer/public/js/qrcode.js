@@ -3,22 +3,29 @@
 $(document).ready(function () {	
     function QRCShortcode() {
         jQuery(".qrc_canvass").each(function() {
+			
+			console.log(datas.size);
             var options = {
+				shape: datas.shape,
                 width: datas.size,
                 height: datas.size,
-                type: "canvas",
                 data: $(this).data('text'),
+				margin: datas.quiet,
                 dotsOptions: {
                     color: datas.color,
                 },
                 backgroundOptions: {
                     color: datas.background,
-                }
+                },
+				qrOptions: {
+                    errorCorrectionLevel: datas.ecLevel,
+                },
             };
 
             var ereer = $(this).attr('id');
             var $Mqrds = '#' + ereer;
             var container = document.querySelector($Mqrds);
+			/* jshint esversion: 6 */
             const qrcode = new QRCodeStyling(options);
             if (qrcode) {
                 qrcode.append(container);

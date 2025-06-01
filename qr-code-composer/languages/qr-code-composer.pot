@@ -154,7 +154,7 @@ msgid "Print Page"
 msgstr ""
 
 #: admin/class-qrc-admin-main.php:444
-msgid "Pro Page"
+msgid "Premium Upgrade"
 msgstr ""
 
 #: admin/class-qrc-admin-main.php:445

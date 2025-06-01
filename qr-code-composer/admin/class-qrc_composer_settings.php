@@ -7,8 +7,8 @@
  * @link       https://sharabindu.com
  * @since      1.0.9
  *
- * @package    qrc_composer_pro
- * @subpackage qrc_composer_pro/admin
+ * @package    qr-code-composer
+ * @subpackage qr-code-composer/admin
  */
 
 class QR_code_Admin_settings{
@@ -27,13 +27,17 @@ class QR_code_Admin_settings{
     register_setting("qrc_composer_settings", "qrc_composer_settings", array()); 
     
     add_settings_section("qrc_design_section", " ", array($this ,'settting_sec_desfifn'), 'qrc_design_sec');
-    
-    add_settings_section("qrc_download_section", " ", array($this ,'settting_sec_func'), 'qrc_admin_sec');
 
 
-    add_settings_field("qr_code_size", esc_html__("Front QR Code Size", "qr-code-composer") ,array($this , "qr_input_size"), 'qrc_design_sec', "qrc_design_section");
+    add_settings_field("qr_code_shape", esc_html__("Choose Shape", "qr-code-composer").'<sup class="qrcnewfrtis">NEW</sup>' ,array($this , "qr_code_shape"), 'qrc_design_sec', "qrc_design_section");
 
-        add_settings_field("qr_color_management", esc_html__("QR Color", "qr-code-composer") ,array($this , "qr_color_management"), 'qrc_design_sec', "qrc_design_section");
+    add_settings_field("qr_ecLevel", esc_html__("Error Correction Level:", "qr-code-composer") ,array($this , "ecLevel"), 'qrc_design_sec', "qrc_design_section"); 
+
+    add_settings_field("qr_quiet", esc_html__("Margin", "qr-code-composer") ,array($this , "quiet"), 'qrc_design_sec', "qrc_design_section");
+
+    add_settings_field("qr_code_size", esc_html__("QR Code Size", "qr-code-composer") ,array($this , "qr_input_size"), 'qrc_design_sec', "qrc_design_section");
+
+    add_settings_field("qr_color_management", esc_html__("QR Color", "qr-code-composer") ,array($this , "qr_color_management"), 'qrc_design_sec', "qrc_design_section");
 
     add_settings_field("qr_bgcolor_management", esc_html__("QR Background Color", "qr-code-composer") , array($this ,"qr_bgcolor_management"), 'qrc_design_sec', "qrc_design_section");
 
@@ -50,47 +54,6 @@ class QR_code_Admin_settings{
     add_settings_field("qr_popup_enablefor", esc_html__("Popup Enable For", "qr-code-composer") , array($this ,"qr_popup_enablefor"), 'qrc_design_sec', "qrc_design_section" , array('class' =>'qrcnewqr_popup_btndesign'));
 
 
-    add_settings_field("qr_alignment", esc_html__("Alignment", "qr-code-composer") , array($this ,"qr_alignment"), 'qrc_admin_sec', "qrc_download_section",array(
-            'class'  =>  'alignme', 
-        'label_for' => 'qr_alignment',
-
-    ));
-
-    if (class_exists('WooCommerce'))
-    {
-        add_settings_field("wc_qr_alignment", esc_html__("QR location on product page", "qr-code-composer") , array($this ,"wc_qr_alignment"), 'qrc_admin_sec', "qrc_download_section",array(
-            'class'  =>  'wcalignme qrcnewfeatures ', 
-        'label_for' => 'qrcppagelocation',
-
-    ));
-
-        add_settings_field("qrc_wc_ptab_name", esc_html__("Change Text of Product Tab", "qr-code-composer") ,array($this , "qrc_wc_ptab_name"), 'qrc_admin_sec', "qrc_download_section",array(
-            'class'  =>  'ptab_name', 
-        'label_for' => 'qrc_wc_ptab_name',
-
-    ));
-
-    }
-
-    add_settings_field("qr_checkbox", esc_html__("Hide QR code according to post type", "qr-code-composer") ,array($this , "qr_checkbox"), 'qrc_admin_sec', "qrc_download_section" ,array(
-            'class'  =>  'qr_checkbox',
-
-    ));
-
-
-    add_settings_field("qr_checkbox_page", esc_html__("Hide QR code according to Page", "qr-code-composer") , array(
-        $this,
-        "qr_checkbox_page"
-    ) , 'qrc_admin_sec', "qrc_download_section" ,array(
-            'class'  =>  'qr_checkbox_page',
-
-    ));
-
-
-    add_settings_field("qr_stcode_management", esc_html__("Shortcode for Current Page URL", "qr-code-composer") ,array($this , "qr_stcode_management"), 'qrc_admin_sec', "qrc_download_section",array(
-            'class'  =>  'qr_stcode_management',
-
-    ));
 
     }
    /**
@@ -99,18 +62,6 @@ class QR_code_Admin_settings{
     function settting_sec_desfifn()
     {   
         return true;
-    }
-    function settting_sec_func()
-    {   
-       ?>
-<div class="qrc-box-header" >
-            <h3 class="sui-box-title"><?php echo esc_html__('Auto Generate QR', 'qr-code-composer') ?></h3>
-<p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qr-code-composer') ?><a class="qrcdownsize" id="qrcauto" video-url="https://www.youtube.com/watch?v=LyQGEShmhn8"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
-
-        </div>
-
-       <?php
-
     }
 
    
@@ -141,16 +92,6 @@ class QR_code_Admin_settings{
         }
     }
 
-
-function qrc_wc_ptab_name()
-{
-
-    $options = get_option('qrc_composer_settings');
-    $qrc_wc_ptab_name = isset($options['qrc_wc_ptab_name']) ? $options['qrc_wc_ptab_name'] : esc_html__('QR Code','qr-code-composer');
-
-    printf('<input type="text" name="qrc_composer_settings[qrc_wc_ptab_name]" value="%s" placeholder="e:g: QR Code" id="qrc_wc_ptab_name">', esc_attr($qrc_wc_ptab_name)); 
-
-}
 
 function qr_checkbox()
 {
@@ -186,6 +127,56 @@ function qr_checkbox()
 }
 
 
+/**
+ * This function is a callback function of  add seeting field
+ */
+
+function ecLevel()
+{
+
+    $options = get_option('qrc_composer_settings');
+    $ecLevel = isset($options['ecLevel']) ? $options['ecLevel'] : 'L'; ?>
+
+
+        <select class="select" name="qrc_composer_settings[ecLevel]" id="qrdotlevel">
+         <option value="L" <?php echo esc_attr($ecLevel) == 'L' ? 'selected' : '' ?>>L - low (7%)</option>
+         <option value="M" <?php echo esc_attr($ecLevel) == 'M' ? 'selected' : '' ?>>M - medium (15%)</option>
+         <option value="Q" <?php echo esc_attr($ecLevel) == 'Q' ? 'selected' : '' ?>>Q - quartile (25%)</option>
+         <option value="H" <?php echo esc_attr($ecLevel) == 'H' ? 'selected' : '' ?>>H - high (30%)</option>
+           </select>
+<?php
+ }
+
+/**
+ * This function is a callback function of  add seeting field
+ */
+
+    function quiet()
+    {
+
+        $options = get_option('qrc_composer_settings');
+        $quiet = isset($options['quiet']) ? $options['quiet'] : '0';
+
+            printf('<input type="number" name="qrc_composer_settings[quiet]"  id="quiet" min="0" step="1" max="100" value="%s">', esc_attr($quiet));
+
+     }
+/**
+ * This function is a callback function of  add seeting field
+ */
+
+function qr_code_shape()
+{
+
+    $options = get_option('qrc_composer_settings');
+    $qrc_codeshape = isset($options['qrc_codeshape']) ? $options['qrc_codeshape'] : 'square'; ?>
+
+        <select name="qrc_composer_settings[qrc_codeshape]" id="qrc_codeshape">
+        <option value="square"  <?php echo esc_attr($qrc_codeshape) == 'square' ? 'selected' : '' ?>>Square</option>
+        <option value="circle" <?php echo esc_attr($qrc_codeshape) == 'circle' ? 'selected' : '' ?>>Circle</option>
+
+        </select>
+<?php
+ }
 /**
  * This function is a callback function of  add seeting field
  */
@@ -231,7 +222,7 @@ function qr_input_size()
     {
 
     $options = get_option('qrc_composer_settings');
-    $options_value = isset($options['qr_download_text']) ? $options['qr_download_text'] : 'Download QR 🠋';
+    $options_value = isset($options['qr_download_text']) ? $options['qr_download_text'] : 'Download QR';
     $qr_download_iconclass = isset($options['qr_download_iconclass']) ? $options['qr_download_iconclass'] : '';
 
     $qr_download_hide = isset($options['qr_download_hide']) ? $options['qr_download_hide'] : 'no';
@@ -252,7 +243,7 @@ function qr_input_size()
    <div class="removealsscolors">
     <?php
    printf('<p><strong>
-    <label class="inputetxtas" for="inputetxtas">'.esc_html("Label", "qr-code-composer").'</label></strong><input type="text" name="qrc_composer_settings[qr_download_text]" value="%s" placeholder="Download Qr" id="inputetxtas"> </p><p class="htmyrmrtdf">🡻 🡳 🡫 🡣 🡓 🡇  🠟 🠋 ⯯ ⮟ ⮇ <span>HTML symbols, <a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp"> More..</a></span></p>', esc_attr($options_value)); 
+    <label class="inputetxtas" for="inputetxtas">'.esc_html("Label", "qr-code-composer").'</label></strong><input type="text" name="qrc_composer_settings[qr_download_text]" value="%s" placeholder="Download Qr" id="inputetxtas"> </p>', esc_attr($options_value)); 
 
         printf('<p><strong>
     <label class="qrc_dwnbtnlabel" for="qr_download_fntsz">'.esc_html("Font Size", "qr-code-composer").'</label></strong><input type="number" name="qrc_composer_settings[qr_download_fntsz]" value="%s"  id="qr_download_fntsz" min="10" max="30"></p>', esc_attr($qr_download_fntsz)); 
@@ -325,14 +316,14 @@ function qr_input_size()
 
     $options = get_option('qrc_composer_settings');
 
-    $qrcpopuptext = isset($options['qrcpopuptext']) ? $options['qrcpopuptext'] : 'View To Click  ⮞ ';
+    $qrcpopuptext = isset($options['qrcpopuptext']) ? $options['qrcpopuptext'] : 'View To Click';
     $qrcpopup_bg = (isset($options1['qrcpopup_bg'])) ? $options1['qrcpopup_bg'] : '#44d813';
     $qrcpopup_color = (isset($options1['qrcpopup_color'])) ? $options1['qrcpopup_color'] : '#000';
     $qrcpopup_brclr = (isset($options1['qrcpopup_brclr'])) ? $options1['qrcpopup_brclr'] : '#32a518';
     $qrcpopup_brdius = (isset($options1['qrcpopup_brdius'])) ? $options1['qrcpopup_brdius'] : '20';
     $qrcpopup_fntsize = isset($options1['qrcpopup_fntsize']) ? $options1['qrcpopup_fntsize'] : '12';
     printf('<p><strong>
-    <label class="inputetxtas" for="qrcpopuptext">'.esc_html("Label", "qr-code-composer").'</label></strong><input type="text" name="qrc_composer_settings[qrcpopuptext]" value="%s" placeholder="View QR code" id="qrcpopuptext"></p><p class="htmyrmrtdf">🡲 🡪 ⮞ ⯈ 🠊 🠞 🠦 🠮 🡆 🢂 → ⇒ ⇢ <span>HTML symbols</span></p>', esc_attr($qrcpopuptext)); 
+    <label class="inputetxtas" for="qrcpopuptext">'.esc_html("Label", "qr-code-composer").'</label></strong><input type="text" name="qrc_composer_settings[qrcpopuptext]" value="%s" placeholder="View QR code" id="qrcpopuptext"></p>', esc_attr($qrcpopuptext)); 
 
         printf('<p><strong>
     <label class="qrc_dwnbtnlabel" for="qrcpopup_fntsize">'.esc_html("Font Size", "qr-code-composer").'</label></strong><input type="number" name="qrc_composer_settings[qrcpopup_fntsize]" value="%s"  id="qrcpopup_fntsize" min="10" max="30"></p>', esc_attr($qrcpopup_fntsize)); 
@@ -361,76 +352,10 @@ function qr_input_size()
     $options = get_option('qrc_composer_settings');
 
     $qrcpopupenbl = isset($options['qrcpopupenbl']) ? 'checked' : '';
-   $qrc_design_type = isset($options['qrc_design_type']) ? $options['qrc_design_type'] : 'popup';
-   $qrc_popupdesign = isset($options['qrc_popupdesign']) ? $options['qrc_popupdesign'] : 'center';
-   $qrc_tooltipdesign = isset($options['qrc_tooltipdesign']) ? $options['qrc_tooltipdesign'] : 'leftTop';
 
-
-
-
-    ?>
-    <div class="qrdownlaodtext">
-
-    <?php
         printf('<div class="onoffswitch"><input type="checkbox" value="qrcpopupenbl" class="onoffswitch-checkbox" id="qrcpopupenbl"  name="qrc_composer_settings[qrcpopupenbl]" %s tabindex="0"><label class="onoffswitch-label" for="qrcpopupenbl">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span></label></div>',esc_attr($qrcpopupenbl));
-
-        ?>
-      
-
-    <p class="qrcvisisbolity"  style="margin-bottom:12px;"><?php esc_html_e('If the switcher is on, the popup button will be visible instead of the frontend QR image. Click on the popup button to see the QR code.', 'qr-code-composer'); ?></p>
-   <div class="removePopupsecte">
-    <strong>
-    <label class="qrc_dwnbtnlabel" for="qrc_design_type"><?php esc_html_e('Display Type:', 'qr-code-composer'); ?></label></strong>
-     <select name="qrc_composer_settings[qrc_design_type]" id="qrc_design_type">
-        
-    <option value="tooltip" <?php echo esc_attr($qrc_design_type) == 'tooltip' ? 'selected' : '' ?>><?php esc_html_e('ToolTip', 'qr-code-composer'); ?></option>
-    <option value="popup" <?php echo esc_attr($qrc_design_type) == 'popup' ? 'selected' : '' ?>><?php esc_html_e('PopUp', 'qr-code-composer'); ?></option>    
-
-    </select> 
-
-    <p  id="qrc_popupdesignwrap">
-    <strong>
-        <label class="qrc_dwnbtnlabel" for="qrc_popupdesign"><?php esc_html_e('Popup Position:', 'qr-code-composer'); ?></label></strong>
-     <select name="qrc_composer_settings[qrc_popupdesign]"  id="qrc_popupdesign">
-        
-    <option value="center" <?php echo esc_attr($qrc_popupdesign) == 'center' ? 'selected' : '' ?>><?php esc_html_e('Center', 'qr-code-composer'); ?></option>
-    <option value="leftTop" <?php echo esc_attr($qrc_popupdesign) == 'leftTop' ? 'selected' : '' ?>><?php esc_html_e('Left Top', 'qr-code-composer'); ?></option>
-    <option value="centerTop" <?php echo esc_attr($qrc_popupdesign) == 'centerTop' ? 'selected' : '' ?>><?php esc_html_e('Center Top', 'qr-code-composer'); ?></option>
-    <option value="rightTop" <?php echo esc_attr($qrc_popupdesign) == 'rightTop' ? 'selected' : '' ?>><?php esc_html_e('Right Top', 'qr-code-composer'); ?></option>
-    <option value="leftBottom" <?php echo esc_attr($qrc_popupdesign) == 'leftBottom' ? 'selected' : '' ?>><?php esc_html_e('Left Bottom', 'qr-code-composer'); ?></option>
-    <option value="centerBottom" <?php echo esc_attr($qrc_popupdesign) == 'centerBottom' ? 'selected' : '' ?>><?php esc_html_e('Center Bottom', 'qr-code-composer'); ?></option>    
-    <option value="rightBottom" <?php echo esc_attr($qrc_popupdesign) == 'rightBottom' ? 'selected' : '' ?>><?php esc_html_e('Right Bottom', 'qr-code-composer'); ?></option>    
-    <option value="centerTopSlide" <?php echo esc_attr($qrc_popupdesign) == 'centerTopSlide' ? 'selected' : '' ?>><?php esc_html_e('Center Top Slide', 'qr-code-composer'); ?></option>    
-    <option value="centerBottomSlide" <?php echo esc_attr($qrc_popupdesign) == 'centerBottomSlide' ? 'selected' : '' ?>><?php esc_html_e('Center Bottom Slide', 'qr-code-composer'); ?></option>    
-    <option value="leftTopSlide" <?php echo esc_attr($qrc_popupdesign) == 'leftTopSlide' ? 'selected' : '' ?>><?php esc_html_e('Left Top Slide', 'qr-code-composer'); ?></option>    
-    <option value="leftBottomSlide" <?php echo esc_attr($qrc_popupdesign) == 'leftBottomSlide' ? 'selected' : '' ?>><?php esc_html_e('Left Bottom Slide', 'qr-code-composer'); ?></option>    
-    <option value="rightTopSlide" <?php echo esc_attr($qrc_popupdesign) == 'rightTopSlide' ? 'selected' : '' ?>><?php esc_html_e('Right Top Slide', 'qr-code-composer'); ?></option>    
-    <option value="rightBottomSlide" <?php echo esc_attr($qrc_popupdesign) == 'rightBottomSlide' ? 'selected' : '' ?>><?php esc_html_e('Right Bottom Slide', 'qr-code-composer'); ?></option>    
-
-        </select> 
-    </p>
-
-    <p id="qrc_tooltipdesignwrap">
-    <strong>
-    <label class="qrc_dwnbtnlabel" for="qrc_tooltipdesign"><?php esc_html_e('Tooltip Position:', 'qr-code-composer'); ?></label></strong>
-     <select name="qrc_composer_settings[qrc_tooltipdesign]" class="qrc_tooltipdesign" id="qrc_tooltipdesign">
-        
-    <option value="bottomLeft" <?php echo esc_attr($qrc_tooltipdesign) == 'bottomLeft' ? 'selected' : '' ?>><?php esc_html_e('Bottom Left', 'qr-code-composer'); ?></option>
-    <option value="bottomCenter" <?php echo esc_attr($qrc_tooltipdesign) == 'bottomCenter' ? 'selected' : '' ?>><?php esc_html_e('Bottom Center', 'qr-code-composer'); ?></option>
-    <option value="bottomRight" <?php echo esc_attr($qrc_tooltipdesign) == 'bottomRight' ? 'selected' : '' ?>><?php esc_html_e('Bottom Right', 'qr-code-composer'); ?></option>
-    <option value="leftTop" <?php echo esc_attr($qrc_tooltipdesign) == 'leftTop' ? 'selected' : '' ?>><?php esc_html_e('Left Top', 'qr-code-composer'); ?></option>
-    <option value="leftCenter" <?php echo esc_attr($qrc_tooltipdesign) == 'leftCenter' ? 'selected' : '' ?>><?php esc_html_e('Left Center', 'qr-code-composer'); ?></option>
-    <option value="rightTop" <?php echo esc_attr($qrc_tooltipdesign) == 'rightTop' ? 'selected' : '' ?>><?php esc_html_e('Right Top', 'qr-code-composer'); ?></option>    
-    <option value="rightCenter" <?php echo esc_attr($qrc_tooltipdesign) == 'rightCenter' ? 'selected' : '' ?>><?php esc_html_e('Right Center', 'qr-code-composer'); ?></option> 
-
-    </select> 
-    </p>
-
-    </div>
-    </div>
-    <?php
     }
 
 /**
@@ -500,7 +425,26 @@ function wc_qr_alignment()
     printf('<input type="text" name="qrc_composer_settings[qr_color]" value="%s" class="qrc-color-picker" id="fill">',esc_attr($qr_color));
 
     }
+    function removeautodisplay()
+    {
 
+        $options = get_option('qrc_autogenerate');
+
+        $checked = isset($options['removeautodisplay']) ? 'checked' : '';
+
+        printf('<p><input type="checkbox" id="removeautodisplay" class="qrc-apple-switch" value="removeautodisplay" name="qrc_autogenerate[removeautodisplay]" %s></p>',$checked);
+
+    }
+    function removemetabox()
+    {
+
+        $options = get_option('qrc_autogenerate');
+
+        $checked = isset($options['removemetabox']) ? 'checked' : '';
+
+        printf('<p><input type="checkbox" class="qrc-apple-switch" value="removemetabox" name="qrc_autogenerate[removemetabox]" %s></p>',$checked);
+
+    }
 
     function qr_stcode_management()
     {

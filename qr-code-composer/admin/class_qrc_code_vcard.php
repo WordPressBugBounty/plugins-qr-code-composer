@@ -7,8 +7,8 @@
  * @link       https://sharabindu.com
  * @since      3.2.7
  *
- * @package    qrc_composer_pro
- * @subpackage qrc_composer_pro/admin
+ * @package    qr-code-composer
+ * @subpackage qr-code-composer/admin
  */
 
 class QRC_VcardLight{

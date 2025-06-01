@@ -2,7 +2,7 @@
 /**
 *
 * @link       https://sharabindu.com
-* @since       2.0.17
+* @since       3.0.0
 *
 * @package    Qrc_composer
 * @subpackage Qrc_composer/includes/
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     $qr_dwnbtnbg_color = (isset($options1['qr_dwnbtnbg_color'])) ? $options1['qr_dwnbtnbg_color'] : '#44d813';
     $qr_dwnbtn_color = (isset($options1['qr_dwnbtn_color'])) ? $options1['qr_dwnbtn_color'] : '#000';
     $download_qr = isset($options1['qr_download_text']) ? $options1['qr_download_text'] : 'Download QR 🡻';
-    $qrc_alignment = isset($options1['qrc_select_alignment']) ? $options1['qrc_select_alignment'] : 'left';
+
     $qr_download_hide = isset($options1['qr_download_hide']) ? $options1['qr_download_hide'] : 'no';
     $qr_download_brclr = isset($options1['qr_download_brclr']) ? $options1['qr_download_brclr'] : '#44d813';
     $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';    
@@ -48,7 +48,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     $qrc_design_type = isset($options1['qrc_design_type']) ? $options1['qrc_design_type'] : 'popup';
     $number = isset($options1['qr_code_phonenumber']) ? $options1['qr_code_phonenumber'] : '+98732382';
 
-
+    $option34 = get_option('qrc_autogenerate');
+    $qrc_alignment = isset($option34['qrc_select_alignment']) ? $option34['qrc_select_alignment'] : 'left';
 
     $options = get_option('qrc_custom_link_generator');
 
