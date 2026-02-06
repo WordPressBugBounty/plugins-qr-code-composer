@@ -29,6 +29,12 @@ class QR_code_Admin_settings{
     add_settings_section("qrc_design_section", " ", array($this ,'settting_sec_desfifn'), 'qrc_design_sec');
 
 
+
+
+    add_settings_field("qr_color_management", esc_html__("QR Color", "qr-code-composer") ,array($this , "qr_color_management"), 'qrc_design_sec', "qrc_design_section");
+
+    add_settings_field("qr_bgcolor_management", esc_html__("QR Background Color", "qr-code-composer") , array($this ,"qr_bgcolor_management"), 'qrc_design_sec', "qrc_design_section");
+
     add_settings_field("qr_code_shape", esc_html__("Choose Shape", "qr-code-composer").'<sup class="qrcnewfrtis">NEW</sup>' ,array($this , "qr_code_shape"), 'qrc_design_sec', "qrc_design_section");
 
     add_settings_field("qr_ecLevel", esc_html__("Error Correction Level:", "qr-code-composer") ,array($this , "ecLevel"), 'qrc_design_sec', "qrc_design_section"); 
@@ -36,12 +42,6 @@ class QR_code_Admin_settings{
     add_settings_field("qr_quiet", esc_html__("Margin", "qr-code-composer") ,array($this , "quiet"), 'qrc_design_sec', "qrc_design_section");
 
     add_settings_field("qr_code_size", esc_html__("QR Code Size", "qr-code-composer") ,array($this , "qr_input_size"), 'qrc_design_sec', "qrc_design_section");
-
-    add_settings_field("qr_color_management", esc_html__("QR Color", "qr-code-composer") ,array($this , "qr_color_management"), 'qrc_design_sec', "qrc_design_section");
-
-    add_settings_field("qr_bgcolor_management", esc_html__("QR Background Color", "qr-code-composer") , array($this ,"qr_bgcolor_management"), 'qrc_design_sec', "qrc_design_section");
-
-
     add_settings_field("qr_download_text", esc_html__("Download QR Button", "qr-code-composer") , array($this ,"qr_download_text"), 'qrc_design_sec', "qrc_design_section");
 
     add_settings_field("qr_visibity_options", esc_html__("QR Code Visibility", "qr-code-composer") , array($this ,"qr_visibity_options"), 'qrc_design_sec', "qrc_design_section",array('class' =>'qrcnewfeatures qrcodevsbity')); 
@@ -190,30 +190,6 @@ function qr_input_size()
         printf('<input type="range" class="qrcranges"  name="qrc_composer_settings[qr_code_picture_size_width]"  id="qwe_sizw" min="50" step="1" max="600" value="%s" oninput="num7.value = this.value"><input type="number" id="num7" value="%s" min="50" step="1" max="600" oninput="qwe_sizw.value = this.value">', esc_attr($qrc_size), esc_attr($qrc_size));
 
  }
-
-
-/**
- * This function is a callback function of  add seeting field
- */
-
-    function qr_alignment()
-    {
-
-    $options = get_option('qrc_composer_settings');
-    $qrc_alignment = isset($options['qrc_select_alignment']) ? $options['qrc_select_alignment'] : '';
-
-    ?>
-    <select name="qrc_composer_settings[qrc_select_alignment]" id="qr_alignment">
-        
-    <option value="left" <?php echo esc_attr($qrc_alignment) == 'left' ? 'selected' : '' ?>><?php esc_html_e('Left', 'qr-code-composer'); ?></option>
-    <option value="right" <?php echo esc_attr($qrc_alignment) == 'right' ? 'selected' : '' ?>><?php esc_html_e('Right', 'qr-code-composer'); ?></option>   
-    <option value="center" <?php echo esc_attr($qrc_alignment) == 'center' ? 'selected' : '' ?>><?php esc_html_e('Center', 'qr-code-composer'); ?></option>
-
-    </select>
-
-    <?php
-    }
-
 /**
  * This function is a callback function of  add seeting field
  */
@@ -226,8 +202,8 @@ function qr_input_size()
     $qr_download_iconclass = isset($options['qr_download_iconclass']) ? $options['qr_download_iconclass'] : '';
 
     $qr_download_hide = isset($options['qr_download_hide']) ? $options['qr_download_hide'] : 'no';
-    $qr_download_brclr = isset($options['qr_download_brclr']) ? $options['qr_download_brclr'] : '#44d813';
-    $qrc_dwnbtn_brdius = isset($options['qrc_dwnbtn_brdius']) ? $options['qrc_dwnbtn_brdius'] : '20';
+    $qr_download_brclr = isset($options['qr_download_brclr']) ? $options['qr_download_brclr'] : '#dddddd';
+    $qrc_dwnbtn_brdius = isset($options['qrc_dwnbtn_brdius']) ? $options['qrc_dwnbtn_brdius'] : '4';
     $qr_download_fntsz = isset($options['qr_download_fntsz']) ? $options['qr_download_fntsz'] : '12';
 
     ?>
@@ -251,7 +227,7 @@ function qr_input_size()
     $value = (isset($options['qr_dwnbtn_color'])) ? $options['qr_dwnbtn_color'] : '#000';
     printf('<p class="qrc_dwnbtn"><strong>
     <label class="qrc_dwnbtnlabel" for="qr_dwnbtn_color">'.esc_html("Text Color", "qr-code-composer").'</label></strong><input type="text" name="qrc_composer_settings[qr_dwnbtn_color]" value="%s" class="qrc-btn-color-picker" id="qr_dwnbtn_color"></p>', esc_attr($value));
-    $valuebg = (isset($options['qr_dwnbtnbg_color'])) ? $options['qr_dwnbtnbg_color'] : '#44d813';
+    $valuebg = (isset($options['qr_dwnbtnbg_color'])) ? $options['qr_dwnbtnbg_color'] : '#dddddd';
     printf('<p><strong>
     <label class="qrc_dwnbtnlabel" for="qr_dwnbtnbg_color">'.esc_html("Background", "qr-code-composer").'</label></strong><input type="text" name="qrc_composer_settings[qr_dwnbtnbg_color]" value="%s" class="qrc-btn-bg-picker" id="qr_dwnbtnbg_color"></p>', esc_attr($valuebg));
 
@@ -317,7 +293,7 @@ function qr_input_size()
     $options = get_option('qrc_composer_settings');
 
     $qrcpopuptext = isset($options['qrcpopuptext']) ? $options['qrcpopuptext'] : 'View To Click';
-    $qrcpopup_bg = (isset($options1['qrcpopup_bg'])) ? $options1['qrcpopup_bg'] : '#44d813';
+    $qrcpopup_bg = (isset($options1['qrcpopup_bg'])) ? $options1['qrcpopup_bg'] : '#dddddd';
     $qrcpopup_color = (isset($options1['qrcpopup_color'])) ? $options1['qrcpopup_color'] : '#000';
     $qrcpopup_brclr = (isset($options1['qrcpopup_brclr'])) ? $options1['qrcpopup_brclr'] : '#32a518';
     $qrcpopup_brdius = (isset($options1['qrcpopup_brdius'])) ? $options1['qrcpopup_brdius'] : '20';
@@ -357,31 +333,6 @@ function qr_input_size()
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span></label></div>',esc_attr($qrcpopupenbl));
     }
-
-/**
- * This function is a callback function of  add seeting field
- */
-
-function wc_qr_alignment()
-{
-
-    $options = get_option('qrc_composer_settings');
-    $qrc_wc_alignment = isset($options['qrcppagelocation']) ? $options['qrcppagelocation'] : 'inatab';
-
-    ?>
-    <select class="select"  name="qrc_composer_settings[qrcppagelocation]" id="qrcppagelocation">
-        
-    <option value="inatab" <?php echo esc_attr($qrc_wc_alignment) == 'inatab' ? 'selected' : '' ?>><?php esc_html_e('In a tab', 'qr-code-composer'); ?></option>
-    <option value="endofpmeta" <?php echo esc_attr($qrc_wc_alignment) == 'endofpmeta' ? 'selected' : '' ?>><?php esc_html_e('End of Product Meta', 'qr-code-composer'); ?></option>    
-
-    <option value="bellowofcart" <?php echo esc_attr($qrc_wc_alignment) == 'bellowofcart' ? 'selected' : '' ?>><?php esc_html_e('Below the cart button', 'qr-code-composer'); ?></option>
-
-     <option value="abvofcart" <?php echo esc_attr($qrc_wc_alignment) == 'abvofcart' ? 'selected' : '' ?>><?php esc_html_e('Above of cart Button', 'qr-code-composer'); ?></option>   
-
-    </select>
-
-    <?php
-}
 
 
     /**

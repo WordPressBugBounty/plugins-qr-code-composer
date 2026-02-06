@@ -46,7 +46,7 @@ class QR_code_Print_light{
     }
     function qr_print_display_frontend(){
 
-        printf('<input type="checkbox"  class="qrc_apple-switch"   value="qrc_enable_print_shtco" checked><span style="display:inline-block;margin-right:30px"></span>[qrc-print]<p class="description"><em>'.esc_html__('Click to enable shortcodes for frontend', 'qr-code-composer').' <a href="https://wordpressqr.sharabindu.com/qr-code-print-demo/"> View Demo</a></em></p>');
+        printf('<input type="checkbox"  class="qrc_apple-switch"   value="qrc_enable_print_shtco" checked><span style="display:inline-block;margin-right:30px"></span>[qrc-print]<p class="description"><em>'.esc_html__('Click to enable shortcodes for frontend', 'qr-code-composer').' <a href="https://wordpressqrcode.com/qr-code-print-demo/"> View Demo</a></em></p>');
 
             }
     function qr_print_post_type()

@@ -2,7 +2,7 @@
 /**
 *
 * @link       https://sharabindu.com
-* @since       3.0.0
+* @since       3.0.4
 *
 * @package    Qrc_composer
 * @subpackage Qrc_composer/admin/
@@ -25,6 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	$download_qr = isset($options['qrcvcrad_download_text']) ? $options['qrcvcrad_download_text'] : esc_html__('Download QR', "qr-code-composer");
 	$qrcvcrad_dwnbtn_color = isset($options['qrcvcrad_dwnbtn_color']) ? $options['qrcvcrad_dwnbtn_color'] : '#000';
-	$qrcvcrad_btnbg_color = isset($options['qrcvcrad_btnbg_color']) ? $options['qrcvcrad_btnbg_color'] : '#44d813';
+	$qrcvcrad_btnbg_color = isset($options['qrcvcrad_btnbg_color']) ? $options['qrcvcrad_btnbg_color'] : '#dddddd';
 
 	$qrcvcrad_wnload_hide = isset($options['qrcvcrad_wnload_hide']) ? $options['qrcvcrad_wnload_hide'] : 'no';

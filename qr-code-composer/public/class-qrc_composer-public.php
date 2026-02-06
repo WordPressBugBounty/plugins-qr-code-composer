@@ -3,7 +3,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      3.0.0
+ * @since      3.0.4
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/public
@@ -25,7 +25,7 @@ class Qrc_composer_Public
     /**
      * The ID of this plugin.
      *
-     * @since    3.0.0
+     * @since    3.0.4
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -34,7 +34,7 @@ class Qrc_composer_Public
     /**
      * The version of this plugin.
      *
-     * @since    3.0.0
+     * @since    3.0.4
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -43,7 +43,7 @@ class Qrc_composer_Public
     /**
      * Initialize the class and set its properties.
      *
-     * @since    3.0.0
+     * @since    3.0.4
      * @param      string    $plugin_name       The name of the plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -58,7 +58,7 @@ class Qrc_composer_Public
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
-     * @since    3.0.0
+     * @since    3.0.4
      */
     public function enqueue_styles()
     {
@@ -70,7 +70,7 @@ class Qrc_composer_Public
     /**
      * Register the JavaScript for the public-facing side of the site.
      *
-     * @since    3.0.0
+     * @since    3.0.4
      */
     public function enqueue_scripts()
     {
@@ -103,6 +103,24 @@ class Qrc_composer_Public
             'ecLevel' => $ecLevel,
         );
         wp_localize_script( 'qrccreateqr', 'datas', $qrcomspoer_options ); 
+        add_filter('script_loader_tag', function ($tag, $handle) {
+
+        if (in_array($handle, ['qr-code-styling', 'qrccreateqr'], true)) {
+            $tag = str_replace([' defer', ' async'], '', $tag);
+            $tag = str_replace(
+                '<script ',
+                '<script data-no-optimize="1" data-noptimize="1" ',
+                $tag
+            );
+        }
+
+        return $tag;
+
+    }, 999, 2);
+
+
+
+
     }
 
     /**
@@ -143,7 +161,7 @@ class Qrc_composer_Public
      * This function is Provide for Createing Woocomerce custom product tab for Qr Code
      */
 
-    public function woo_custom_product_tabs($tabs)
+   public function woo_custom_product_tabs($tabs)
     {
 
         $options1 = get_option('qrc_autogenerate');
@@ -174,15 +192,14 @@ class Qrc_composer_Public
 
         if ( ( $qrc_meta_display == '2' ) or ( $singlular_wc_exclude ) or $checked )
         {
-            return;
-        }
-        else
-        {
-            return $tabs;
 
+            if ( isset($tabs['qty_pricing_tab']) ) {
+            unset($tabs['qty_pricing_tab']); // Remove only QR Code tab
+        }
         }
 
 
+    return $tabs;
 
     }
 

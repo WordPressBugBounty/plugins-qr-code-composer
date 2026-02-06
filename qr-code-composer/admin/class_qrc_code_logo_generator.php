@@ -108,7 +108,7 @@ public function settting_log_sec_func()
 <div class="qrc-box-header" >
             <h3 class="sui-box-title"><?php echo esc_html__('QR codes for various components', 'qr-code-composer') ?>
 </h3>
-<p class="vrcomponents"><?php echo esc_html__('Basically,it generates QR codes for the following elements. which are displayed on the frontend through shortcodes. The most interesting thing is that in the premium version you can also generate these QR codes using the', 'qr-code-composer') ?> <a href="https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode"><?php echo esc_html__('Shortcode Generator (Pro).', 'qr-code-composer') ?></a></p>
+<p class="vrcomponents"><?php echo esc_html__('Basically,it generates QR codes for the following elements. which are displayed on the frontend through shortcodes. The most interesting thing is that in the premium version you can also generate these QR codes using the', 'qr-code-composer') ?> <a href="https://qrcode.woocommercebarcode.com/wp-admin/admin.php?page=qrc_shortcode"><?php echo esc_html__('Shortcode Generator (Pro).', 'qr-code-composer') ?></a></p>
         </div>
         <?php
 }

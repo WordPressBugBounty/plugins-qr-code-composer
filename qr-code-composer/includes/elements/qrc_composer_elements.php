@@ -128,7 +128,7 @@
       [
         'label' => __( 'Premium QR Demo <i class="icon-element eicon-upgrade-crown"></i>', 'qr-code-composer' ),
         'type' => \Elementor\Controls_Manager::RAW_HTML,
-        'raw' => __( '<p>Check out the Premium Version QR Code on the Elementor Editor page <a href="https://wordpressqrcode.sharabindu.com/wp-admin/post.php?post=2984&action=elementor" traget="_blank">View Demo</a> | <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" traget="_blank">Plugin Page</a></p>', 'qr-code-composer' ),
+        'raw' => __( '<p>Check out the Premium Version QR Code on the Elementor Editor page <a href="https://qrcode.woocommercebarcode.com/wp-admin/post.php?post=2984&action=elementor" traget="_blank">View Demo</a> | <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" traget="_blank">Upgrade to PRO</a></p>', 'qr-code-composer' ),
         'content_classes' => 'qrc_premkumverd',
       ]
     );
@@ -181,7 +181,7 @@
       [
         'label' => __( 'Premium QR Demo <i class="icon-element eicon-upgrade-crown"></i>', 'qr-code-composer' ),
         'type' => \Elementor\Controls_Manager::RAW_HTML,
-        'raw' => __( '<p>Check out the Premium Version QR Code on the Elementor Editor page <a href="https://wordpressqrcode.sharabindu.com/wp-admin/post.php?post=2984&action=elementor" traget="_blank">View Demo</a> | <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" traget="_blank">Plugin Page</a></p>', 'qr-code-composer' ),
+        'raw' => __( '<p>Check out the Premium Version QR Code on the Elementor Editor page <a href="https://qrcode.woocommercebarcode.com/wp-admin/post.php?post=2984&action=elementor" traget="_blank">View Demo</a> | <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" traget="_blank">Upgrade to PRO</a></p>', 'qr-code-composer' ),
         'content_classes' => 'qrc_premkumverd',
       ]
     );
@@ -307,7 +307,7 @@
       [
         'label' => __( 'Premium QR Demo <i class="icon-element eicon-upgrade-crown"></i>', 'qr-code-composer' ),
         'type' => \Elementor\Controls_Manager::RAW_HTML,
-        'raw' => __( '<p>Check out the Premium Version QR Code on the Elementor Editor page <a href="https://wordpressqrcode.sharabindu.com/wp-admin/post.php?post=2984&action=elementor" traget="_blank">View Demo</a> | <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" traget="_blank">Plugin Page</a></p>', 'qr-code-composer' ),
+        'raw' => __( '<p>Check out the Premium Version QR Code on the Elementor Editor page <a href="https://qrcode.woocommercebarcode.com/wp-admin/post.php?post=2984&action=elementor" traget="_blank">View Demo</a> | <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" traget="_blank">Upgrade to PRO</a></p>', 'qr-code-composer' ),
         'content_classes' => 'qrc_premkumverd',
       ]
     );

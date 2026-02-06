@@ -519,17 +519,17 @@ $("div#qrccomsposerprviewss").css('opacity','1');
         $('.qrc_metavcard_display th').append("<p>Automatically displaying QR Code for WooCommerce customers.</p>");
 
 
-        $('.qr_code_vcard th').append("<p>A simple vCard QR code based on the information on the side. If you want to generate more, use the  <a href='https://wordpressqrcode.sharabindu.com/wp-admin/admin.php?page=qrc_shortcode'> shortcode generator for vCard</a></p>");
-        $('.qrc_vacrdtempe th').append("<p>vCard Templates is a feature for displaying vCard information on the frontend. <a href='https://wordpressqr.sharabindu.com/card/elizabeth-i-brown/'>View Demo</a></p>");
+        $('.qr_code_vcard th').append("<p>A simple vCard QR code based on the information on the side. If you want to generate more, use the  <a href='https://qrcode.woocommercebarcode.com/wp-admin/admin.php?page=qrc_shortcode'> shortcode generator for vCard</a></p>");
+        $('.qrc_vacrdtempe th').append("<p>vCard Templates is a feature for displaying vCard information on the frontend. <a href='https://wordpressqrcode.com/card/elizabeth-i-brown/'>View Demo</a></p>");
 		        $('.qrc_vacrdauodisplay th').append("<p>Meta vCard QR code will be automatically displayed on the frontend after the content.</p>");
 		
 		
-        $('.qr_checkbox_vcrad th').append("<p>Clicking the switcher button next to the post type name will enable the vCard meta field for that post type<a href='https://wordpressqr.sharabindu.com/docs/automatically-display-vcard/' target='_blank'> Read Docs</a></p>");
+        $('.qr_checkbox_vcrad th').append("<p>Clicking the switcher button next to the post type name will enable the vCard meta field for that post type<a href='https://wordpressqrcode.com/docs/automatically-display-vcard/' target='_blank'> Read Docs</a></p>");
 
-        $('.qrc_userdsiplay th').append("<p>The plugin generates auto QR codes for user profiles, vCard QR code are generated from user profile information, If you want to close <a href='profile.php/#qrcuserQRcode'>Look Profile Page</a></p>");
-        $('.qrc_bbpress_display th').append("<p>Forum Memeber QR Code Generator for BB Press. QR code of memeber's profile URL and memeber's vCard QR code. <a href='https://wordpressqr.sharabindu.com/forums/users/dipashi/'> View Demo</a></p>");
-        $('.qrc_bdypress_display th').append("<p>  Profile QR Code Generator for Buddy Press. QR code of user's profile URL and user's vCard QR code. <a href='https://wordpressqr.sharabindu.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
-        $('.qrc_dokan_display th').append("<p>Vendor QR code generator for Dokan. QR code of vendor's profile URL and vendor's vCard QR code. <a href='https://wordpressqr.sharabindu.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
+        $('.qrc_userdsiplay th').append("<p>The plugin generates auto QR codes for user profiles, vCard QR code are generated from user profile information, If you want to close <a href='profile.php/#qrcuserQRcode'>Look Profile Page</a> | <a href='https://wordpressqrcode.com/wp-profile-qr-code/'>View Demo</a></p>");
+        $('.qrc_bbpress_display th').append("<p>Forum Memeber QR Code Generator for BB Press. QR code of memeber's profile URL and memeber's vCard QR code. <a href='https://wordpressqrcode.com/forums/users/dipashi/'> View Demo</a></p>");
+        $('.qrc_bdypress_display th').append("<p>  Profile QR Code Generator for Buddy Press. QR code of user's profile URL and user's vCard QR code. <a href='https://wordpressqrcode.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
+        $('.qrc_dokan_display th').append("<p>Vendor QR code generator for Dokan. QR code of vendor's profile URL and vendor's vCard QR code. <a href='https://wordpressqrcode.com/store/sharabindubakshi/'> View Demo</a></p>");
 
     })
 })(jQuery);

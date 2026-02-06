@@ -38,7 +38,7 @@ class QR_code_List_View_Light{
     function qr_dwn_display_frontend(){
 
 
-        printf('<input type="checkbox" " class="qrc_apple-switch"   value="qrc_enable_dwn_shtco" checked><span style="display:inline-block;margin-right:30px"></span>[qrc-download]<p class="description"><em>'.esc_html__('Click to enable shortcodes for frontend', 'qr-code-composer').' <a href="https://wordpressqr.sharabindu.com/qr-code-download/"> View Demo</a></em></p>');
+        printf('<input type="checkbox" " class="qrc_apple-switch"   value="qrc_enable_dwn_shtco" checked><span style="display:inline-block;margin-right:30px"></span>[qrc-download]<p class="description"><em>'.esc_html__('Click to enable shortcodes for frontend', 'qr-code-composer').' <a href="https://wordpressqrcode.com/qr-code-download/"> View Demo</a></em></p>');
 
             }
 

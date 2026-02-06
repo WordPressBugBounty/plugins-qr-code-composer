@@ -2,7 +2,7 @@
 /**
 *
 * @link       https://sharabindu.com
-* @since       3.0.0
+* @since       3.0.4
 *
 * @package    Qrc_composer
 * @subpackage Qrc_composer/includes/
@@ -21,15 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';
 
     $qrc_size = isset($options1['qr_code_picture_size_width']) ? $options1['qr_code_picture_size_width'] : 200;
-    $qrc_dwnbtn_brdius = isset($options1['qrc_dwnbtn_brdius']) ? $options1['qrc_dwnbtn_brdius'] : '20';
+    $qrc_dwnbtn_brdius = isset($options1['qrc_dwnbtn_brdius']) ? $options1['qrc_dwnbtn_brdius'] : '4';
     $qr_download_fntsz = isset($options1['qr_download_fntsz']) ? $options1['qr_download_fntsz'] : '12';
 
-    $qr_dwnbtnbg_color = (isset($options1['qr_dwnbtnbg_color'])) ? $options1['qr_dwnbtnbg_color'] : '#44d813';
+    $qr_dwnbtnbg_color = (isset($options1['qr_dwnbtnbg_color'])) ? $options1['qr_dwnbtnbg_color'] : '#dddddd';
     $qr_dwnbtn_color = (isset($options1['qr_dwnbtn_color'])) ? $options1['qr_dwnbtn_color'] : '#000';
-    $download_qr = isset($options1['qr_download_text']) ? $options1['qr_download_text'] : 'Download QR 🡻';
+    $download_qr = isset($options1['qr_download_text']) ? $options1['qr_download_text'] : 'Download QR';
 
     $qr_download_hide = isset($options1['qr_download_hide']) ? $options1['qr_download_hide'] : 'no';
-    $qr_download_brclr = isset($options1['qr_download_brclr']) ? $options1['qr_download_brclr'] : '#44d813';
+    $qr_download_brclr = isset($options1['qr_download_brclr']) ? $options1['qr_download_brclr'] : '#dddddd';
     $qrchidefrontend = isset($options1['qrchidefrontend']) ? 'checked' : '';    
     $popupcustomqr = isset($options1['popupcustomqr']) ? 'checked' : '';
     $popupcustomqr = isset($options1['popupcustomqr']) ? 'checked' : '';
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
     $qrcpopupenbl = isset($options1['qrcpopupenbl']) ? 'checked' : '';
 
-    $qrcpopup_bg = (isset($options1['qrcpopup_bg'])) ? $options1['qrcpopup_bg'] : '#44d813';
+    $qrcpopup_bg = (isset($options1['qrcpopup_bg'])) ? $options1['qrcpopup_bg'] : '#dddddd';
     $qrcpopup_color = (isset($options1['qrcpopup_color'])) ? $options1['qrcpopup_color'] : '#000';
     $qrcpopup_brclr = (isset($options1['qrcpopup_brclr'])) ? $options1['qrcpopup_brclr'] : '#32a518';
     $qrcpopup_brdius = (isset($options1['qrcpopup_brdius'])) ? $options1['qrcpopup_brdius'] : '20';
