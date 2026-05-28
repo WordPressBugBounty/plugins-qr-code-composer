@@ -1,5 +1,5 @@
-﻿=== QR Code Composer – Automatic QR code generation  ===
-Plugin Name: QR Code Composer – Automatic QR code generation
+﻿=== QR Code Composer – Automatic QR Code Generator ===
+Plugin Name: QR Code Composer – Automatic QR Code Generator
 Contributors: sharabindu
 Tags: qr code, qrcode, qr code generator, woocommerce, shortcode
 Donate link: https://sharabindu.com/donation/
@@ -120,25 +120,17 @@ Take your QR codes to the next level with **QR Code Composer Pro**:
 
 **Shortcode Generator:** On the plugin’s settings page, you’ll find the shortcode generator. From here let’s create shortcodes for all elements. Shortcodes for Custom Link QR, Whatsapp QR, WIFI QR, Google Map QR, vCard QR, and Event QR, can be generated through this generator. Also, you can customize many things including changing the design, color, logo, and animation of the QR code. Check out the live backend demo below [View Shortcode Geneator](https://qrcode.woocommercebarcode.com/wp-admin/admin.php?page=qrc_shortcode)
 
-= Credits =
-
-This plugin includes a modified version of the QRCode for JavaScript by Kazuhiko Arase, which is licensed under the MIT license.
-
-= Privacy =
-This plugin:
-
-* Does NOT connect to any third-party services
-
-* Does NOT store user data
-
-* ONLY generates QR code images locally
-
 
 = ⭐ We Value Your Feedback =
 Your feedback helps us grow!
 If you enjoy QR Code Composer, please share your experience and leave a rating. It means a lot.
 
 
+= Technical Excellence =
+
+Built using modern standards, **QR Code Composer** works smoothly with all major WordPress themes and plugins. It’s lightweight, clean, and designed to keep your website fast and secure.
+
+Want an easier way to connect with your audience? Install **QR Code Composer** today and start creating useful, engaging QR codes in just a few minutes!
 
 = How to add QR codes to a WordPress website = 
 [youtube https://youtu.be/5m0W-1mkydE]
