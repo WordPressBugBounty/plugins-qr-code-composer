@@ -1,10 +1,5 @@
 (function($) {
 	
-	$(window).load(function() {
-		
-		 $('.rightside').fadeIn(300);
-		
-	});
 		$(window).scroll(function() {
     if ($(window).scrollTop() > 200) {
              $('.bulptinyprowarp').fadeIn(300);
@@ -499,38 +494,6 @@ $("div#qrccomsposerprviewss").css('opacity','1');
                 $('#qr_print_cat_ty').show()
             }
         });
-      $('.removeautodisplay th').append("<p>Disable QR Code automatically displayed on the frontend after the content.</p>");
-
-      $('.removemetabox th').append("<p>Disable QR Code From Backend Metabox </p>");		
-		
-		
-		$('.alignme th').append("<p>Choose the alignment of the QR code, by default it will be on the left</p>");
-        $('.wcalignme th').append("<p>Choose the QR Code location on the Single product page, by default In a Tab</p>");
-        $('.ptab_name th').append("<p>The QR code is located in the tab called QR Code on the product page. Rename tab name</p>");
-        $('.qr_checkbox th').append("<p>Disable the QR code for specific post type that you wish to prevent the QR code on.</p>");
-        $('.qr_checkbox_page th').append("<p>Disable the QR code for specific pages that you wish to prevent the QR code on. Also can remove QR code from page, post, product, custom post using meta field</p>");
-        $('.qr_stcode_management th').append("<p>This is the shortcode for generating QR code of current page, current page url will be used as content of QR code.</p>");
-        $('.qr_code_custom_text th').append("<p>Creating QR codes with custom links, static text or numbers as QR code content.</p>");
-        $('.qr_code_phonenumber th').append("<p>Creating QR codes with Phone or Mobile number as QR code content.</p>");
-        $('.qr_code_mail_text th').append("<p>Creating QR codes with WhatsApp Number as QR code content.</p>");
-        $('.qr_code_wifi_text th').append("<p>Creating QR codes with WIFI Access as QR code content.</p>");
-        $('.qr_code_event_text th').append("<p>Creating QR codes with Event Management as QR code content.</p>");
-        $('.qr_code_maps_text th').append("<p>Creating QR codes with Google Map Location as QR code content.</p>");
-        $('.qrc_metavcard_display th').append("<p>Automatically displaying QR Code for WooCommerce customers.</p>");
-
-
-        $('.qr_code_vcard th').append("<p>A simple vCard QR code based on the information on the side. If you want to generate more, use the  <a href='https://qrcode.woocommercebarcode.com/wp-admin/admin.php?page=qrc_shortcode'> shortcode generator for vCard</a></p>");
-        $('.qrc_vacrdtempe th').append("<p>vCard Templates is a feature for displaying vCard information on the frontend. <a href='https://wordpressqrcode.com/card/elizabeth-i-brown/'>View Demo</a></p>");
-		        $('.qrc_vacrdauodisplay th').append("<p>Meta vCard QR code will be automatically displayed on the frontend after the content.</p>");
-		
-		
-        $('.qr_checkbox_vcrad th').append("<p>Clicking the switcher button next to the post type name will enable the vCard meta field for that post type<a href='https://wordpressqrcode.com/docs/automatically-display-vcard/' target='_blank'> Read Docs</a></p>");
-
-        $('.qrc_userdsiplay th').append("<p>The plugin generates auto QR codes for user profiles, vCard QR code are generated from user profile information, If you want to close <a href='profile.php/#qrcuserQRcode'>Look Profile Page</a> | <a href='https://wordpressqrcode.com/wp-profile-qr-code/'>View Demo</a></p>");
-        $('.qrc_bbpress_display th').append("<p>Forum Memeber QR Code Generator for BB Press. QR code of memeber's profile URL and memeber's vCard QR code. <a href='https://wordpressqrcode.com/forums/users/dipashi/'> View Demo</a></p>");
-        $('.qrc_bdypress_display th').append("<p>  Profile QR Code Generator for Buddy Press. QR code of user's profile URL and user's vCard QR code. <a href='https://wordpressqrcode.com/members/dipashi/profile/qr-code/'> View Demo</a></p>");
-        $('.qrc_dokan_display th').append("<p>Vendor QR code generator for Dokan. QR code of vendor's profile URL and vendor's vCard QR code. <a href='https://wordpressqrcode.com/store/sharabindubakshi/'> View Demo</a></p>");
-
     })
 })(jQuery);
 (function($) {
@@ -582,8 +545,8 @@ jQuery(document).ready(function($) {
       $('div.qrctab-content div.' + active_section + tab_suffix).addClass('active');
 
       // Handle tab menu.
-      $('div.tab-nav ul li.active').removeClass('active');
-      $('div.tab-nav ul li a[href="#' + active_section + '"]').closest('li').addClass('active');
+      $('div.qrc-tab-nav ul li.active').removeClass('active');
+      $('div.qrc-tab-nav ul li a[href="#' + active_section + '"]').closest('li').addClass('active');
 
     }
 

@@ -34,11 +34,11 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
 
 
 
-        add_settings_field("qrc_bbpress_display", esc_html__("BB Press QR Code (Premium)", "qr-code-composer") ,array($this , "qrc_bbpress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bbpress_display',));
+        add_settings_field("qrc_bbpress_display", esc_html__("BB Press QR Code", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' ,array($this , "qrc_bbpress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bbpress_display',));
 
-        add_settings_field("qrc_bdypress_display", esc_html__("Buddy Press QR Code (Premium)", "qr-code-composer") ,array($this , "qrc_bdypress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bdypress_display',));
+        add_settings_field("qrc_bdypress_display", esc_html__("Buddy Press QR Code", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' ,array($this , "qrc_bdypress_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_bdypress_display',));
 
-        add_settings_field("qrc_dokan_display", esc_html__("Dokan QR Code (Premium)", "qr-code-composer") ,array($this , "qrc_dokan_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_dokan_display',));
+        add_settings_field("qrc_dokan_display", esc_html__("Dokan QR Code", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' ,array($this , "qrc_dokan_display"), 'qrc_admin_integrate_sec', "qrc_admin_integrate__section", array('class'  =>  'qrc_dokan_display',));
 
     
 
@@ -65,7 +65,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
 </label></p></div>',esc_attr($checked));
 
 
-       echo '<p class="qrcshortvar"><label class="mqrc_label" for="qrcuservacrds" style="vertical-align: middle;">Author QR Shortcode (Premium):</label>
+       echo '<p class="qrcshortvar"><label class="mqrc_label" for="qrcuservacrds" style="vertical-align: middle;">Author QR Shortcode :</label><span class="qrcprofetdisbd">PRO</span>
             <input id="qrcuservacrds" type="text" class="shortcodereadoly" value="[qrc_user]" readonly style="width:70px;">
             <a href="https://wordpressqrcode.com/docs/author-page-qr-code">See Docs</a></p>';
     }
@@ -95,7 +95,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
     <option value="vcard" selected><?php esc_html_e('Auto Display QR as Memeber vCard', 'qr-code-composer'); ?></option>
     <option value="shortcode"><?php esc_html_e('Shortcode for Memeber vCard', 'qr-code-composer'); ?></option>    
 
-    </select><a id="qrcbbpress" video-url="https://www.youtube.com/watch?v=N_5Hl_qxJZc"><span title="Video Documentation" id="qrcintehf" class="dashicons dashicons-video-alt3"></span></a>
+    </select>
     <span class="shortcodes">
     <span>[bbpress-qrc-composer]</span>
 
@@ -132,7 +132,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
     <option value="vcard" selected><?php esc_html_e('Auto Display QR as Memeber vCard', 'qr-code-composer'); ?></option> 
     <option value="shortcode"><?php esc_html_e('Shortcode for Memeber vCard', 'qr-code-composer'); ?></option>    
 
-    </select><a id="qrcbdypress" video-url="https://www.youtube.com/watch?v=987t9BEmcSw"><span title="Video Documentation" id="qrcintehf" class="dashicons dashicons-video-alt3"></span></a>
+    </select>
     <span class="shortcodesr">
     <span>[buddypress-qrc-composer]</span>
 
@@ -169,7 +169,7 @@ register_setting("qrc_admin_integrate", "qrc_admin_integrate", array($this ,'qr_
 
     <option value="shortcode"><?php esc_html_e('Shortcode for Verdor vCard', 'qr-code-composer'); ?></option>    
 
-    </select><a id="qrcdokan" video-url="https://www.youtube.com/watch?v=7FRu8sE2wKA"><span title="Video Documentation" id="qrcintehf" class="dashicons dashicons-video-alt3"></span></a>
+    </select>
     <span class="shortcodesdokan">
     <span>[dokhan-qrc-composer]</span>
 

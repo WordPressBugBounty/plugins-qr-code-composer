@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "qrc-composer-pro/qr-code",
+	"title": "QR Code Composer",
+	"category": "widgets",
+	"icon": "screenoptions",
+	"description": "Generate a styled QR code for a custom link/text, phone number, or the current page link — using your QR Code Composer settings.",
+	"keywords": [ "qr", "qr code", "qrcode", "barcode" ],
+	"textdomain": "qr-code-composer",
+	"attributes": {
+		"sourceType": { "type": "string", "default": "current" },
+
+		"link": { "type": "string", "default": "" },
+
+		"number": { "type": "string", "default": "" },
+
+
+
+
+
+
+		"shape": { "type": "string", "default": "" },
+		"size": { "type": "string", "default": "" },
+		"bodystyle": { "type": "string", "default": "" },
+		"color": { "type": "string", "default": "" },
+		"background": { "type": "string", "default": "" },
+		"qrcbround": { "type": "string", "default": "" },
+
+		"dbtn": { "type": "string", "default": "" },
+		"label": { "type": "string", "default": "" },
+		"dbtcolor": { "type": "string", "default": "" },
+		"dbtbg": { "type": "string", "default": "" },
+		"dbborder": { "type": "string", "default": "" },
+		"brdius": { "type": "string", "default": "" },
+		"fntsz": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"html": false,
+		"align": [ "left", "center", "right" ]
+	}
+}

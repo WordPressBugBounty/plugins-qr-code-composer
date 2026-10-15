@@ -14,6 +14,7 @@
 				type: "canvas",
 				data:$carousel.data('qrcontent'),
 				dotsOptions: {
+                type: $carousel.data('dotstyle'),
 				color: $carousel.data('qrcolor'),
 				},
 				backgroundOptions: {

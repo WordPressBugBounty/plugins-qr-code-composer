@@ -10,6 +10,7 @@ class QRC_Lite_redirect{
 	     define( 'QRC_COMPOSER_PLUGIN_ID', 'qr_composer' ); 
 	     define( 'QRC_COMPOSER_ORDER_MAIL', 'qrc_ordermail' ); 
 	     define( 'QRC_COMPOSER_SHORTCODE', 'qrc_shortcode' ); 
+	     define( 'QRC_COMPOSER_DYNAMCI', 'qrc_dynamic_links' ); 
 	     define( 'QRC_COMPOSER_VCARDLIST', 'qrc_vcardlist' ); 
 	     define( 'QRC_COMPOSER_PRINT_ID', 'qrc_print_pdf' ); 
 	     define( 'QRC_COMPOSER_DOWNLOAD_ID', 'qrc_list_view' );

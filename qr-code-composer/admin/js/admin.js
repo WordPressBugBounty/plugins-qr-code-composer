@@ -55,8 +55,8 @@ jQuery(document).ready(function($) {
       $('div.qrctab-content div.' + active_section + tab_suffix).addClass('active');
 
       // Handle tab menu.
-      $('div.tab-nav ul li.active').removeClass('active');
-      $('div.tab-nav ul li a[href="#' + active_section + '"]').closest('li').addClass('active');
+      $('div.qrc-tab-nav ul li.active').removeClass('active');
+      $('div.qrc-tab-nav ul li a[href="#' + active_section + '"]').closest('li').addClass('active');
 
     }
 

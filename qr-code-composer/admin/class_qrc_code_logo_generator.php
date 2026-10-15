@@ -39,24 +39,24 @@ public function qrc_custom_link_generator_page()
 
     ));
 
-        add_settings_field("qr_code_mail_text", esc_html__("QR for WhatsApp ", "qr-code-composer") , array($this ,"qr_code_mail_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_mail_text", esc_html__("QR for WhatsApp", "qr-code-composer") , array($this ,"qr_code_mail_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_mail_text', 
         'label_for' => 'qr_code_mail_text',
 
     ));
 
-        add_settings_field("qr_code_wifi_text", esc_html__("QR for Wifi (Premium)", "qr-code-composer") , array($this ,"qr_code_wifi_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_wifi_text", esc_html__("QR for Wifi", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' , array($this ,"qr_code_wifi_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_wifi_text'
 
     ));
 
 
-        add_settings_field("qr_code_maps_text", esc_html__("QR for Maps (Premium)", "qr-code-composer") , array($this ,"qr_code_maps_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section" , array(
+        add_settings_field("qr_code_maps_text", esc_html__("QR for Maps", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' , array($this ,"qr_code_maps_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section" , array(
             'class'  =>  'qr_code_maps_text'
 
     ));
 
-        add_settings_field("qr_code_event_text", esc_html__("QR for Event (Premium)", "qr-code-composer") , array($this ,"qr_code_event_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
+        add_settings_field("qr_code_event_text", esc_html__("QR for Event", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' , array($this ,"qr_code_event_text"), 'qrc_logo_admin_sec', "logo_qrc_download_section", array(
             'class'  =>  'qr_code_event_text'
 
     ));
@@ -79,15 +79,19 @@ public function qr_code_event_text()
             <input type="text" placeholder="Write Event Loaction" id="mqrc_label" ></p><p>
 
             <label class="mrc_jsdhshd" for="mrc_jsdhshd">Start Date & Time:</label>  
-
+<div class="qrcprodemowrap">
             <input type="text" class="qrcprodemo" id="mrc_jsdhshd">
-            <input type="text" class="qrcprodemo1" id="qrcprodemo1"></p><p>
-            <label class="mqrc_label" for="qrcprodemo2">End Date & Time:</label>    
+            <input type="text" class="qrcprodemo1" id="qrcprodemo1">
+</div>
+            </p><p>
+            <label class="mqrc_label" for="qrcprodemo2">End Date & Time:</label> 
+ <div class="qrcprodemowrap">              
             <input type="text" class="qrcprodemo2" id="qrcprodemo2">
-            <input type="text" class="qrcprodemo3" id="qrcprodemo3"></p>
+            <input type="text" class="qrcprodemo3" id="qrcprodemo3">
+</div>
+            </p>
             <p class="qrcshortvar">
-            <input id="qrevents" type="text" class="shortcodereadoly" value="[qrc_event]" readonly >
-            <a class="videurls" id="qrcevent" video-url="https://www.youtube.com/watch?v=5L_XP4qXlj8"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>');
+            <input id="qrevents" type="text" class="shortcodereadoly" value="[qrc_event]" readonly ></p>');
 
 
 
@@ -127,8 +131,7 @@ public function qr_code_maps_text()
             <label for="qrc_mapq"  class="qrc_label wifi">Query</label>   
             <input type="text" placeholder="Write Maps Query" id="qrc_mapq" style="min-width:300px"></p>
             <p class="qrcshortvar">
-            <input id="qmaps" type="text" class="shortcodereadoly" value="[qr_maps_composer]" readonly >
-            <a class="videurls" id="qrcmap" video-url="https://www.youtube.com/watch?v=hvyI2TjrGM4"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>');
+            <input id="qmaps" type="text" class="shortcodereadoly" value="[qr_maps_composer]" readonly ></p>');
 
 }
 /**
@@ -144,8 +147,7 @@ public function qr_code_wifi_text()
             <label for="qrc_wifi_p"  class="qrc_label wifi">Wifi Password   </label>    
             <input type="text" placeholder="Write wifi password" id="qrc_wifi_p" style="min-width:300px"></p> 
             <p class="qrcshortvar">
-            <input id="wifiexre" type="text" class="shortcodereadoly" value="[qr_wifi_composer]" readonly >
-            <a id="qcwifi" class="videurls" video-url="https://www.youtube.com/watch?v=jqvtNpNpPZc"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>');
+            <input id="wifiexre" type="text" class="shortcodereadoly" value="[qr_wifi_composer]" readonly ></p>');
 
 }
 /**
@@ -161,8 +163,7 @@ public function qr_code_mail_text()
 
     printf('<p><input type="text" id="qr_code_mail_text" name="qrc_custom_link_generator[qr_code_mail_text]"   value="%s" placeholder="'.esc_attr($placeholder).'" style="min-width:300px"></p><p class="qrcshortvar">
             <input id="qr_whaappxre" type="text" class="shortcodereadoly" value="[qr_whatsapp_composer]" readonly >
-            <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_whaappxre" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button>
-            <a class="videurls" id="qcwhatapp" video-url="https://www.youtube.com/watch?v=NHPDHzGQsoo"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
+            <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_whaappxre" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button></p>
             ', esc_attr($options_value));
 
 }
@@ -180,8 +181,7 @@ public function qr_code_custom_text()
 
     printf('<p><input style="width:300px" type="text" id="qr_code_custom_text" name="qrc_custom_link_generator[qr_code_custom_text]"   value="%s" placeholder="'.esc_attr($placeholder).'"></p><p class="qrcshortvar">
             <input id="qr_linkexre" type="text" class="shortcodereadoly" value="[qr_link_composer]" readonly >
-            <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_linkexre" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button>
-            <a class="videurls" id="qclinks" video-url="https://www.youtube.com/watch?v=z3iEHvdcIO0"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>',esc_attr($options_value));
+            <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_linkexre" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button></p>',esc_attr($options_value));
 
 }
 public function qr_code_phonenumber()
@@ -193,8 +193,7 @@ public function qr_code_phonenumber()
 
     printf('<p><input type="text" id="qr_code_phonenumber" name="qrc_custom_link_generator[qr_code_phonenumber]"   value="%s" placeholder="'.esc_attr($placeholder).'" style="width:300px"></p><p class="qrcshortvar">
             <input id="qr_phnexre" type="text" class="shortcodereadoly" value="[qrc_phonenumber]" readonly >
-            <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_phnexre" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button>
-            <a class="videurls" id="qcphone" video-url="https://www.youtube.com/watch?v=AeNknsIkGnU"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>', esc_attr($options_value));
+            <button type="button" class="qrcclipbtns" data-clipboard-demo data-clipboard-target="#qr_phnexre" title="copy shortcode"><span class="dashicons dashicons-admin-page"></span></button></p>', esc_attr($options_value));
 
 }
 

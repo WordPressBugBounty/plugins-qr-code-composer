@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-01-23 12:02+0600\n"
+"POT-Creation-Date: 2026-10-15 10:49+0600\n"
 "PO-Revision-Date: 2023-05-09 19:04+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: esc_html;esc_html__;__\n"
 "X-Poedit-SearchPath-0: includes\n"
@@ -24,400 +24,709 @@ msgstr ""
 msgid "QR Composer"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:30 admin/class-qrc-admin-main.php:84
-msgid "Shortcode Generator"
+#: admin/class-qrc-admin-main.php:31 admin/class-qrc-admin-main.php:528
+msgid "Auto Generate QR Code"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:34
-msgid "Order Email QR"
+#: admin/class-qrc-admin-main.php:35
+msgid "Custom QR Code"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:38
-msgid "Bulk vCard list"
+#: admin/class-qrc-admin-main.php:37 admin/class-qrc-admin-main.php:530
+msgid "vCard QR Code"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:44
-msgid " Post type QR List"
+#: admin/class-qrc-admin-main.php:39 admin/class-qrc-admin-main.php:531
+msgid "Integration"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:44
-msgid "Post type QR List"
+#: admin/class-qrc-admin-main.php:42
+msgid "Shortcode Generator(PRO)"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:50
-msgid "Bulk Print QR Code"
+#: admin/class-qrc-admin-main.php:47
+msgid "Dynamic QR Code(PRO)"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:50
-msgid " Bulk Print QR Code"
+#: admin/class-qrc-admin-main.php:51
+msgid "Order QR Code (PRO)"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:72 admin/class-qrc-admin-main.php:127
-#: admin/class-qrc-admin-main.php:195
+#: admin/class-qrc-admin-main.php:55
+msgid "Download Vcard (PRO)"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:61
+msgid "Download QR Code(PRO)"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:67
+msgid "Bulk Print(PRO)"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:67
+msgid " Bulk Print (PRO)"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:72 admin/class-qrc-admin-main.php:240
+#: admin/class-qrc-admin-main.php:293 admin/class-qrc-admin-main.php:383
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:89 admin/class-qrc-admin-main.php:171
+#: admin/class-qrc-admin-main.php:238
 msgid "Pro Dashbord demo"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:74 admin/class-qrc-admin-main.php:129
-#: admin/class-qrc-admin-main.php:197 admin/class-qrc-admin-main.php:250
-msgid "Buy Premium"
+#: admin/class-qrc-admin-main.php:91 admin/class-qrc-admin-main.php:172
+#: admin/class-qrc-admin-main.php:489
+msgid "PRO Demo Page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:75 admin/class-qrc-admin-main.php:130
-#: admin/class-qrc-admin-main.php:198 admin/class-qrc-admin-main.php:251
-#: admin/class-qrc-admin-main.php:342 admin/class-qrc-admin-main.php:448
+#: admin/class-qrc-admin-main.php:92 admin/class-qrc-admin-main.php:173
+#: admin/class-qrc-admin-main.php:241 admin/class-qrc-admin-main.php:294
+#: admin/class-qrc-admin-main.php:384
 msgid "Docs"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:77 admin/class-qrc-admin-main.php:132
-#: admin/class-qrc-admin-main.php:200 admin/class-qrc-admin-main.php:253
-#: admin/class-qrc-admin-main.php:344 admin/class-qrc-admin-main.php:449
+#: admin/class-qrc-admin-main.php:94 admin/class-qrc-admin-main.php:175
+#: admin/class-qrc-admin-main.php:243 admin/class-qrc-admin-main.php:296
+#: admin/class-qrc-admin-main.php:386 admin/class-qrc-admin-main.php:507
 msgid "Support"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:78 admin/class-qrc-admin-main.php:133
-#: admin/class-qrc-admin-main.php:201 admin/class-qrc-admin-main.php:254
-#: admin/class-qrc-admin-main.php:345
+#: admin/class-qrc-admin-main.php:95 admin/class-qrc-admin-main.php:176
+#: admin/class-qrc-admin-main.php:244 admin/class-qrc-admin-main.php:297
+#: admin/class-qrc-admin-main.php:387
 msgid "More Plugin"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:85
+#: admin/class-qrc-admin-main.php:101
+msgid "Shortcode Generator"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:102
 msgid ""
 "Create multiple shortcodes for each element. Also can do different QR "
 "design, logo change etc"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:139
+#: admin/class-qrc-admin-main.php:182
 msgid "Order QR code (Premium)"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:140
+#: admin/class-qrc-admin-main.php:183
 msgid ""
 "The order QR code is displayed on the order dashboard and it will print in "
 "the order email"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:149
+#: admin/class-qrc-admin-main.php:192
 msgid "Order QR code"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:150
+#: admin/class-qrc-admin-main.php:193
 msgid "QR Code on Invoice"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:207
+#: admin/class-qrc-admin-main.php:250
 msgid "Download All vCard QR code from one page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:208
+#: admin/class-qrc-admin-main.php:251
 msgid "Download all Post type vCard QR Code Images from One Page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:248
+#: admin/class-qrc-admin-main.php:291
 msgid "Live demo"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:260
+#: admin/class-qrc-admin-main.php:303
 msgid "Download QR code from one page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:261
+#: admin/class-qrc-admin-main.php:304
 msgid "Download all Post type QR Codes from One Page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:270 admin/class-qrc-admin-main.php:361
-#: admin/class-qrc_composer-admin.php:200
+#: admin/class-qrc-admin-main.php:313 admin/class-qrc-admin-main.php:403
+#: admin/class-qrc_composer-admin.php:205
 msgid "Settings"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:271
+#: admin/class-qrc-admin-main.php:314
 msgid "Download Page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:340
+#: admin/class-qrc-admin-main.php:382
 msgid "Bulk Print demo"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:341
-msgid "Buy premium"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:351
+#: admin/class-qrc-admin-main.php:393
 msgid "QR Code Bulk Print(Pro)"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:352
+#: admin/class-qrc-admin-main.php:394
 msgid "Print QR Code In Bulk Qty based on Post type"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:362
+#: admin/class-qrc-admin-main.php:404
 msgid "Print Page"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:444
-msgid "Premium Upgrade"
+#: admin/class-qrc-admin-main.php:495
+msgid "PRO Dashboard"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:445
-msgid "Pro dashboard"
+#: admin/class-qrc-admin-main.php:501
+msgid "Documentation"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:446
-msgid "Pro Demo"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:457 admin/class-qrc_composer-admin.php:216
+#: admin/class-qrc-admin-main.php:517 admin/class-qrc_composer-admin.php:221
 #: includes/elements/qrc_composer_elements.php:16
-#: includes/metadata/class_qrc_defaultmeta.php:31
+#: includes/metadata/class_qrc_defaultmeta.php:105
 msgid "QR Code Composer"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:458
-msgid "Generate QR Code instantly"
+#: admin/class-qrc-admin-main.php:520
+msgid "Next-Gen QR Code Builder for WordPress Block Editor & WooCommerce."
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:465
+#: admin/class-qrc-admin-main.php:527
 msgid "Design QR code"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:466
-msgid "Auto Generate QR Code"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:467 admin/class-qrc_composer_settings.php:311
+#: admin/class-qrc-admin-main.php:529 admin/class-qrc_composer_settings.php:937
 msgid "Various Components QR"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:468
-msgid "vCard QR Code"
+#: admin/class-qrc-admin-main.php:533
+msgid "Why Upgrade to Pro"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:469
-msgid "Integration"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:470
-msgid "Our All Plugins"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:484 admin/class-qrc-admin-main.php:573
-#: admin/class-qrc-admin-main.php:589 admin/class-qrc-admin-main.php:616
-#: admin/class-qrc-admin-main.php:654
-msgid "Save Changes"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:489
-msgid "Preview"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:525
-msgid "Premium QR design"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:535
-msgid "Body Shape QR Code"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:536
-msgid "EyeFrame Shape QR"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:537
-msgid "Eyeball Shape QR"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:538
-msgid "Gradient Color QR"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:539
-msgid "Logo Upload"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:541
-msgid "Get Premium"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:556
-msgid "Order Email QR Code (Premium)"
-msgstr ""
-
-#: admin/class-qrc-admin-main.php:558
-msgid ""
-"Automatically generates QR code for every new order and old order. WC order "
-"email QR code, can be created from different elements."
+#: admin/class-qrc-admin-main.php:560
+msgid "Dot Shape"
 msgstr ""
 
 #: admin/class-qrc-admin-main.php:562
-msgid "Order Email Demo"
+msgid "QR Code Shape"
 msgstr ""
 
 #: admin/class-qrc-admin-main.php:564
-msgid "Order QR code in PDF Invoice"
+msgid "Size & Background"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:566
-msgid "PDF Demo"
+#: admin/class-qrc-admin-main.php:566 admin/class-qrc_composer_settings.php:781
+#: includes/elements/qrc_composer_elements.php:165
+#: includes/elements/qrc_composer_elements.php:209
+msgid "Download Button"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:595
-msgid "Shortcode Generator (Premium)"
+#: admin/class-qrc-admin-main.php:568 admin/class-qrc_composer_settings.php:50
+#: admin/class-qrc_composer_settings.php:877
+msgid "Miscellaneous"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:596
-msgid ""
-"In the premium version, you can create multiple shortcodes for each element. "
-"Also can do different QR designs, logo changes etc"
+#: admin/class-qrc-admin-main.php:569 admin/class-qrc_composer_settings.php:613
+msgid "Eye Frame Shape"
 msgstr ""
 
-#: admin/class-qrc-admin-main.php:598
-msgid "Pro Backend Demo"
+#: admin/class-qrc-admin-main.php:571 admin/class-qrc_composer_settings.php:653
+msgid "Eye Ball Shape"
 msgstr ""
 
-#: admin/class-qrc_composer-admin.php:216
+#: admin/class-qrc-admin-main.php:572 admin/class-qrc_composer_settings.php:46
+msgid "Logo"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:573 admin/class-qrc_composer_settings.php:51
+#: admin/class-qrc_composer_settings.php:67
+msgid "Preset"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:583 admin/class-qrc-admin-main.php:645
+#: admin/class-qrc-admin-main.php:726 admin/class-qrc-admin-main.php:762
+#: admin/class-qrc-admin-main.php:805
+msgid "Save Changes"
+msgstr ""
+
+#: admin/class-qrc-admin-main.php:590
+msgid "Live Preview"
+msgstr ""
+
+#: admin/class-qrc_composer-admin.php:221
 msgid "We are sincerely grateful for choosing"
 msgstr ""
 
-#: admin/class-qrc_composer-admin.php:216
+#: admin/class-qrc_composer-admin.php:221
 msgid "A 5-star review from you on"
 msgstr ""
 
-#: admin/class-qrc_composer-admin.php:216
+#: admin/class-qrc_composer-admin.php:221
 msgid "wordpress.org"
 msgstr ""
 
-#: admin/class-qrc_composer-admin.php:216
+#: admin/class-qrc_composer-admin.php:221
 msgid "will motivate our efforts"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:34
-msgid "Front QR Code Size"
+#: admin/class-qrc_composer_settings.php:33
+msgid "bodyshape"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:36
-#: includes/elements/qrc_composer_elements.php:109
-msgid "QR Color"
+#: admin/class-qrc_composer_settings.php:35
+msgid "EYEshape"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:38
-msgid "QR Background Color"
+#: admin/class-qrc_composer_settings.php:37
+msgid "EYEBALL"
 msgstr ""
 
 #: admin/class-qrc_composer_settings.php:41
-msgid "Download QR Button"
+msgid "QR code design"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:43
-msgid "QR Code Visibility"
+#: admin/class-qrc_composer_settings.php:44
+msgid "Size"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:45
-msgid "QR Code in Popup"
+#: admin/class-qrc_composer_settings.php:48
+msgid "Download Buttonn"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:47
-msgid "Popup button design"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:50
-msgid "Popup Enable For"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:53
-#: includes/elements/qrc_composer_elements.php:81
-msgid "Alignment"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:61
-msgid "QR location on product page"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:67
-msgid "Change Text of Product Tab"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:75
-msgid "Hide QR code according to post type"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:81
-msgid "Hide QR code according to Page"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:90
-msgid "Shortcode for Current Page URL"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:107
-msgid "Auto Generate QR"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:108
+#: admin/class-qrc_composer_settings.php:69
 msgid ""
-"These QR codes are automatically displayed after the content of the web "
-"page. current page url will be used as content of QR code."
+"Presets are ready-made QR code designs that combine professionally selected "
+"colors, shapes, gradients, and styling options into a single click. Simply "
+"choose a preset to instantly apply a complete design without manually "
+"configuring each setting.\n"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:149
-#: public/class-qrc_composer-public.php:145
-msgid "QR Code"
+#: admin/class-qrc_composer_settings.php:71
+msgid ""
+"After applying a preset, you can fully customize the QR code to match your "
+"brand or personal preferences. Adjust colors, gradients, dot styles, eye "
+"shapes, logos, borders, and other design settings as needed.\n"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:255
-#: admin/class-qrc_composer_settings.php:335
-msgid "Label"
+#: admin/class-qrc_composer_settings.php:416
+msgid "QR Code Shape + Border + Label"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:258
-#: admin/class-qrc_composer_settings.php:338
-msgid "Font Size"
+#: admin/class-qrc_composer_settings.php:418
+msgid ""
+"Select the shape style for your QR code. Choose between a classic square "
+"design or a modern circular design to match your branding or visual "
+"preferences."
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:262
-msgid "Text Color"
+#: admin/class-qrc_composer_settings.php:420
+msgid "Choose Shape"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:265
-#: admin/class-qrc_composer_settings.php:348
-#: includes/elements/qrc_composer_elements.php:257
-msgid "Background"
+#: admin/class-qrc_composer_settings.php:422
+#: admin/class-qrc_composer_settings.php:552
+#: admin/class-qrc_composer_settings.php:617
+#: admin/class-qrc_composer_settings.php:657
+#: includes/elements/qrc_composer_elements.php:71
+msgid "Square"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:269
-#: admin/class-qrc_composer_settings.php:351
+#: admin/class-qrc_composer_settings.php:423
+msgid "circle"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:429
+msgid "Add Border Or Label?"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:432
+#: admin/class-qrc_composer_settings.php:478
+#: admin/class-qrc_composer_settings.php:510
+msgid "Yes"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:434
+#: admin/class-qrc_composer_settings.php:480
+#: admin/class-qrc_composer_settings.php:512
+msgid "No"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:441
+msgid "Border Round:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:445
+msgid "Thickness of Border:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:447
+msgid ""
+"It is recommended to keep the Margin value equal to or greater than the "
+"Thickness value."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:452
+#: admin/class-qrc_composer_settings.php:762
+msgid "Margin:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:456
+msgid "The clear, empty space surrounding a QR Code on all sides."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:461
+msgid "Dasharray:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:464
+msgid ""
+"This setting allows a dashed border. The first field controls dash width, "
+"the second controls dash count. Set the first to 0 and the second to 1 to "
+"remove the border, or both to 0 for a solid border."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:468
+#: admin/class-qrc_composer_settings.php:921
 msgid "Border Color"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:272
-#: admin/class-qrc_composer_settings.php:354
-#: includes/elements/qrc_composer_elements.php:289
+#: admin/class-qrc_composer_settings.php:474
+msgid "Enable Label for Top ?"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:488
+#: admin/class-qrc_composer_settings.php:518
+msgid "Input Text"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:494
+#: admin/class-qrc_composer_settings.php:523
+#: admin/class-qrc_composer_settings.php:913
+msgid "Font Size"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:498
+#: admin/class-qrc_composer_settings.php:530
+msgid "Text Color"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:505
+msgid "Enable Label for Bottom ?"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:546
+msgid "Body Dot Shape"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:548
+msgid ""
+"This feature allows you to customize the dot design of the QR code. Choose "
+"your preferred style, and for gradient colors, select two complementary "
+"colors. For a solid color, use the same color code for both."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:550
+#: admin/class-qrc_composer_settings.php:615
+#: includes/elements/qrc_composer_elements.php:67
+msgid "Choose Design"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:553
+#: includes/elements/qrc_composer_elements.php:72
+msgid "Dots"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:554
+#: includes/elements/qrc_composer_elements.php:73
+msgid "Rounded"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:555
+#: includes/elements/qrc_composer_elements.php:74
+msgid "Extra Rounded"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:556
+#: admin/class-qrc_composer_settings.php:619
+#: admin/class-qrc_composer_settings.php:659
+msgid "Classy"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:557
+#: includes/elements/qrc_composer_elements.php:76
+msgid "Classy Rounded"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:561
+#: admin/class-qrc_composer_settings.php:625
+#: admin/class-qrc_composer_settings.php:663
+msgid "First Color"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:563
+#: admin/class-qrc_composer_settings.php:627
+#: admin/class-qrc_composer_settings.php:665
+msgid "Second Color"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:578
+#: admin/class-qrc_composer_settings.php:630
+#: admin/class-qrc_composer_settings.php:668
+msgid "Type:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:580
+msgid "linear"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:581
+#: admin/class-qrc_composer_settings.php:633
+#: admin/class-qrc_composer_settings.php:671
+msgid "Radial"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:585
+#: admin/class-qrc_composer_settings.php:637
+#: admin/class-qrc_composer_settings.php:675
+msgid "Rotation:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:591
+msgid "Error Correction Level:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:593
+msgid "L - low (7%)"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:594
+msgid "M - medium (15%)"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:595
+msgid "Q - quartile (25%)"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:596
+msgid "H - high (30%)"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:598
+msgid ""
+"Defines how much of the QR code can be recovered if damaged. Higher levels "
+"offer more recovery but reduce capacity."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:618
+#: admin/class-qrc_composer_settings.php:658
+msgid "Circle"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:620
+msgid "Classy rounded"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:627
+#: admin/class-qrc_composer_settings.php:665
+msgid "To create a single color, enter the same color code for both fields."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:632
+#: admin/class-qrc_composer_settings.php:670
+msgid "Linear"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:655
+msgid "Choose Design:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:694
+msgid "QR Code Size, Background, Loader"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:698
+msgid "QR Code Frontend Size:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:704
+msgid ""
+"Set the display size of the QR code as it appears on the frontend of your "
+"website"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:709
+msgid "Download QR Code Size:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:714
+msgid ""
+"Set the size and resolution of the QR code for download to ensure high-"
+"quality results."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:721
+msgid "Background Color: "
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:724
+msgid ""
+"Select a background color. For best scanning results, use a light color with "
+"a dark QR code."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:738
+msgid "Upload a Logo to Display Inside the QR Code"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:741
+msgid "Upload:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:750
+msgid ""
+"Add your custom logo or brand image to appear at the center of the QR code"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:754
+msgid "Logo Size:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:759
+msgid ""
+"For optimal QR code scanning performance, it is recommended to keep the logo "
+"image size minimal."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:766
+msgid "The clear, empty space surrounding Logo on all sides."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:784
+msgid "Show/Hide:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:788
+msgid "Remove Download Button"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:789
+msgid "Keep Download Button"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:797
+msgid "Available Formats:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:824
+msgid "Button Label:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:828
+msgid "Font Size:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:833
+msgid "Download File"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:835
+msgid "Default"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:836
+msgid "Custom"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:840
+msgid "Input File name"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:844
+msgid "Text Color:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:848
+msgid "Background:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:852
+msgid "Border Color:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:855
+msgid "Border Radius:"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:882
+msgid "QR Code Visibility"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:888
+msgid ""
+"When the switcher is enabled, the QR code will be hidden on the frontend, "
+"displaying only the download button. Clicking the download button will "
+"immediately download the QR code"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:891
+msgid "QR Code in Popup"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:903
+msgid ""
+"When the switcher is enabled, the popup button will replace the QR code "
+"image on the frontend. Clicking the popup button will display the QR code in "
+"a popup window."
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:905
+msgid "Popup button design"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:910
+msgid "Label"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:916
+msgid "Color"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:918
+#: includes/elements/qrc_composer_elements.php:272
+msgid "Background"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:924
+#: includes/elements/qrc_composer_elements.php:304
 msgid "Border Radius"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:308
-msgid "Auto Generate QR / Current Page QR"
+#: admin/class-qrc_composer_settings.php:926
+msgid "Popup Enable For"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:314
+#: admin/class-qrc_composer_settings.php:934
+msgid "Auto Generate QR + Shortcode for Current Page URL"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:940
 #: includes/metadata/class-qrc-filed-data.php:374
 msgid "vCard QR"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:317
-msgid "Integration QR (Pro)"
+#: admin/class-qrc_composer_settings.php:943
+msgid "Integration QR"
 msgstr ""
 
-#: admin/class-qrc_composer_settings.php:317
+#: admin/class-qrc_composer_settings.php:946
+msgid "Widgets QR"
+msgstr ""
+
+#: admin/class-qrc_composer_settings.php:946
 msgid ""
-"When you Checked for popup, the associated shortcode will also enable the "
-"popup behavior"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:343
-msgid "Color"
-msgstr ""
-
-#: admin/class-qrc_composer_settings.php:512
-msgid "For developer: "
+"When the \"Popup\" option is checked, the associated shortcode will also "
+"enable the popup behavior."
 msgstr ""
 
 #: admin/class_qr_code_list_view.php:28 admin/class_qr_code_print.php:28
@@ -493,30 +802,25 @@ msgid "User Profile QR Code"
 msgstr ""
 
 #: admin/class_qrc_admin_integration.php:37
-msgid "BB Press Plugin (Premium)"
+msgid "BB Press QR Code"
 msgstr ""
 
 #: admin/class_qrc_admin_integration.php:39
-msgid "Buddy Press Plugin (Premium)"
+msgid "Buddy Press QR Code"
 msgstr ""
 
 #: admin/class_qrc_admin_integration.php:41
-msgid "Dokan Plugin (Premium)"
+msgid "Dokan QR Code"
 msgstr ""
 
 #: admin/class_qrc_admin_integration.php:50
-msgid "Generate QR codes for other plugins"
+msgid "QR Code Integration with Your Favorite WordPress Plugins"
 msgstr ""
 
 #: admin/class_qrc_admin_integration.php:52
 msgid ""
-"QR codes can be generated for other plugins, we have integrated QR codes for "
-"BuddyPress, BBPress, and Dokan plugin. What other plugins can be integrated "
-"with."
-msgstr ""
-
-#: admin/class_qrc_admin_integration.php:52
-msgid "Send your feedback"
+"Connect your QR codes with the tools you already use and create better user "
+"experiences, faster access, and higher engagement."
 msgstr ""
 
 #: admin/class_qrc_admin_integration.php:80
@@ -575,6 +879,92 @@ msgstr ""
 msgid "Vendor Phone"
 msgstr ""
 
+#: admin/class_qrc_code_autogenertae.php:33
+#: includes/elements/qrc_composer_elements.php:96
+msgid "Alignment"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:39
+msgid "Disable Auto Display"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:43
+msgid "Remove QR Code From Meta Box"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:47
+msgid "Disable QR Sidebar in Gutenberg Editor"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:51
+msgid "QR location on product page"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:57
+msgid "Change Text of Product Tab"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:65
+msgid "Hide QR code according to post type"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:71
+msgid "Hide QR code according to Page"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:80
+msgid "Shortcode for Current Page URL"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:101
+msgid "Automatic QR Code Generation "
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:102
+msgid ""
+"These QR codes are automatically displayed after the content of the web "
+"page. current page url will be used as content of QR code."
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:222
+#: includes/elements/qrc_composer_elements.php:100
+msgid "Left"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:223
+#: includes/elements/qrc_composer_elements.php:108
+msgid "Right"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:224
+#: includes/elements/qrc_composer_elements.php:104
+msgid "Center"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:246
+msgid "In a tab"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:247
+msgid "End of Product Meta"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:249
+msgid "Below the cart button"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:251
+msgid "Above of cart Button"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:267
+msgid "Use light color for better QR scanning control"
+msgstr ""
+
+#: admin/class_qrc_code_autogenertae.php:297
+msgid "For developer: "
+msgstr ""
+
 #: admin/class_qrc_code_logo_generator.php:30
 msgid "Custom Link/Text /email/number"
 msgstr ""
@@ -584,41 +974,41 @@ msgid "QR code for phone number"
 msgstr ""
 
 #: admin/class_qrc_code_logo_generator.php:42
-msgid "QR for WhatsApp "
+msgid "QR for WhatsApp"
 msgstr ""
 
 #: admin/class_qrc_code_logo_generator.php:48
-msgid "QR for Wifi (Premium)"
+msgid "QR for Wifi"
 msgstr ""
 
 #: admin/class_qrc_code_logo_generator.php:54
-msgid "QR for Maps (Premium)"
+msgid "QR for Maps"
 msgstr ""
 
 #: admin/class_qrc_code_logo_generator.php:59
-msgid "QR for Event (Premium)"
+msgid "QR for Event"
 msgstr ""
 
-#: admin/class_qrc_code_logo_generator.php:109
+#: admin/class_qrc_code_logo_generator.php:113
 msgid "QR codes for various components"
 msgstr ""
 
-#: admin/class_qrc_code_logo_generator.php:111
+#: admin/class_qrc_code_logo_generator.php:115
 msgid ""
 "Basically,it generates QR codes for the following elements. which are "
 "displayed on the frontend through shortcodes. The most interesting thing is "
 "that in the premium version you can also generate these QR codes using the"
 msgstr ""
 
-#: admin/class_qrc_code_logo_generator.php:111
+#: admin/class_qrc_code_logo_generator.php:115
 msgid "Shortcode Generator (Pro)."
 msgstr ""
 
-#: admin/class_qrc_code_logo_generator.php:160
+#: admin/class_qrc_code_logo_generator.php:162
 msgid "Input WhatsApp numer with Country Code "
 msgstr ""
 
-#: admin/class_qrc_code_logo_generator.php:179
+#: admin/class_qrc_code_logo_generator.php:180
 msgid "Write Text, Number or Link "
 msgstr ""
 
@@ -627,26 +1017,26 @@ msgid "Input phone or mobile number"
 msgstr ""
 
 #: admin/class_qrc_code_vcard.php:33
-msgid "A Simple vCard (Free & Pro)"
+msgid "Single vCard"
 msgstr ""
 
-#: admin/class_qrc_code_vcard.php:35
-msgid "Enable vCard Meta Field (Pro)"
+#: admin/class_qrc_code_vcard.php:39
+msgid "Enable vCard Meta Field"
 msgstr ""
 
-#: admin/class_qrc_code_vcard.php:40
-msgid "Enable Auto Display (Pro)"
+#: admin/class_qrc_code_vcard.php:44
+msgid "Enable Auto Display"
 msgstr ""
 
-#: admin/class_qrc_code_vcard.php:43
-msgid "vCard Template Shortcode (Pro)"
+#: admin/class_qrc_code_vcard.php:47
+msgid "vCard Template Shortcode"
 msgstr ""
 
-#: admin/class_qrc_code_vcard.php:148
-msgid "Bulk vCard Generator (Pro)"
+#: admin/class_qrc_code_vcard.php:152
+msgid "Bulk vCard Generator"
 msgstr ""
 
-#: admin/class_qrc_code_vcard.php:150
+#: admin/class_qrc_code_vcard.php:154
 msgid ""
 " These settings create vcard meta fields in posts, pages, products, or "
 "custom posts. After filling information in meta field, it will generate "
@@ -655,8 +1045,14 @@ msgid ""
 msgstr ""
 
 #: admin/class_qrc_shortcode.php:37 admin/extra/vcardShortcodeoptions.php:26
-#: includes/elements/qrc_composer_elements.php:171
+#: includes/elements/qrc_composer_elements.php:186
+#: includes/metadata/class_qrc_defaultmeta.php:64
+#: includes/metadata/class_qrc_defaultmeta.php:124
 msgid "Download QR"
+msgstr ""
+
+#: includes/data/data.php:55
+msgid "Download image Quality of QR; default 300px"
 msgstr ""
 
 #: includes/elements/qrc_composer_elements.php:47
@@ -671,39 +1067,35 @@ msgstr ""
 msgid "Current Url"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:68
+#: includes/elements/qrc_composer_elements.php:75
+msgid "classy"
+msgstr ""
+
+#: includes/elements/qrc_composer_elements.php:83
 msgid "QR code display size"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:85
-msgid "Left"
+#: includes/elements/qrc_composer_elements.php:124
+msgid "QR Color"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:89
-msgid "Center"
-msgstr ""
-
-#: includes/elements/qrc_composer_elements.php:93
-msgid "Right"
-msgstr ""
-
-#: includes/elements/qrc_composer_elements.php:118
+#: includes/elements/qrc_composer_elements.php:133
 msgid "Background Color"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:119
+#: includes/elements/qrc_composer_elements.php:134
 msgid "Use light color for better QR code scanning, white color recommended"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:129
-#: includes/elements/qrc_composer_elements.php:182
-#: includes/elements/qrc_composer_elements.php:308
+#: includes/elements/qrc_composer_elements.php:144
+#: includes/elements/qrc_composer_elements.php:197
+#: includes/elements/qrc_composer_elements.php:323
 msgid "Premium QR Demo <i class=\"icon-element eicon-upgrade-crown\"></i>"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:131
-#: includes/elements/qrc_composer_elements.php:184
-#: includes/elements/qrc_composer_elements.php:310
+#: includes/elements/qrc_composer_elements.php:146
+#: includes/elements/qrc_composer_elements.php:199
+#: includes/elements/qrc_composer_elements.php:325
 msgid ""
 "<p>Check out the Premium Version QR Code on the Elementor Editor page <a "
 "href=\"https://qrcode.woocommercebarcode.com/wp-admin/post.php?"
@@ -712,56 +1104,51 @@ msgid ""
 "traget=\"_blank\">Upgrade to PRO</a></p>"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:141
+#: includes/elements/qrc_composer_elements.php:156
 msgid "Button"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:150
-#: includes/elements/qrc_composer_elements.php:194
-msgid "Download Button"
-msgstr ""
-
-#: includes/elements/qrc_composer_elements.php:158
+#: includes/elements/qrc_composer_elements.php:173
 msgid "Enable Download Button?"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:160
+#: includes/elements/qrc_composer_elements.php:175
 msgid "Show"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:161
+#: includes/elements/qrc_composer_elements.php:176
 msgid "Hide"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:169
+#: includes/elements/qrc_composer_elements.php:184
 msgid "Button Label"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:172
+#: includes/elements/qrc_composer_elements.php:187
 msgid "Type Button Label here"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:201
+#: includes/elements/qrc_composer_elements.php:216
 msgid "Padding"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:215
+#: includes/elements/qrc_composer_elements.php:230
 msgid "Button margin from top"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:240
+#: includes/elements/qrc_composer_elements.php:255
 msgid "Text color"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:272
+#: includes/elements/qrc_composer_elements.php:287
 msgid " Typography"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:281
+#: includes/elements/qrc_composer_elements.php:296
 msgid "Border"
 msgstr ""
 
-#: includes/elements/qrc_composer_elements.php:301
+#: includes/elements/qrc_composer_elements.php:316
 msgid "Box Shadow"
 msgstr ""
 

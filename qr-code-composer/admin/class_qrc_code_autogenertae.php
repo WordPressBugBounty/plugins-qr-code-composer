@@ -36,15 +36,15 @@ function qcr_settings_page()
 
     ));
 
-    add_settings_field("removeautodisplay", esc_html__("Disable Auto Display", "qr-code-composer").'<sup class="qrcnewfrtis">NEW</sup>' , array($this ,"removeautodisplay"), 'qrc_admin_sec', "qrc_download_section",array(
+    add_settings_field("removeautodisplay", esc_html__("Disable Auto Display", "qr-code-composer") , array($this ,"removeautodisplay"), 'qrc_admin_sec', "qrc_download_section",array(
             'class'  =>  'removeautodisplay',
 
     ));
-    add_settings_field("removemetabox", esc_html__("Remove QR Code From Meta Box", "qr-code-composer").'<sup class="qrcnewfrtis">NEW</sup>' , array($this ,"removemetabox"), 'qrc_admin_sec', "qrc_download_section",array(
+    add_settings_field("removemetabox", esc_html__("Remove QR Code From Meta Box", "qr-code-composer") , array($this ,"removemetabox"), 'qrc_admin_sec', "qrc_download_section",array(
             'class'  =>  'removemetabox',
 
     ));
-
+    add_settings_field("qrchidegutenberg", esc_html__("Disable QR Sidebar in Gutenberg Editor", "qrc_composer_pro") , array($this ,"qrchidegutenberg"), 'qrc_admin_sec', "qrc_download_section");
     if (class_exists('WooCommerce'))
     {
 
@@ -83,13 +83,23 @@ function qcr_settings_page()
     ));
 
 }
-    
+    function qrchidegutenberg() {
+    $options = get_option('qrc_autogenerate');
+
+    $is_checked = isset($options['qrchidegutenberg']) && !empty($options['qrchidegutenberg']);
+    $checked_attr = $is_checked ? 'checked' : '';
+
+    printf(
+        '<p><input type="checkbox" id="qrchidegutenberg" class="qrc-apple-switch" value="1" name="qrc_autogenerate[qrchidegutenberg]" %s></p>',
+        $checked_attr
+    );
+}   
     function settting_sec_func()
     {   
        ?>
 <div class="qrc-box-header" >
             <h3 class="sui-box-title"><?php echo esc_html__('Automatic QR Code Generation ', 'qr-code-composer') ?></h3>
-<p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qr-code-composer') ?><a class="qrcdownsize" id="qrcauto" video-url="https://www.youtube.com/watch?v=LyQGEShmhn8"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
+<p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qr-code-composer') ?></p>
 
         </div>
 
@@ -98,35 +108,45 @@ function qcr_settings_page()
     }
 
 
+function qr_checkbox_page() {
 
-function qr_checkbox_page(){
+    $options = (array) get_option('qrc_autogenerate', array()); // loop er baire
 
+    $pages = get_posts(array(
+        'post_type'      => 'page',
+        'post_status'    => 'publish',
+        'posts_per_page' => -1,
+        'orderby'        => 'title',
+        'order'          => 'ASC',
+    ));
 
-        $qrc_type_pages = get_posts(array(
-            'post_type' => 'page',
-            'posts_per_page' => - 1,
-        ));
-        if ($qrc_type_pages)
-        {
-            foreach ($qrc_type_pages as $qrc_type_page){
-
-        $options = get_option('qrc_autogenerate');
-
-        $checked = isset($options[$qrc_type_page->ID]) ? 'checked' : '';
-
-            printf('<div style="margin-top:10px"><label class="qrccheckboxwrap" for ="%s">%s
-  <input type="checkbox" id="%s"  value="%s" name="qrc_autogenerate[%s]" %s>
-  <span class="qrccheckmark"></span>
-</label></br></div>', $qrc_type_page->ID,$qrc_type_page->post_title, $qrc_type_page->ID, $qrc_type_page->ID,$qrc_type_page->ID,$checked);
-
-
-        }
-
-
-    
-        }
+    if (!$pages) {
+        return;
     }
 
+    echo '<div class="qrc-page-picker">';
+    echo '<input type="search" class="qrc-page-search" placeholder="' . esc_attr__('Search pages...', 'your-textdomain') . '">';
+    echo '<div class="qrc-page-list">';
+
+    foreach ($pages as $page) {
+
+        $title = ($page->post_title !== '') ? $page->post_title : sprintf('(no title) #%d', $page->ID);
+
+        printf(
+            '<label class="qrccheckboxwrap" data-title="%s">
+                <input type="checkbox" value="%d" name="qrc_autogenerate[%d]" %s>
+                <span class="qrccheckmark"></span>%s
+            </label>',
+            esc_attr(strtolower($title)),
+            $page->ID,
+            $page->ID,
+            checked(isset($options[$page->ID]), true, false),
+            esc_html($title)
+        );
+    }
+
+    echo '</div></div>';
+}
 function qrc_wc_ptab_name()
 {
 
@@ -306,7 +326,11 @@ function qrc_autogenerate_sanitize($input)
         $sanitary_values['removeautodisplay'] = sanitize_text_field($input['removeautodisplay']);
     }    
 
-
+    if (isset($input['qrchidegutenberg']))
+    {
+        $sanitary_values['qrchidegutenberg'] = sanitize_text_field($input['qrchidegutenberg']);
+    }
+     
 
     if (isset($input['qrc_wc_ptab_name']))
     {

@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name: QR Code Composer
- * Description: Auto-generate QR codes for WordPress pages, posts & WooCommerce — no manual setup required.
+ * Description: Easily build QR codes with Gutenberg blocks, shortcodes, and auto-generation—no external APIs, services, or dependencies required.
  * Tags: QR Code, qrcode,vCard, Shortcode, WooCommerce, QR Code Widget, QR Code Shortcode, post, page, product
  * Author: Sharabindu
  * Author URI:  https://sharabindu.com/plugins/wordpress-qr-code-generator/
- * Version: 3.0.5
+ * Version: 3.0.6
  * Text Domain: qr-code-composer
  * Domain Path: /languages
  * License: GPLv2 or later
@@ -34,10 +34,10 @@ function deactivate_QRCpro_version(){
 
 /**
  * Currently plugin version.
- * Start at version 3.0.5 and use SemVer - https://semver.org
+ * Start at version 3.0.6 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'QRC_COMPOSER_VERSION', '3.0.5');
+define( 'QRC_COMPOSER_VERSION', "3.0.6");
 
 /**
  * The core plugin path that is used to define internationalization
@@ -92,7 +92,7 @@ require QRC_COMPOSER_PATH . 'includes/data/data.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    3.0.5
+ * @since    3.0.6
  */
 function run_qrc_composer() {
 
@@ -105,3 +105,24 @@ run_qrc_composer();
 
 
 
+/**
+ * Add custom links (Rate & Donate) to the plugin row meta on plugins.php
+ */
+add_filter( 'plugin_row_meta', 'qrc_composer_add_row_meta_links', 10, 2 );
+
+function qrc_composer_add_row_meta_links( $links, $file ) {
+
+    // আপনার প্লাগিনের প্রধান ফাইলের রিলেটিভ পাথ চেক করুন
+    // উদাহরণ: qr-code-composer/qr-code-composer.php
+    if ( plugin_basename( __FILE__ ) === $file ) {
+        
+        $custom_links = array(
+            'rate'   => '<a href="https://wordpress.org/support/plugin/qr-code-composer/reviews/#new-post" target="_blank">' . esc_html__( 'Rate this plugin ★', 'qr-code-composer' ) . '</a>',
+            'donate' => '<a href="https://donate.stripe.com/cN25libT35t72c07ss" target="_blank">' . esc_html__( 'Donate to this plugin ♥', 'qr-code-composer' ) . '</a>',
+        );
+
+        $links = array_merge( $links, $custom_links );
+    }
+
+    return $links;
+}

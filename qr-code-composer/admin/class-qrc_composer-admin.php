@@ -3,7 +3,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      3.0.5
+ * @since      3.0.6
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/admin
@@ -27,7 +27,7 @@ class Qrc_composer_Admin
     /**
      * The ID of this plugin.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -36,7 +36,7 @@ class Qrc_composer_Admin
     /**
      * The version of this plugin.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -45,7 +45,7 @@ class Qrc_composer_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -87,7 +87,7 @@ class Qrc_composer_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      */
     public function enqueue_styles()
     {
@@ -118,7 +118,7 @@ class Qrc_composer_Admin
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      */
     public function enqueue_scripts()
     {
@@ -155,7 +155,7 @@ class Qrc_composer_Admin
             'jquery','wp-color-picker','jquery-datepicker'
         ) , $this->version, true); 
         }
-    if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_DOWNLOAD_ID) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_PRINT_ID ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_ORDER_MAIL ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_SHORTCODE ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_VCARDLIST ) !== false ) {
+    if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_DOWNLOAD_ID) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_PRINT_ID ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_ORDER_MAIL ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_SHORTCODE ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_VCARDLIST ) !== false|| sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_DYNAMCI ) !== false ) {
 
         wp_enqueue_script('admin-js', QRC_COMPOSER_URL . 'admin/js/admin.js', array(
             'jquery'
@@ -178,12 +178,15 @@ class Qrc_composer_Admin
 
         $background = (isset($options1['background'])) ? $options1['background'] : 'transparent';
         $qr_color = (isset($options1['qr_color'])) ? $options1['qr_color'] : '#000';
+                $qrc_dot_style = isset($options1['qrc_dot_style']) ? $options1['qrc_dot_style'] : 'classy-rounded';
+        $qrc_codeshape = isset($options1['qrc_codeshape']) ? $options1['qrc_codeshape'] : 'square'; 
+
         $qrcomspoer_options = array(
             'size' => $qrc_size,
             'color' => $qr_color,
+            'shape' => $qrc_codeshape,
             'background' => $background,
-            'quiet' => $quiet,
-            'ecLevel' => $ecLevel,
+            'dotstyle' => $qrc_dot_style,
         );
         wp_localize_script( 'qrccreateqr', 'datas', $qrcomspoer_options );   
 
@@ -192,7 +195,7 @@ class Qrc_composer_Admin
     /**
      * Setting link.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      */
 
     public function plugin_settings_link($links)

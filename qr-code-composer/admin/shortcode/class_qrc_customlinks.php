@@ -101,7 +101,7 @@ class QRCoserpsgortcode{
             }
 
 
-        $qrcelements =  '<div class="qrcswholewtapper" style="text-align:'.$qrc_alignment.';"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_cuttenpages_'.$i.'" style="display:'.$displayblock.'" data-text="' . $current_id_link . '"></div>'.$qr_download_.'</div></div>';
+        $qrcelements =  '<div class="qrcswholewtapper" style="text-align:'.$qrc_alignment.';"><div class="qrcprowrapper"  id="qrcwraa'.$i.'leds"><div class="qrc_canvass" id="qrc_cuttenpages_'.$i.'" style="display:'.$displayblock.'" data-text="' . $current_id . '"></div>'.$qr_download_.'</div></div>';
         if($qrcpopupenbl == 'checked'){
         $content = '<div class="qrcpromodalwrapper" style="margin: 20px 0;"><button type="button" class="qrc-modal-toggle" id="popModal_ex2" style="background:'.$qrcpopup_bg.';color:'. $qrcpopup_color.';border: 1px solid '.$qrcpopup_brclr.';border-radius:'.$qrcpopup_brdius.'px;padding: 6px 14px;font-size:'.$qrcpopup_fntsize.'px">'.esc_html($qrcpopuptext).'</button><div class="qrc_modal"><div class="qrc-overlay qrc-modal-toggle"></div><div class="qrc-modal-wrapper qrc-modal-transition"><span class="qrc-modal-toggle">&times;</span>'.$qrcelements.'</div></div></div>';
 

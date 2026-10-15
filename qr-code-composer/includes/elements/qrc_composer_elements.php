@@ -61,8 +61,23 @@
                     ],
                 ]
             ); 
-
-            $this->add_control(
+      $this->add_control(
+            'dotstyles',
+            [
+              'label' => esc_html__( 'Choose Design', 'qrc_composer_pro' ),
+              'type' => \Elementor\Controls_Manager::SELECT,
+              'default' => 'extra-rounded',
+              'options' => [
+                'square'  => esc_html__( 'Square', 'qrc_composer_pro' ),
+                'dots' => esc_html__( 'Dots', 'qrc_composer_pro' ),
+                'rounded' => esc_html__( 'Rounded', 'qrc_composer_pro' ),
+                'extra-rounded' => esc_html__( 'Extra Rounded', 'qrc_composer_pro' ),
+                'classy' => esc_html__( 'classy', 'qrc_composer_pro' ),
+                'classy-rounded' => esc_html__( 'Classy Rounded', 'qrc_composer_pro' ),
+              ],
+            ]
+          );
+                  $this->add_control(
                 'qr_width',
                 [
                  'label' => esc_html__( 'QR code display size', 'qr-code-composer' ),
@@ -335,6 +350,7 @@
           $random_id = $this->get_id();
 
         $color1 = isset( $settings['qr_color']) ?  $settings['qr_color'] : "#000";          
+        $dotstyle = isset( $settings['dotstyles']) ?  $settings['dotstyles'] : "square";          
  $this->add_render_attribute(
         'qr-code-composer_attributes',
         [
@@ -344,6 +360,7 @@
         'data-qrcontent'  => $current_link,
         'data-qrbgcolor'    => $qrc_bgcolor,
         'data-qrcolor'    => $color1,
+        'data-dotstyle'    => $dotstyle,
 
 
 

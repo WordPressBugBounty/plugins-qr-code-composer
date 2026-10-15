@@ -3,7 +3,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      3.0.5
+ * @since      3.0.6
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/public
@@ -25,7 +25,7 @@ class Qrc_composer_Public
     /**
      * The ID of this plugin.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -34,7 +34,7 @@ class Qrc_composer_Public
     /**
      * The version of this plugin.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -43,7 +43,7 @@ class Qrc_composer_Public
     /**
      * Initialize the class and set its properties.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      * @param      string    $plugin_name       The name of the plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -58,7 +58,7 @@ class Qrc_composer_Public
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      */
     public function enqueue_styles()
     {
@@ -70,7 +70,7 @@ class Qrc_composer_Public
     /**
      * Register the JavaScript for the public-facing side of the site.
      *
-     * @since    3.0.5
+     * @since    3.0.6
      */
     public function enqueue_scripts()
     {
@@ -94,13 +94,14 @@ class Qrc_composer_Public
         $background = (isset($options1['background'])) ? $options1['background'] : 'transparent';
         $qr_color = (isset($options1['qr_color'])) ? $options1['qr_color'] : '#000';
         $qrc_codeshape = isset($options1['qrc_codeshape']) ? $options1['qrc_codeshape'] : 'square'; 
+        $qrc_dot_style = isset($options1['qrc_dot_style']) ? $options1['qrc_dot_style'] : 'classy-rounded';
+
         $qrcomspoer_options = array(
             'size' => $qrc_size,
             'shape' => $qrc_codeshape,
             'color' => $qr_color,
             'background' => $background,
-            'quiet' => $quiet,
-            'ecLevel' => $ecLevel,
+            'dotstyle' => $qrc_dot_style,
         );
         wp_localize_script( 'qrccreateqr', 'datas', $qrcomspoer_options ); 
         add_filter('script_loader_tag', function ($tag, $handle) {

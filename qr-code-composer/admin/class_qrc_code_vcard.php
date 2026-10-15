@@ -36,15 +36,15 @@ public function qrc_vcard_generator_page()
 
         add_settings_field("qr_checkbox_vcradd","" ,array($this , "settting_log_sec_func"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
             'class'  =>  'qrcbulkvcardfet',));        
-        add_settings_field("qr_checkbox_vcrad", esc_html__("Enable vCard Meta Field (Pro)", "qr-code-composer") ,array($this , "qr_checkbox"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section" ,array(
+        add_settings_field("qr_checkbox_vcrad", esc_html__("Enable vCard Meta Field", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' ,array($this , "qr_checkbox"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section" ,array(
             'class'  =>  'qr_checkbox_vcrad',
 
     ));
 
-        add_settings_field("qrc_metavcard_display", esc_html__("Enable Auto Display (Pro)", "qr-code-composer") ,array($this , "qrc_metavcard_display"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
+        add_settings_field("qrc_metavcard_display", esc_html__("Enable Auto Display", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>' ,array($this , "qrc_metavcard_display"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
             'class'  =>  'qrc_metavcard_display',));
 
-        add_settings_field("qrc_vacrdtempe", esc_html__("vCard Template Shortcode (Pro)", "qr-code-composer") ,array($this , "qrc_vacrdtempe"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
+        add_settings_field("qrc_vacrdtempe", esc_html__("vCard Template Shortcode", "qr-code-composer").'<span class="qrcprofetdisbd">PRO</span>',array($this , "qrc_vacrdtempe"), 'qrc_vacrd_admin_sec', "qrc_vacrd_admin__section",array(
             'class'  =>  'qrc_vacrdtempe',));
 
 
@@ -149,7 +149,7 @@ public function settting_log_sec_func()
 {?>
 
 <div class="qrc-box-header" >
-            <h3 class="sui-box-title"><?php echo esc_html__('Bulk vCard Generator (Pro)', 'qr-code-composer') ?>
+            <h3 class="sui-box-title"><?php echo esc_html__('Bulk vCard Generator', 'qr-code-composer').'<span class="qrcprofetdisbd">PRO</span>'; ?>
 </h3>
 <p class="vrcomponents"><?php echo esc_html__(' These settings create vcard meta fields in posts, pages, products, or custom posts. After filling information in meta field, it will generate vCard QR code and display metafield section as well as frontend, for details click video button or read documentation', 'qr-code-composer') ?><a id="qrcvcardfs" video-url="https://www.youtube.com/watch?v=xgdf97_GYWw"><span title="Video Documentation" id="qrcdocsides" class="dashicons dashicons-video-alt3"></span></a></p>
 
