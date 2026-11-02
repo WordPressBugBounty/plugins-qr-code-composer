@@ -7,7 +7,7 @@
  * public-facing side of the site and the admin area.
  *
  * @link       https://sharabindu.com
- * @since      3.0.6
+ * @since      3.0.7
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/includes
@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      3.0.6
+ * @since      3.0.7
  * @package    Qrc_composer
  * @subpackage Qrc_composer/includes
  * @author     Sharabindu Bakshi <sharabindu86@gmail.com>
@@ -35,7 +35,7 @@ class Qrc_composer {
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 * @access   protected
 	 * @var      Qrc_composer_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
@@ -44,7 +44,7 @@ class Qrc_composer {
 	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 * @access   protected
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
@@ -53,7 +53,7 @@ class Qrc_composer {
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 * @access   protected
 	 * @var      string    $version    The current version of the plugin.
 	 */
@@ -66,13 +66,13 @@ class Qrc_composer {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 */
 	public function __construct() {
 		if ( defined( 'QRC_COMPOSER_VERSION' ) ) {
 			$this->version = QRC_COMPOSER_VERSION;
 		} else {
-			$this->version = '3.0.6';
+			$this->version = '3.0.7';
 		}
 		$this->plugin_name = 'qr-code-composer';
 	
@@ -97,7 +97,7 @@ class Qrc_composer {
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 * @access   private
 	 */
 	private function load_dependencies() {
@@ -122,7 +122,7 @@ class Qrc_composer {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
@@ -143,7 +143,7 @@ class Qrc_composer {
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 * @access   private
 	 */
 	private function define_public_hooks() {
@@ -178,7 +178,7 @@ class Qrc_composer {
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
-	 * @since    3.0.6
+	 * @since    3.0.7
 	 */
 	public function run() {
 		$this->loader->run();
@@ -188,7 +188,7 @@ class Qrc_composer {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     3.0.6
+	 * @since     3.0.7
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
@@ -198,7 +198,7 @@ class Qrc_composer {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     3.0.6
+	 * @since     3.0.7
 	 * @return    Qrc_composer_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
@@ -208,7 +208,7 @@ class Qrc_composer {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     3.0.6
+	 * @since     3.0.7
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {

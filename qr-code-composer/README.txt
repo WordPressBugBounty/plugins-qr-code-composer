@@ -6,8 +6,8 @@ Donate link: https://donate.stripe.com/cN25libT35t72c07ss
 Requires at least: 5.0
 Tested up to: 7.1.3
 Requires PHP: 5.6
-Stable tag: 3.0.6
-Version: 3.0.6
+Stable tag: 3.0.7
+Version: 3.0.7
 Text Domain: qr-code-composer
 Domain Path: /languages
 License: GPLv2 or later
@@ -185,14 +185,15 @@ The Pro version's analytics feature stores scan data (such as device, country, c
 Your feedback helps us grow!
 If you enjoy QR Code Composer, please share your experience and leave a rating. It means a lot.
 
-
+= How to add QR codes to a WordPress website = 
+[youtube https://youtu.be/5m0W-1mkydE]
 
 = WordPress QR Code Gutenberg Block = 
 [youtube https://youtu.be/mJx9vUU7930]
 
 
-= How to add QR codes to a WordPress website = 
-[youtube https://youtu.be/5m0W-1mkydE]
+= How Create Dynamic QR Code in WordPress(Premium) = 
+[youtube https://youtu.be/-psUDqpnBlk&t]
 
 
 
@@ -315,6 +316,10 @@ No. Static QR codes are created instantly in the browser and **not stored in the
 
 
 == Changelog ==
+
+= 3.0.7 =
+
+- Fix: Auto generate QR code content 
 
 = 3.0.6 =
 

@@ -519,6 +519,17 @@ function qrc_print_pdf()
             </h3>
             <small><?php echo esc_html__('Next-Gen QR Code Builder for WordPress Block Editor & WooCommerce.', 'qr-code-composer'); ?></small>
         </li>
+        <li>
+          <div class="pvgw-header-right" style="text-align: right; border-left: 1px solid #f1f5f9; padding-left: 24px; display: flex; flex-direction: column; align-items: flex-end;">
+    <span style="font-size: 10px; text-transform: uppercase; color: #94a3b8; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px;">POWERED BY</span>
+    
+    <a href="https://sharabindu.com" target="_blank" style="text-decoration: none; font-size: 16px; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 6px;">
+        <!-- Sharabindu Icon -->
+        <img src="<?php echo esc_url( QRC_COMPOSER_URL . 'admin/img/sharabindu-icon.png' ); ?>" alt="Sharabindu" style="height: 24px; width: auto;"> <span>↗</span>
+    </a>
+</div>
+
+        </li>
     </ul>
 </div>
     <div class="qrcodewrap" id="qrccomposerprowraper">
@@ -624,10 +635,12 @@ function qrc_print_pdf()
     <span class="qrc-badge-text"><strong>New:</strong> Gutenberg Block Supported!</span>
 </div>
 
-         <p style="color: #000000;margin-top: 30px;">
-<small>Need advanced features? <strong><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/#pricing" target="_blank">Explore Pro features →</a></strong></small> </p>
+<iframe width="100%" height="250" src="https://www.youtube.com/embed/mJx9vUU7930?si=fna4PDeIq0oC14b2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        </div> </div>
+
+        </div> 
+
+      </div>
 
          </div>
     </div>
@@ -675,6 +688,7 @@ $qrc_why_url = admin_url( 'admin.php?page=qr-code-composer#why-pro' );
   <p><em><?php esc_html_e( 'Free creates QR codes. Pro lets you change, schedule and measure them.', 'qr-code-composer' ); ?></em></p>
 
   <h3 class="orderqrpro"><?php esc_html_e( 'Dynamic QR codes with scan analytics', 'qr-code-composer' ); ?></h3>
+  <iframe width="100%" height="250" src="https://www.youtube.com/embed/-psUDqpnBlk?si=EyGOD8UQOoQ5zs6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <p><?php esc_html_e( 'Change where a printed QR code points without reprinting it, and see how many people scan it.', 'qr-code-composer' ); ?></p>
   <ul class="qrc_pro_points">
     <li><?php esc_html_e( 'Editable short links', 'qr-code-composer' ); ?></li>
@@ -694,9 +708,7 @@ $qrc_why_url = admin_url( 'admin.php?page=qr-code-composer#why-pro' );
   <h3 class="orderqrpro"><?php esc_html_e( 'QR codes that match your brand', 'qr-code-composer' ); ?></h3>
   <p><?php esc_html_e( 'Pick the shape, colors and label so every QR code looks like it belongs on your site.', 'qr-code-composer' ); ?></p>
 
-  <video autoplay muted loop playsinline>
-    <source src="<?php echo esc_url( QRC_COMPOSER_URL . '/admin/img/wordpress-qr-code.mp4' ); ?>" type="video/mp4">
-  </video>
+  <iframe width="100%" height="250" src="https://www.youtube.com/embed/nkqmE_jWycI?si=xaM9SXeSjkgSRZNh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   <ul class="qrc_pro_points">
     <li><?php esc_html_e( 'Circular, dotted, square and framed shapes', 'qr-code-composer' ); ?></li>

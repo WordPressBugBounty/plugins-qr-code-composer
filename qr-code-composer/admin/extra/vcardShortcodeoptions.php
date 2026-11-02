@@ -2,7 +2,7 @@
 /**
 *
 * @link       https://sharabindu.com
-* @since       3.0.6
+* @since       3.0.7
 *
 * @package    Qrc_composer
 * @subpackage Qrc_composer/admin/
