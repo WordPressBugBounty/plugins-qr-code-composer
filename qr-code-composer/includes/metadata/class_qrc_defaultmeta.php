@@ -53,18 +53,30 @@ class QRCDefaultmeta
             return;
         }
 
-        wp_enqueue_script( 'qrccreateqr' );
+        // Free version: pages, posts and products only (custom post types are Pro).
+        if ( ! QRC_Free_Limit::type_supported( $post->post_type ) ) {
+            return;
+        }
 
-        require QRC_COMPOSER_PATH . 'includes/data/data.php';
+        $locked = ! QRC_Free_Limit::is_allowed( $post->ID );
 
-        // FIX: always use the real permalink of the post being edited, and
-        // keep the QR inside the narrow sidebar (max 240px).
-        $current_id_link = get_permalink( $post->ID );
-        $qrc_size        = ! empty( $qrc_size ) ? min( absint( $qrc_size ), 240 ) : 200;
-        $download_qr     = esc_html__( 'Download QR', 'qrc_composer_pro' );
-        $current_title   = $post->post_title ? $post->post_title : 'qr_code';
+        if ( $locked ) {
+            // Not one of the picked items: show the limit notice instead of the QR.
+            $qr_html = QRC_Free_Limit::locked_notice_html( $post->post_type );
+        } else {
+            wp_enqueue_script( 'qrccreateqr' );
 
-        $qr_html = '<div class="qrcswholewtapper"><div class="qrcprowrapper"><div class="qrc_canvass" id="qrc_cuurentlinks" data-text="' . esc_attr( $current_id_link ) . '" style="width:' . esc_attr( $qrc_size ) . 'px;display:inline-block"></div><div><a class="qrcdownloads" download="' . esc_attr( $current_title ) . '.png"><button type="button" style="min-width:' . esc_attr( $qrc_size ) . 'px;" class="button button-secondary is-button is-default is-large">' . esc_html( $download_qr ) . '</button></a></div></div></div>';
+            require QRC_COMPOSER_PATH . 'includes/data/data.php';
+
+            // FIX: always use the real permalink of the post being edited, and
+            // keep the QR inside the narrow sidebar (max 240px).
+            $current_id_link = get_permalink( $post->ID );
+            $qrc_size        = ! empty( $qrc_size ) ? min( absint( $qrc_size ), 240 ) : 200;
+            $download_qr     = esc_html__( 'Download QR', 'qrc_composer_pro' );
+            $current_title   = $post->post_title ? $post->post_title : 'qr_code';
+
+            $qr_html = '<div class="qrcswholewtapper"><div class="qrcprowrapper"><div class="qrc_canvass" id="qrc_cuurentlinks" data-text="' . esc_attr( $current_id_link ) . '" style="width:' . esc_attr( $qrc_size ) . 'px;display:inline-block"></div><div><a class="qrcdownloads" download="' . esc_attr( $current_title ) . '.png"><button type="button" style="min-width:' . esc_attr( $qrc_size ) . 'px;" class="button button-secondary is-button is-default is-large">' . esc_html( $download_qr ) . '</button></a></div></div></div>';
+        }
 
         wp_enqueue_script(
             'admin-sidebar.js',
@@ -75,6 +87,7 @@ class QRCDefaultmeta
         );
         wp_localize_script( 'admin-sidebar.js', 'qrcSidebarData', array(
             'qrHtml' => $qr_html,
+            'locked' => $locked,
         ) );
     }
 
@@ -90,8 +103,8 @@ class QRCDefaultmeta
             return; // Gutenberg uses the sidebar instead.
         }
 
-        $excluded_posttypes = array( 'attachment', 'revision', 'nav_menu_item', 'custom_css', 'customize_changeset', 'oembed_cache', 'user_request', 'wp_block', 'scheduled-action', 'product_variation', 'shop_order', 'shop_order_refund', 'shop_coupon', 'elementor_library', 'e-landing-page' );
-        if ( in_array( $post_type, $excluded_posttypes, true ) ) {
+        // Free version: pages, posts and products only (custom post types are Pro).
+        if ( ! QRC_Free_Limit::type_supported( $post_type ) ) {
             return;
         }
 
@@ -110,6 +123,12 @@ class QRCDefaultmeta
 
     public function qrc_metabox_func( $post )
     {
+        // Free limit: only the picked items get the QR panel.
+        if ( ! QRC_Free_Limit::is_allowed( $post->ID ) ) {
+            echo wp_kses_post( QRC_Free_Limit::locked_notice_html( $post->post_type ) );
+            return;
+        }
+
         wp_enqueue_script( 'qrccreateqr' );
         wp_enqueue_style( 'qrc-admin-css' );
 

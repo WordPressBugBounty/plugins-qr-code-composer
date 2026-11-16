@@ -3,7 +3,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      3.0.7
+ * @since      4.0.0
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/admin
@@ -27,7 +27,7 @@ class Qrc_composer_Admin
     /**
      * The ID of this plugin.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -36,7 +36,7 @@ class Qrc_composer_Admin
     /**
      * The version of this plugin.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -45,7 +45,7 @@ class Qrc_composer_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -87,7 +87,7 @@ class Qrc_composer_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      */
     public function enqueue_styles()
     {
@@ -112,13 +112,17 @@ class Qrc_composer_Admin
         wp_enqueue_style('qrc-admin-css');
         wp_enqueue_style('datetimepicker', QRC_COMPOSER_URL . 'admin/css/jquery.datetimepicker.css', array() , $this->version, 'all');
 
-
+        // Shudhu plugin settings page (page=qr_composer) e tab content hide hobe.
+        $qrc_current_page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        if ('qr_composer' === $qrc_current_page) {
+            wp_add_inline_style('qrc-admin-css', '.qrctab-content{display:none;}');
+        }
     }
 
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      */
     public function enqueue_scripts()
     {
@@ -153,6 +157,10 @@ class Qrc_composer_Admin
 
         wp_enqueue_script('custom', QRC_COMPOSER_URL . 'admin/js/custom.js', array(
             'jquery','wp-color-picker','jquery-datepicker'
+        ) , $this->version, true); 
+
+        wp_enqueue_script('qrc-free-limit', QRC_COMPOSER_URL . 'admin/js/qrc-free-limit.js', array(
+            'jquery'
         ) , $this->version, true); 
         }
     if ( sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_DOWNLOAD_ID) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_PRINT_ID ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_ORDER_MAIL ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_SHORTCODE ) !== false || sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_VCARDLIST ) !== false|| sanitize_title(isset($_GET['page'])) && strpos((sanitize_title(wp_unslash($_GET['page'])) ), QRC_COMPOSER_DYNAMCI ) !== false ) {
@@ -195,7 +203,7 @@ class Qrc_composer_Admin
     /**
      * Setting link.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      */
 
     public function plugin_settings_link($links)

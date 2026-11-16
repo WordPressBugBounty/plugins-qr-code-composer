@@ -3,7 +3,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       https://sharabindu.com
- * @since      3.0.7
+ * @since      4.0.0
  *
  * @package    Qrc_composer
  * @subpackage Qrc_composer/public
@@ -25,7 +25,7 @@ class Qrc_composer_Public
     /**
      * The ID of this plugin.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      * @access   private
      * @var      string    $plugin_name    The ID of this plugin.
      */
@@ -34,7 +34,7 @@ class Qrc_composer_Public
     /**
      * The version of this plugin.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      * @access   private
      * @var      string    $version    The current version of this plugin.
      */
@@ -43,7 +43,7 @@ class Qrc_composer_Public
     /**
      * Initialize the class and set its properties.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      * @param      string    $plugin_name       The name of the plugin.
      * @param      string    $version    The version of this plugin.
      */
@@ -58,11 +58,11 @@ class Qrc_composer_Public
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      */
     public function enqueue_styles()
     {
-         wp_register_style('qrc-css', QRC_COMPOSER_URL . 'public/css/qrc.css', array() ,time(), 'all');
+         wp_register_style('qrc-css', QRC_COMPOSER_URL . 'public/css/qrc.css', array() ,QRC_COMPOSER_VERSION, 'all');
         wp_enqueue_style('qrc-css');
 
     }
@@ -70,18 +70,18 @@ class Qrc_composer_Public
     /**
      * Register the JavaScript for the public-facing side of the site.
      *
-     * @since    3.0.7
+     * @since    4.0.0
      */
     public function enqueue_scripts()
     {
 
          wp_register_script('qr-code-styling', QRC_COMPOSER_URL . 'admin/js/qr-code-styling.js', array(
             'jquery'
-        ) , time(), true);
+        ) , QRC_COMPOSER_VERSION, true);
 
         wp_register_script('qrccreateqr', QRC_COMPOSER_URL . 'public/js/qrcode.js', array(
         'jquery','qr-code-styling'
-        ) ,time(), true);
+        ) ,QRC_COMPOSER_VERSION, true);
 
         $options1 = get_option('qrc_composer_settings');
 
@@ -130,31 +130,43 @@ class Qrc_composer_Public
 
     public function qcr_code_element($content)
     {
-
         $options1 = get_option('qrc_autogenerate');
-        if (!empty($options1)){
-            $singlular_exclude = is_singular($options1);
-            $single_exclude = is_page($options1);
-        }else
-        {
-            $singlular_exclude = '';
-            $single_exclude = '';
+
+        // "Disable Auto Display" switch.
+        if (isset($options1['removeautodisplay'])) {
+            return $content;
         }
-        $qrc_meta_display = get_post_meta(get_the_id() , 'qrc_metabox', true);
-        $checked = isset($options1['removeautodisplay']) ? 'checked' : '';
-        if ( ($qrc_meta_display == '2') or ($singlular_exclude) or (is_singular('product')) or ($single_exclude) or $checked )  {
-            $content .= '';
-        }elseif(function_exists('bp_search_is_search') &&
-            bp_search_is_search()){
-            $content .= '';
-        }else{ 
+
+        if (function_exists('bp_search_is_search') && bp_search_is_search()) {
+            return $content;
+        }
+
+        // Free version: single pages and posts only. Products use the WooCommerce
+        // hooks below, and custom post types are a Pro feature.
+        if (!is_singular(array('page', 'post'))) {
+            return $content;
+        }
+
+        $post_id = get_the_ID();
+
+        // Ignore the_content() calls for other posts (related posts, widgets, ...).
+        if (!$post_id || $post_id !== get_queried_object_id()) {
+            return $content;
+        }
+
+        // Hidden from the meta box / Gutenberg sidebar of this item.
+        if (get_post_meta($post_id, 'qrc_metabox', true) == '2') {
+            return $content;
+        }
+
+        // Free limit: only the picked items.
+        if (!QRC_Free_Limit::is_allowed($post_id)) {
+            return $content;
+        }
+
         $content .= do_shortcode('[qrc_code_composer]');
 
-             }
-            return $content; 
-
-
-
+        return $content;
     }
 
 
@@ -179,19 +191,10 @@ class Qrc_composer_Public
 
         $qrc_meta_display = get_post_meta(get_the_id() , 'qrc_metabox', true);
 
-        if (!empty($options1))
-        {
-            $singlular_wc_exclude = is_singular($options1);
-        }
-        else
-        {
-            $singlular_wc_exclude = '';
-        }
-
-
         $checked = isset($options1['removeautodisplay']) ? 'checked' : '';
 
-        if ( ( $qrc_meta_display == '2' ) or ( $singlular_wc_exclude ) or $checked )
+        // Hidden by the person, auto display is off, or not one of the picked products (free limit).
+        if ( ( $qrc_meta_display == '2' ) or $checked or ! QRC_Free_Limit::is_allowed( get_the_ID() ) )
         {
 
             if ( isset($tabs['qty_pricing_tab']) ) {
@@ -206,6 +209,12 @@ class Qrc_composer_Public
 
     public function woo_qrc_tab_content()
     {
+        // Same rules for every product QR location (tab, above/below cart, product meta).
+        $product_id = get_the_ID();
+        if ( ! QRC_Free_Limit::is_allowed( $product_id ) || get_post_meta( $product_id, 'qrc_metabox', true ) == '2' ) {
+            return;
+        }
+
        $content = do_shortcode('[qrc_code_composer]');
         return printf('%s', $content);
 

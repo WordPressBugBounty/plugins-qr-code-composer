@@ -19,6 +19,18 @@ class QRC_Shortcode_lite {
     }
 
     function qrc_user_profile_fields($user) {
+        // Free limit: only the first N user accounts get a Profile QR Code.
+        if ( ! QRC_Free_Limit::is_user_allowed( $user->ID ) ) {
+            printf(
+                '<h3>%s <small>%s</small></h3><p>%s <a href="%s" target="_blank" rel="noopener">%s</a></p>',
+                esc_html__("Profile QR Code", "qr-code-composer"),
+                esc_html__("(QR code composer)", "qr-code-composer"),
+                esc_html( sprintf( __( 'The free version shows a Profile QR Code for up to %d user accounts.', 'qr-code-composer' ), QRC_Free_Limit::user_limit() ) ),
+                esc_url( QRC_Free_Limit::PRO_URL ),
+                esc_html__( 'Upgrade to Pro for unlimited', 'qr-code-composer' )
+            );
+            return;
+        }
     ?>
     <h3><?php esc_html_e("Profile QR Code", "qr-code-composer"); ?> <small><?php esc_html_e("(QR code composer)", "qr-code-composer"); ?></small></h3> 
     <?php
@@ -44,7 +56,8 @@ class QRC_Shortcode_lite {
     $i++; 
     $options3 = get_option('qrc_admin_integrate');
     $qrcvcardmyacdash = isset($options3['qrc_vcard_myacdash']) ? 'checked' : '';
-    if($qrcvcardmyacdash != 'checked'){
+    // Free limit: only the first N user accounts get the My Account vCard QR code.
+    if($qrcvcardmyacdash != 'checked' && QRC_Free_Limit::is_user_allowed(get_current_user_id())){
      wp_enqueue_script('qrccreateqr');
             $user_meta = get_current_user_id();
             $user_info = get_userdata($user_meta);

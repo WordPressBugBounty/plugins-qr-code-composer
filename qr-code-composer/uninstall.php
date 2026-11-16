@@ -6,7 +6,7 @@
 
  *
  * @link       https://sharabindu.com
- * @since      3.0.7
+ * @since      4.0.0
  *
  * @package    Qrc_composer
  */
@@ -15,3 +15,6 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+
+// Remembered default picks for the free limit.
+delete_option( 'qrc_free_default_ids' );

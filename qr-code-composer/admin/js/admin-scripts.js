@@ -825,8 +825,8 @@ jQuery(document).ready(function($) {
 jQuery(function ($) {
     $('.qrc-page-search').on('input', function () {
         var term = $(this).val().toLowerCase();
-        $('.qrc-page-list .qrccheckboxwrap').each(function () {
-            $(this).toggle($(this).data('title').indexOf(term) !== -1);
+        $(this).closest('.qrc-page-picker').find('.qrccheckboxwrap').each(function () {
+            $(this).toggle(String($(this).attr('data-title')).indexOf(term) !== -1);
         });
     });
 });

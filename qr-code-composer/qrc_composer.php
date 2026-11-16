@@ -1,15 +1,17 @@
 <?php
 /*
- * Plugin Name: QR Code Composer
- * Description: Easily build QR codes with Gutenberg blocks, shortcodes, and auto-generation—no external APIs, services, or dependencies required.
- * Tags: QR Code, qrcode,vCard, Shortcode, WooCommerce, QR Code Widget, QR Code Shortcode, post, page, product
- * Author: Sharabindu
- * Author URI:  https://sharabindu.com/plugins/wordpress-qr-code-generator/
- * Version: 3.0.7
- * Text Domain: qr-code-composer
- * Domain Path: /languages
- * License: GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Plugin Name:       QR Code Composer
+ * Plugin URI:        https://sharabindu.com/plugins/wordpress-qr-code-generator/
+ * Description:       Easily build QR codes with Gutenberg blocks, shortcodes, and auto-generation—no external APIs, services, or dependencies required.
+ * Version:           4.0.0
+ * Requires at least: 5.0
+ * Requires PHP:      5.6
+ * Author:            Sharabindu
+ * Author URI:        https://sharabindu.com/
+ * License:           GPLv2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       qr-code-composer
+ * Domain Path:       /languages
  */
 
 
@@ -34,10 +36,10 @@ function deactivate_QRCpro_version(){
 
 /**
  * Currently plugin version.
- * Start at version 3.0.7 and use SemVer - https://semver.org
+ * Start at version 4.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'QRC_COMPOSER_VERSION', "3.0.7");
+define( 'QRC_COMPOSER_VERSION', "4.0.0");
 
 /**
  * The core plugin path that is used to define internationalization
@@ -92,7 +94,7 @@ require QRC_COMPOSER_PATH . 'includes/data/data.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    3.0.7
+ * @since    4.0.0
  */
 function run_qrc_composer() {
 

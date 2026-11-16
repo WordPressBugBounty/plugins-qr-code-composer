@@ -39,7 +39,8 @@
 
         // FIX: QR is always rendered. Before, a missing meta object kept a
         // Spinner on screen forever and the QR never appeared.
-        const hasMeta = !! meta && typeof setMeta === 'function';
+        const locked = !! ( window.qrcSidebarData && window.qrcSidebarData.locked );
+        const hasMeta = ! locked && !! meta && typeof setMeta === 'function';
         const metaValue = hasMeta && meta.qrc_metabox ? meta.qrc_metabox : '1';
 
         return createElement(

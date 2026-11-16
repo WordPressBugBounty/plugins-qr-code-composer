@@ -8,8 +8,6 @@ class QRCAdminMain{
   {
     add_action( 'admin_menu', array($this, 'admin_menu_define' ));  
 
-    include_once plugin_dir_path(dirname(__FILE__)) . 'vendor/wordpress-plugin-installer-main/class-connekt-plugin-installer.php';
-
   }
 
 /**
@@ -288,8 +286,6 @@ function qrc_pro_func(){
         <div class="qrcodewrap">
                   <div class="qr_wp_admin">
                       <ul class="qrc_nav_bar">
-                          <li><a href="https://wordpressqrcode.com/qr-code-download/" target="_blank"><?php echo esc_html('Live demo', 'qr-code-composer') ?></a></li>
-
                           <li><a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" target="_blank"><?php echo esc_html('Upgrade to PRO', 'qr-code-composer') ?></a></li>
                           <li><a href="https://wordpressqrcode.com/docs/introduction/" target="_blank"><?php echo esc_html('Docs', 'qr-code-composer') ?></a></li>
 
@@ -635,9 +631,6 @@ function qrc_print_pdf()
     <span class="qrc-badge-text"><strong>New:</strong> Gutenberg Block Supported!</span>
 </div>
 
-<iframe width="100%" height="250" src="https://www.youtube.com/embed/mJx9vUU7930?si=fna4PDeIq0oC14b2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
         </div> 
 
       </div>
@@ -845,90 +838,119 @@ $qrc_why_url = admin_url( 'admin.php?page=qr-code-composer#why-pro' );
 
 
 
-  <section class="qrc-pro-section">
+  <section class="qrc-pro-section qrc-why-pro">
+
     <div class="qrc-pro-header">
-      <h2>Unlock the Full Power with Pro</h2>
-      <p>Compare Free vs. Pro features and see how QR Code Composer Pro can grow your website.</p>
+      <span class="qrc-why-eyebrow"><?php esc_html_e( 'Why upgrade to Pro?', 'qr-code-composer' ); ?></span>
+      <h2><?php esc_html_e( 'Unlimited automatic QR codes, everywhere on your site', 'qr-code-composer' ); ?></h2>
+      <p><?php esc_html_e( 'The free version shows an automatic QR code on up to 3 items. With Pro there is no limit: generate and display QR codes automatically on all your content, with nothing to pick and nothing to hit a cap on.', 'qr-code-composer' ); ?></p>
+    </div>
+
+    <div class="qrc-why-grid">
+      <?php
+      $qrc_why_items = array(
+        array( 'dashicons-admin-post',     __( 'Posts', 'qr-code-composer' ),                   __( 'Every blog post gets its own QR code, generated and displayed automatically.', 'qr-code-composer' ) ),
+        array( 'dashicons-admin-page',     __( 'Pages', 'qr-code-composer' ),                   __( 'Add a QR code to every page on your site without choosing pages one by one.', 'qr-code-composer' ) ),
+        array( 'dashicons-cart',           __( 'Products', 'qr-code-composer' ),                __( 'Show a QR code on every WooCommerce product page, so shoppers can scan and share.', 'qr-code-composer' ) ),
+        array( 'dashicons-database',       __( 'Custom Post Types', 'qr-code-composer' ),       __( 'Works with any custom post type: portfolios, events, listings, courses and more.', 'qr-code-composer' ) ),
+        array( 'dashicons-id',             __( 'Profile QR Code', 'qr-code-composer' ),         __( 'Every user gets a Profile QR Code with their contact details as a vCard.', 'qr-code-composer' ) ),
+        array( 'dashicons-admin-users',    __( 'My Account Dashboard', 'qr-code-composer' ),    __( 'Every customer sees their own QR code on the WooCommerce My Account dashboard.', 'qr-code-composer' ) ),
+      );
+      foreach ( $qrc_why_items as $qrc_why_item ) : ?>
+        <div class="qrc-why-card">
+          <span class="qrc-why-icon dashicons <?php echo esc_attr( $qrc_why_item[0] ); ?>"></span>
+          <h3><?php echo esc_html( $qrc_why_item[1] ); ?></h3>
+          <p><?php echo esc_html( $qrc_why_item[2] ); ?></p>
+          <div class="qrc-why-limits">
+            <span class="qrc-tag-limited"><?php esc_html_e( 'Free: up to 3', 'qr-code-composer' ); ?></span>
+            <span class="qrc-tag-pro"><?php esc_html_e( 'Pro: Unlimited', 'qr-code-composer' ); ?></span>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+    <div class="qrc-pro-header qrc-why-subhead">
+      <h2><?php esc_html_e( 'And much more in Pro', 'qr-code-composer' ); ?></h2>
     </div>
 
     <div class="qrc-table-wrapper">
       <table class="qrc-comparison-table">
         <thead>
           <tr>
-            <th class="qrc-col-feature">Features</th>
-            <th class="qrc-col-free">Free Version</th>
-            <th class="qrc-col-pro">PRO Version</th>
+            <th class="qrc-col-feature"><?php esc_html_e( 'Features', 'qr-code-composer' ); ?></th>
+            <th class="qrc-col-free"><?php esc_html_e( 'Free Version', 'qr-code-composer' ); ?></th>
+            <th class="qrc-col-pro"><?php esc_html_e( 'PRO Version', 'qr-code-composer' ); ?></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <span class="qrc-feature-title">Static QR Codes</span>
-              <span class="qrc-feature-desc">Generate static codes for links, plain text, and basic content.</span>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Unlimited Auto QR Generate & Display', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Posts, pages, products, custom post types, Profile QR Code and My Account dashboard.', 'qr-code-composer' ); ?></span>
             </td>
-            <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
-            <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
+            <td class="qrc-center"><span class="qrc-tag-limited"><?php esc_html_e( '3 of each', 'qr-code-composer' ); ?></span></td>
+            <td class="qrc-center"><span class="qrc-tag-pro"><?php esc_html_e( 'Unlimited', 'qr-code-composer' ); ?></span></td>
           </tr>
           <tr>
             <td>
-              <span class="qrc-feature-title">Dynamic QR Codes &amp; Edit Destination</span>
-              <span class="qrc-feature-desc">Change destination links anytime without reprinting the QR code.</span>
-            </td>
-            <td class="qrc-center"><span class="qrc-status-icon qrc-status-cross">✕</span></td>
-            <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
-          </tr>
-          <tr>
-            <td>
-              <span class="qrc-feature-title">Scan Analytics &amp; Tracking</span>
-              <span class="qrc-feature-desc">Track daily scans, top links, locations, and device types.</span>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Dynamic QR Codes & Edit Destination', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Change destination links anytime without reprinting the QR code.', 'qr-code-composer' ); ?></span>
             </td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-cross">✕</span></td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
           </tr>
           <tr>
             <td>
-              <span class="qrc-feature-title">WooCommerce Order &amp; Invoice QR</span>
-              <span class="qrc-feature-desc">Add QR codes on order emails and top 3 PDF invoice plugins.</span>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Scan Analytics & Tracking', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Track daily scans, top links, locations, and device types.', 'qr-code-composer' ); ?></span>
             </td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-cross">✕</span></td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
           </tr>
           <tr>
             <td>
-              <span class="qrc-feature-title">Gutenberg Block &amp; Elementor Live Editor</span>
-              <span class="qrc-feature-desc">Native block editor controls and live Elementor sidebar editing.</span>
-            </td>
-            <td class="qrc-center">Basic Addon</td>
-            <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓ (Full Controls)</span></td>
-          </tr>
-          <tr>
-            <td>
-              <span class="qrc-feature-title">Custom Styling &amp; Logo Inside QR</span>
-              <span class="qrc-feature-desc">Add center logos, custom dot styles, frame shapes, and colors.</span>
-            </td>
-            <td class="qrc-center"><span class="qrc-tag-limited">Basic Colors</span></td>
-            <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓ (Full Styling)</span></td>
-          </tr>
-          <tr>
-            <td>
-              <span class="qrc-feature-title">Bulk Export &amp; High-Res Downloads</span>
-              <span class="qrc-feature-desc">Export all post types or vCards in bulk. Download SVG/PDF formats.</span>
-            </td>
-            <td class="qrc-center"><span class="qrc-tag-limited">PNG Only</span></td>
-            <td class="qrc-center"><span class="qrc-tag-pro">PNG, SVG &amp; PDF</span></td>
-          </tr>
-          <tr>
-            <td>
-              <span class="qrc-feature-title">Advanced Access &amp; Integrations</span>
-              <span class="qrc-feature-desc">Dokan vendor stores, BuddyPress profiles, and link scheduling.</span>
+              <span class="qrc-feature-title"><?php esc_html_e( 'WooCommerce Order & Invoice QR', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Add QR codes on order emails and top 3 PDF invoice plugins.', 'qr-code-composer' ); ?></span>
             </td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-cross">✕</span></td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
           </tr>
           <tr>
             <td>
-              <span class="qrc-feature-title">Bulk vCard QR Code Generator</span>
-              <span class="qrc-feature-desc">Generate contact card (vCard) QR codes in bulk for team members, employee directories, or customer lists instantly without manual entry.</span>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Gutenberg Block & Elementor Live Editor', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Native block editor controls and live Elementor sidebar editing.', 'qr-code-composer' ); ?></span>
+            </td>
+            <td class="qrc-center"><span class="qrc-tag-limited"><?php esc_html_e( 'Basic Addon', 'qr-code-composer' ); ?></span></td>
+            <td class="qrc-center"><span class="qrc-tag-pro"><?php esc_html_e( 'Full Controls', 'qr-code-composer' ); ?></span></td>
+          </tr>
+          <tr>
+            <td>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Custom Styling & Logo Inside QR', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Add center logos, custom dot styles, frame shapes, and colors.', 'qr-code-composer' ); ?></span>
+            </td>
+            <td class="qrc-center"><span class="qrc-tag-limited"><?php esc_html_e( 'Basic Colors', 'qr-code-composer' ); ?></span></td>
+            <td class="qrc-center"><span class="qrc-tag-pro"><?php esc_html_e( 'Full Styling', 'qr-code-composer' ); ?></span></td>
+          </tr>
+          <tr>
+            <td>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Bulk Export & High-Res Downloads', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Export all post types or vCards in bulk. Download SVG/PDF formats.', 'qr-code-composer' ); ?></span>
+            </td>
+            <td class="qrc-center"><span class="qrc-tag-limited"><?php esc_html_e( 'PNG Only', 'qr-code-composer' ); ?></span></td>
+            <td class="qrc-center"><span class="qrc-tag-pro"><?php esc_html_e( 'PNG, SVG & PDF', 'qr-code-composer' ); ?></span></td>
+          </tr>
+          <tr>
+            <td>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Advanced Access & Integrations', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Dokan vendor stores, BuddyPress profiles, and link scheduling.', 'qr-code-composer' ); ?></span>
+            </td>
+            <td class="qrc-center"><span class="qrc-status-icon qrc-status-cross">✕</span></td>
+            <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span class="qrc-feature-title"><?php esc_html_e( 'Bulk vCard QR Code Generator', 'qr-code-composer' ); ?></span>
+              <span class="qrc-feature-desc"><?php esc_html_e( 'Generate vCard QR codes in bulk for team members, employee directories, or customer lists.', 'qr-code-composer' ); ?></span>
             </td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-cross">✕</span></td>
             <td class="qrc-center"><span class="qrc-status-icon qrc-status-check">✓</span></td>
@@ -938,70 +960,11 @@ $qrc_why_url = admin_url( 'admin.php?page=qr-code-composer#why-pro' );
     </div>
 
     <div class="qrc-pro-cta-box">
-      <h3 style="color:#fff">Ready to Boost Your Website with Dynamic QR Codes?</h3>
-      <p>Upgrade today to access dynamic tracking, custom designs, WooCommerce invoice integration, and priority support.</p>
-      <a href="https://sharabindu.com/plugins/wordpress-qr-code-generator/" class="qrc-btn-upgrade" target="_blank" rel="noopener">Upgrade to Pro Now</a>
+      <h3><?php esc_html_e( 'Remove the limit. Put a QR code on everything.', 'qr-code-composer' ); ?></h3>
+      <p><?php esc_html_e( 'Upgrade to Pro for unlimited automatic QR codes on posts, pages, products, custom post types, user profiles and the My Account dashboard, plus dynamic tracking, custom designs and priority support.', 'qr-code-composer' ); ?></p>
+      <a href="<?php echo esc_url( QRC_Free_Limit::PRO_URL ); ?>" class="qrc-btn-upgrade" target="_blank" rel="noopener"><?php esc_html_e( 'Upgrade to Pro Now', 'qr-code-composer' ); ?></a>
     </div>
   </section>
-
- <section class="qrc-pro-section">
-      <div class="qrc-pro-header">
-      <h2>Our All Plugins</h2>
-      <p>Explore our full collection of plugins to add powerful features and grow your WordPress website.</p>
-    </div> 
-<div class="poytgwbemfn">
-
-
-       
-<?php 
-
-
-$plugins = [
-  [
-    'slug' => 'qr-code-composer',
-  ],
-  [
-    'slug' => 'barcode-generator-for-woocommerce',
-  ],
-  [
-    'slug' => 'mini-cart-for-woocommerce',
-  ],
-  [
-    'slug' => 'elfi-masonry-addon'
-  ],
-  [
-    'slug' => 'yoo-bar'
-  ],
-  [
-    'slug' => 'fancy-fiter'
-  ],
-  [
-    'slug' => 'master-qr-generator'
-  ]
-]; 
-
-if( class_exists( 'Connekt_Plugin_Installer' ) ) {
-  Connekt_Plugin_Installer::init( $plugins );
-}
- ?>
-        </div>
-      </section>
-        <section class="qrc-pro-section">
-
-      <div class="qrc-pro-header">
-      <h2>Useful Videos</h2>
-      <p>Watch quick video guides to learn how to create, customize, and display QR codes on your site.</p>
-    </div> 
-      <ul>
-        <li>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mJx9vUU7930?si=dNaIB-VS1_CU-JWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
-        </li>
-        <li>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-psUDqpnBlk?si=B5lV5nV0tf7FR0NY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
-        </li>
-        
-      </ul>
-      </section>
     </div>
 
   </div> <!-- END tabs-content -->

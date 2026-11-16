@@ -62,17 +62,8 @@ function qcr_settings_page()
 
     }
 
-    add_settings_field("qr_checkbox", esc_html__("Hide QR code according to post type", "qr-code-composer") ,array($this , "qr_checkbox"), 'qrc_admin_sec', "qrc_download_section" ,array(
-            'class'  =>  'qr_checkbox',
-
-    ));
-
-
-    add_settings_field("qr_checkbox_page", esc_html__("Hide QR code according to Page", "qr-code-composer") , array(
-        $this,
-        "qr_checkbox_page"
-    ) , 'qrc_admin_sec', "qrc_download_section" ,array(
-            'class'  =>  'qr_checkbox_page',
+    add_settings_field("qrc_free_ids", esc_html__("Show QR code on these items", "qr-code-composer") ,array($this , "qrc_free_picker"), 'qrc_admin_sec', "qrc_download_section" ,array(
+            'class'  =>  'qrc_free_ids',
 
     ));
 
@@ -100,6 +91,15 @@ function qcr_settings_page()
 <div class="qrc-box-header" >
             <h3 class="sui-box-title"><?php echo esc_html__('Automatic QR Code Generation ', 'qr-code-composer') ?></h3>
 <p><?php echo esc_html__('These QR codes are automatically displayed after the content of the web page. current page url will be used as content of QR code.', 'qr-code-composer') ?></p>
+<p><strong><?php
+printf(
+    /* translators: %d: number of items allowed per content type */
+    esc_html__('Free version: up to %d pages, %d posts and %d products. Custom post types and unlimited items are available in Pro.', 'qr-code-composer'),
+    absint(QRC_Free_Limit::limit()),
+    absint(QRC_Free_Limit::limit()),
+    absint(QRC_Free_Limit::limit())
+);
+?></strong></p>
 
         </div>
 
@@ -108,44 +108,81 @@ function qcr_settings_page()
     }
 
 
-function qr_checkbox_page() {
+/**
+ * Picker for the items that get an automatic QR code (free limit per type).
+ */
+function qrc_free_picker() {
 
-    $options = (array) get_option('qrc_autogenerate', array()); // loop er baire
+    $limit = QRC_Free_Limit::limit();
 
-    $pages = get_posts(array(
-        'post_type'      => 'page',
-        'post_status'    => 'publish',
-        'posts_per_page' => -1,
-        'orderby'        => 'title',
-        'order'          => 'ASC',
-    ));
+    foreach (QRC_Free_Limit::types() as $type) {
 
-    if (!$pages) {
-        return;
-    }
+        $selected = QRC_Free_Limit::get_ids($type);
+        $is_page  = ('page' === $type);
 
-    echo '<div class="qrc-page-picker">';
-    echo '<input type="search" class="qrc-page-search" placeholder="' . esc_attr__('Search pages...', 'your-textdomain') . '">';
-    echo '<div class="qrc-page-list">';
+        $items = get_posts(array(
+            'post_type'      => $type,
+            'post_status'    => 'publish',
+            'posts_per_page' => $is_page ? -1 : 200,
+            'orderby'        => $is_page ? 'title' : 'date',
+            'order'          => $is_page ? 'ASC' : 'DESC',
+            'no_found_rows'  => true,
+        ));
 
-    foreach ($pages as $page) {
-
-        $title = ($page->post_title !== '') ? $page->post_title : sprintf('(no title) #%d', $page->ID);
+        // Always list the picked items, even if they are older than the list above.
+        $missing = array_diff($selected, wp_list_pluck($items, 'ID'));
+        if ($missing) {
+            $items = array_merge(get_posts(array(
+                'post_type'      => $type,
+                'post__in'       => $missing,
+                'post_status'    => 'any',
+                'posts_per_page' => -1,
+                'orderby'        => 'post__in',
+            )), $items);
+        }
 
         printf(
-            '<label class="qrccheckboxwrap" data-title="%s">
-                <input type="checkbox" value="%d" name="qrc_autogenerate[%d]" %s>
-                <span class="qrccheckmark"></span>%s
-            </label>',
-            esc_attr(strtolower($title)),
-            $page->ID,
-            $page->ID,
-            checked(isset($options[$page->ID]), true, false),
-            esc_html($title)
+            '<div class="qrc-free-box" data-limit="%1$d"><h4>%2$s <span class="qrc-free-count">%3$d / %1$d</span></h4><input type="hidden" name="qrc_autogenerate[qrc_free_present][%4$s]" value="1"><div class="qrc-page-picker">',
+            $limit,
+            esc_html(QRC_Free_Limit::type_label($type)),
+            count($selected),
+            esc_attr($type)
         );
+
+        echo '<input type="search" class="qrc-page-search" placeholder="' . esc_attr__('Search...', 'qr-code-composer') . '">';
+        echo '<div class="qrc-page-list">';
+
+        if (!$items) {
+            echo '<em>' . esc_html__('Nothing published yet.', 'qr-code-composer') . '</em>';
+        }
+
+        foreach ($items as $item) {
+
+            $title = ($item->post_title !== '') ? $item->post_title : sprintf('(no title) #%d', $item->ID);
+
+            printf(
+                '<label class="qrccheckboxwrap" data-title="%s">
+                    <input type="checkbox" class="qrc-free-cb" value="%d" name="qrc_autogenerate[qrc_free_ids][%s][]" %s>
+                    <span class="qrccheckmark"></span>%s
+                </label>',
+                esc_attr(strtolower($title)),
+                $item->ID,
+                esc_attr($type),
+                checked(in_array($item->ID, $selected, true), true, false),
+                esc_html($title)
+            );
+        }
+
+        echo '</div>';
+        echo '<p class="qrc-free-full-note">' . sprintf(
+            /* translators: %d: limit per content type */
+            esc_html__('Limit reached (%d). Uncheck one to pick another. Pro has no limit.', 'qr-code-composer'),
+            $limit
+        ) . '</p>';
+        echo '</div></div>';
     }
 
-    echo '</div></div>';
+    echo '<p class="qrc-free-pro-note"><span class="dashicons dashicons-lock"></span> ' . esc_html__('Custom post types and unlimited items are available in Pro.', 'qr-code-composer') . ' <a href="' . esc_url(QRC_Free_Limit::PRO_URL) . '" target="_blank" rel="noopener">' . esc_html__('Upgrade to Pro', 'qr-code-composer') . '</a></p>';
 }
 function qrc_wc_ptab_name()
 {
@@ -157,38 +194,6 @@ function qrc_wc_ptab_name()
 
 }
 
-function qr_checkbox()
-{
-
-    $args = array(
-        'public' => true,
-    );
-
-        $excluded_posttypes = array('attachment','revision','nav_menu_item','custom_css','customize_changeset','oembed_cache','user_request','wp_block','scheduled-action','product_variation','shop_order','shop_order_refund','shop_coupon','elementor_library','e-landing-page','wp_template','wp_template_part','wp_navigation','wp_global_styles','shop_order_placehold');
-
-    $types = get_post_types( $args);
-    $post_types = array_diff($types, $excluded_posttypes);
-
-    foreach ($post_types as $post_type)
-    {
-        $post_type_title = get_post_type_object($post_type);
-
-        $options = get_option('qrc_autogenerate');
-
-        $checked = isset($options[$post_type]) ? 'checked' : '';
-
-        printf('<div><label class="qrccheckboxwrap"  for ="%s" id="qrc_label_wrap">%s
-  <input  type="checkbox" id="%s" value="%s" name="qrc_autogenerate[%s]" %s>
-  <span class="qrccheckmark"></span>
-</label></br></div>', $post_type, $post_type, $post_type,$post_type, $post_type, $checked);
-
-
-
-
-    }
-
-
-}
     function removeautodisplay()
     {
 
@@ -337,28 +342,33 @@ function qrc_autogenerate_sanitize($input)
         $sanitary_values['qrc_wc_ptab_name'] = sanitize_text_field($input['qrc_wc_ptab_name']);
     }
             
-    $post_types = get_post_types();
+    // Free limit: store the picked items per type (max N each).
+    $old     = get_option('qrc_autogenerate', array());
+    $ids     = (isset($old['qrc_free_ids']) && is_array($old['qrc_free_ids'])) ? $old['qrc_free_ids'] : array();
+    $present = (isset($input['qrc_free_present']) && is_array($input['qrc_free_present'])) ? $input['qrc_free_present'] : array();
+    $limit   = QRC_Free_Limit::limit();
 
-    foreach ($post_types as $post_type)
-    {
+    foreach (QRC_Free_Limit::types() as $type) {
 
-        if (isset($input[$post_type]))
-        {
-            $sanitary_values[$post_type] = $input[$post_type];
+        if (!isset($present[$type])) {
+            continue; // this type was not in the form, keep what is saved.
         }
-    }
-        $qrc_type_pages = get_posts(array(
-            'post_type' => 'page',
-            'posts_per_page' => - 1,
-        ));
 
-            foreach ($qrc_type_pages as $qrc_type_page){
+        $raw   = (isset($input['qrc_free_ids'][$type]) && is_array($input['qrc_free_ids'][$type])) ? $input['qrc_free_ids'][$type] : array();
+        $clean = array();
 
-            if (isset($input[$qrc_type_page->ID]))
-            {
-                $sanitary_values[$qrc_type_page->ID] = $input[$qrc_type_page->ID];
+        foreach ($raw as $id) {
+            $id = absint($id);
+            if ($id && get_post_type($id) === $type && !in_array($id, $clean, true)) {
+                $clean[] = $id;
             }
         }
+
+        $ids[$type] = array_slice($clean, 0, $limit);
+    }
+
+    $sanitary_values['qrc_free_ids'] = $ids;
+
     return $sanitary_values;
 }
 }
